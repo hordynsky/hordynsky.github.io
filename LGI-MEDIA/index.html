@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Swiper Slider CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+	<link rel="stylesheet" href="css/swiperSlider.css">
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Start #header -->
+	<header id="header">
+		<nav id="nav" class="header">
+			<div class="header__logo">
+				<a href="index.html">LGI MEDIA</a>
+			</div>
+
+			<div class="header__links">
+				<ul>
+					<li>
+						<a href="films.html">Films</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="news.html">News</a>
+					</li>
+					<li>
+						<a href="contact-us.html">Contact</a>
+					</li>
+					<li>
+						<a href="#" id="search" class="header__search"><i class="im im-magnifier"></i></a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="header__links_mobile">
+				<div id="button_mobile" class="header__button_mobile">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+
+				<div id="menu_mobile" class="header__menu_mobile hide">
+					<i id="close_menu" class="im im-x-mark header__close-menu"></i>
+
+					<ul>
+						<li>
+							<a href="films.html">Films</a>
+						</li>
+						<li>
+							<a href="about.html">About</a>
+						</li>
+						<li>
+							<a href="news.html">News</a>
+						</li>
+						<li>
+							<a href="contact-us.html">Contact</a>
+						</li>
+						<li>
+							<a href="#" id="search_mobile" class="header__search">Search</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End /#header -->
+
+	<!-- Start .search-popup -->
+	<div id="search_popup" class="search-popup hide">
+		<i id="search_popup_close" class="im im-x-mark search-popup__close"></i>
+
+		<input type="search" placeholder="SEARCH OUR COLLECTION">
+		<div class="search-popup__button">
+			<span>Search </span>
+			<i class="im im-magnifier" aria-hidden="true"></i>
+		</div>
+	</div>
+	<!-- End /.search-popup -->
+
+	<!-- Start .slider -->
+	<!-- Swiper -->
+  <div id="slider" class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+      	<img id="slide-img" src="img/humpback_whale.jpg" alt="1">
+					<div class="slide-text">
+						<a href="#">HUMPBACK WHALES</a>
+						<p>Spectacular shots of one of the largest mammals to have graced the planet.</p>
+					</div>
+      </div>
+
+       <div class="swiper-slide">
+       	<img id="slide-img" src="img/humpback_whale.jpg" alt="1">
+					<div class="slide-text">
+						<a href="#">HUMPBACK WHALES</a>
+						<p>Spectacular shots of one of the largest mammals to have graced the planet.</p>
+					</div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+	<!-- End /.slider -->
+
+	<div class="main-header home">
+		<h2>FEATURED FILMS</h2>
+	</div>
+
+	<!-- Start .main -->
+	<article id="main" class="main">
+		<!-- Start .films-gallery -->
+		<section class="films-gallery">
+			<div class="films-gallery__section">
+				<div class="films-gallery__element">
+					<img src="img/emergence.jpg" alt="img 1">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+
+				<div class="films-gallery__element">
+					<img src="img/news1.jpg" alt="img 2">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+				
+				<div class="films-gallery__element">
+					<img src="img/adult.jpg" alt="img 3">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="films-gallery__section">
+				<div class="films-gallery__element">
+					<img src="img/adventure-alpine-background-355770.jpg" alt="img 1">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+
+				<div class="films-gallery__element">
+					<img src="img/animals_hero_mountains.jpg" alt="img 2">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+				
+				<div class="films-gallery__element">
+					<img src="img/humpback_whale.jpg" alt="img 3">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="films-gallery__section">
+				<div class="films-gallery__element">
+					<img src="img/black-and-white-black-and-white-conifer-763097.jpg" alt="img 1">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+
+				<div class="films-gallery__element">
+					<img src="img/news2.jpg" alt="img 2">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+				
+				<div class="films-gallery__element">
+					<img src="img/Screen-Shot-2018-10-04-at-10.20.51-am.jpg" alt="img 3">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="films-gallery__section">
+				<div class="films-gallery__element">
+					<img src="img/Screen-Shot-2018-10-04-at-10.18.jpg" alt="img 1">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+
+				<div class="films-gallery__element">
+					<img src="img/animals_hero_mountains.jpg" alt="img 2">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+				
+				<div class="films-gallery__element">
+					<img src="img/adult-art-business-1043552.jpg" alt="img 3">
+					<p>
+						<a href="#">HUMPBACK WHALES</a>
+					</p>
+				</div>
+			</div>
+
+			<a href="#" class="btn">VIEW ALL FILMS</a> 
+		</section>
+		<!-- End /.films-gallery -->
+
+		<!-- Start .films-gallery_mobile -->
+		<div class="films-gallery_mobile">
+			<div class="films-gallery_mobile__element">
+				<img src="img/news2.jpg" alt="image">
+				<p>ROAD TO CALVARY : JESUS</p>	
+			</div>
+
+			<div class="films-gallery_mobile__element">
+				<img src="img/news2.jpg" alt="image">
+				<p>ROAD TO CALVARY : JESUS</p>	
+			</div>
+
+			<div class="films-gallery_mobile__element">
+				<img src="img/news2.jpg" alt="image">
+				<p>ROAD TO CALVARY : JESUS</p>	
+			</div>
+
+			<div class="films-gallery_mobile__element">
+				<img src="img/news2.jpg" alt="image">
+				<p>ROAD TO CALVARY : JESUS</p>	
+			</div>
+
+			<div class="films-gallery_mobile__element">
+				<img src="img/news2.jpg" alt="image">
+				<p>ROAD TO CALVARY : JESUS</p>	
+			</div>
+
+			<div class="films-gallery_mobile__element">
+				<img src="img/news2.jpg" alt="image">
+				<p>ROAD TO CALVARY : JESUS</p>	
+			</div>
+
+			<div class="films-gallery_mobile__element">
+				<img src="img/news2.jpg" alt="image">
+				<p>ROAD TO CALVARY : JESUS</p>	
+			</div>
+
+			<div class="films-gallery_mobile__btn">
+				VIEW ALL FILMS
+			</div>
+
+		</div>
+		<!-- End /.films-gallery_mobile -->
+
+		<!-- Start .partners -->
+		<section class="partners">
+			<div class="partners__element">
+				<img src="img/bbc.png" alt="partners">
+			</div>
+
+			<div class="partners__element">
+				<img src="img/bbc.png" alt="partners">
+			</div>
+
+			<div class="partners__element">
+				<img src="img/bbc.png" alt="partners">
+			</div>
+
+			<div class="partners__element">
+				<img src="img/bbc.png" alt="partners">
+			</div>
+
+			<div class="partners__element">
+				<img src="img/bbc.png" alt="partners">
+			</div>
+
+			<div class="partners__element">
+				<img src="img/bbc.png" alt="partners">
+			</div>
+
+			<div class="partners__element">
+				<img src="img/bbc.png" alt="partners">
+			</div>
+		</section>
+		<!-- End /.partners -->
+
+	</article>
+	<!-- End /.main -->
+
+	<!-- Start .footer -->
+	<footer id="footer_home" class="footer_home">
+		<div class="footer-container">
+			<div class="footer-copyright">
+				<span>Copyright © LGI MEDIA 2018</span>
+			</div>
+
+			<div class="footer-social">
+				<a href="#">Facebook</a>
+				<a href="#">Twitter</a>
+				<a href="#">Vimeo </a>
+			</div>
+		</div>
+	</footer>
+	<!-- End /.footer -->
+
+	<!-- Optional JavaScript -->
+	<!-- Swiper Slider JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+
+	<!-- JS for home page -->
+	<script src="js/home.js"></script>
+
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

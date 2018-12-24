@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>News Detail</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Start #header -->
+    <header id="header">
+        <nav id="nav" class="header sticky">
+            <div class="header__logo">
+                <a href="index.html">LGI MEDIA</a>
+            </div>
+
+            <div class="header__links">
+                <ul>
+                    <li>
+                        <a href="films.html">Films</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="news.html">News</a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#" id="search" class="header__search"><i class="im im-magnifier"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__links_mobile">
+                <div id="button_mobile" class="header__button_mobile">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div id="menu_mobile" class="header__menu_mobile hide">
+                    <i id="close_menu" class="im im-x-mark header__close-menu"></i>
+
+                    <ul>
+                        <li>
+                            <a href="films.html">Films</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="news.html">News</a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#" id="search_mobile" class="header__search">Search</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End /#header -->
+
+    <!-- Start .search-popup -->
+    <div id="search_popup" class="search-popup hide">
+        <i id="search_popup_close" class="im im-x-mark search-popup__close"></i>
+
+        <input type="search" placeholder="SEARCH OUR COLLECTION">
+        <div class="search-popup__button">
+            <span>Search </span>
+            <i class="im im-magnifier" aria-hidden="true"></i>
+        </div>
+    </div>
+    <!-- End /.search-popup -->
+    
+    <div class="news-detail">
+        <div class="news-detail__title">
+            <div class="main-header">
+                <h1>Uncovering hidden gems of china's wildlife</h1>
+            </div>
+        </div>
+
+        <div class="news-detail__date">
+            <p><span>02 October 2018</span></p>
+        </div>
+
+        <div class="news-detail__main-img">
+            <img src="img/forest.jpg" alt="forest">
+        </div>
+
+        <div class="news-detail__wrapper">
+            <div class="news-detail__social">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.718 10.528c0 .792-.268 1.829-.684 2.642-1.009 1.98-3.063 1.967-3.063-.14 0-.786.27-1.799.687-2.58 1.021-1.925 3.06-1.624 3.06.078zm10.282 1.472c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm-5-1.194c0-3.246-2.631-5.601-6.256-5.601-4.967 0-7.744 3.149-7.744 7.073 0 3.672 2.467 6.517 7.024 6.517 2.52 0 4.124-.726 5.122-1.288l-.687-.991c-1.022.593-2.251 1.136-4.256 1.136-3.429 0-5.733-2.199-5.733-5.473 0-5.714 6.401-6.758 9.214-5.071 2.624 1.642 2.524 5.578.582 7.083-1.034.826-2.199.799-1.821-.756 0 0 1.212-4.489 1.354-4.975h-1.364l-.271.952c-.278-.785-.943-1.295-1.911-1.295-2.018 0-3.722 2.19-3.722 4.783 0 1.73.913 2.804 2.38 2.804 1.283 0 1.95-.726 2.364-1.373-.3 2.898 5.725 1.557 5.725-3.525z"/></svg></a>
+            </div>
+            <div class="news-detail__description">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Eget duis at tellus at urna condimentum. Tempus iaculis urna id volutpat lacus 
+                    laoreet. Enim sit amet venenatis urna cursus eget nunc scelerisque. Netus et malesuada fames ac 
+                    turpis egestas integer. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Mattis aliquam 
+                    faucibus purus in massa tempor. Feugiat vivamus at augue eget arcu dictum. Eget velit aliquet sagittis 
+                    id consectetur purus. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Suspendisse 
+                    potenti nullam ac tortor. 
+                </p>
+                <p>
+                    Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Risus feugiat in ante metus dictum 
+                    at tempor. Sit amet facilisis magna etiam tempor orci eu lobortis elementum. Montes nascetur ridiculus 
+                    mus mauris vitae ultricies leo integer malesuada. Dolor magna eget est lorem ipsum dolor sit amet 
+                    consectetur. Curabitur gravida arcu ac tortor dignissim convallis. Sed odio morbi quis commodo odio. 
+                    Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Montes nascetur ridiculus mus mauris 
+                    vitae ultricies leo integer malesuada. Dolor magna eget est lorem ipsum dolor sit amet consectetur. 
+                    Curabitur gravida arcu ac tortor dignissim convallis. Sed odio morbi quis commodo odio. Nec dui nunc 
+                    mattis enim ut tellus elementum sagittis vitae. 
+                </p>
+                <img src="img/mountains.jpg" alt="mountains">
+                <blockquote>
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                    do eiusmod tempor incididunt ut labore et dolore magna.”
+                </blockquote>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Eget duis at tellus at urna condimentum. Tempus iaculis urna id volutpat lacus 
+                    laoreet. Enim sit amet venenatis urna cursus eget nunc scelerisque. Netus et malesuada fames ac 
+                    turpis egestas integer. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Mattis aliquam 
+                    faucibus purus in massa tempor. Feugiat vivamus at augue eget arcu dictum. Eget velit aliquet sagittis 
+                    id consectetur purus. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Suspendisse 
+                    potenti nullam ac tortor. 
+                </p>
+                <p>
+                    Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Risus feugiat in ante metus dictum 
+                    at tempor. Sit amet facilisis magna etiam tempor orci eu lobortis elementum. Montes nascetur ridiculus 
+                    mus mauris vitae ultricies leo integer malesuada. Dolor magna eget est lorem ipsum dolor sit amet 
+                    consectetur. Curabitur gravida arcu ac tortor dignissim convallis. Sed odio morbi quis commodo odio. 
+                    Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Montes nascetur ridiculus mus mauris 
+                    vitae ultricies leo integer malesuada. Dolor magna eget est lorem ipsum dolor sit amet consectetur. 
+                    Curabitur gravida arcu ac tortor dignissim convallis. Sed odio morbi quis commodo odio. Nec dui nunc 
+                    mattis enim ut tellus elementum sagittis vitae. 
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Start .footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copyright">
+                <span>Copyright © LGI MEDIA 2018</span>
+            </div>
+
+            <div class="footer-social">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Vimeo </a>
+            </div>
+        </div>
+    </footer>
+    <!-- End /.footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- Main JS -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>

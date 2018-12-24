@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Film Detail</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Start #header -->
+    <header id="header">
+        <nav id="nav" class="header sticky">
+            <div class="header__logo">
+                <a href="index.html">LGI MEDIA</a>
+            </div>
+
+            <div class="header__links">
+                <ul>
+                    <li>
+                        <a href="films.html">Films</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="news.html">News</a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#" id="search" class="header__search"><i class="im im-magnifier"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__links_mobile">
+                <div id="button_mobile" class="header__button_mobile">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div id="menu_mobile" class="header__menu_mobile hide">
+                    <i id="close_menu" class="im im-x-mark header__close-menu"></i>
+
+                    <ul>
+                        <li>
+                            <a href="films.html">Films</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="news.html">News</a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#" id="search_mobile" class="header__search">Search</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End /#header -->
+
+    <!-- Start .search-popup -->
+    <div id="search_popup" class="search-popup hide">
+        <i id="search_popup_close" class="im im-x-mark search-popup__close"></i>
+
+        <input type="search" placeholder="SEARCH OUR COLLECTION">
+        <div class="search-popup__button">
+            <span>Search </span>
+            <i class="im im-magnifier" aria-hidden="true"></i>
+        </div>
+    </div>
+    <!-- End /.search-popup -->
+
+  <div class="film-detail__preview">
+    <img src="img/humpback_whale.jpg" alt="film-detail previw">
+  </div>
+
+  <div class="film-detail__header">
+    <h1>Humbpack Wales</h1>
+  </div>
+
+  <div class="film-detail__action-mobile">
+        <a href="#" class="btn">Add to WatchList</a> 
+        <a href="#" class="btn">Share</a> 
+  </div>
+
+  <div class="film-detail__information">
+        <div class="film-detail__synopsis">
+            <div class="film-details__header">
+                <h4>Synopsis</h4>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget duis at tellus at urna condimentum. Tempus iaculis urna id volutpat lacus laoreet. Enim sit amet venenatis urna cursus eget nunc scelerisque. Netus et malesuada fames ac turpis egestas integer. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Mattis aliquam faucibus purus in massa tempor. Feugiat vivamus at augue eget arcu dictum. Eget velit aliquet sagittis id consectetur purus. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Suspendisse potenti nullam ac tortor.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget duis at tellus at urna condimentum. Tempus iaculis urna id volutpat lacus laoreet. Enim sit amet venenatis urna cursus eget nunc scelerisque. Netus et malesuada fames ac turpis egestas integer.
+            </p>
+            <div class="film-detail__synopsis_images">
+                <a href="#">
+                    <img src="img/emergence.jpg" alt="emergence image">
+                </a>
+                <a href="#">
+                    <img src="img/humpback_whale.jpg" alt="emergence image">
+                </a>
+                <a href="#">
+                    <img src="img/emergence.jpg" alt="emergence image">
+                </a>
+                <a href="#" class='mobile-mockup'>
+                    <img src="img/emergence.jpg" alt="emergence image">
+                </a>
+            </div>
+        </div>
+        <div class="film-detail__details">
+            <div class="film-details__header">
+                <h4>Details</h4>
+            </div>
+            <div class="film-detail__details_list">
+                <ul class="episodes">
+                    <li class="details-list__name">Episodes</li>
+                    <li class="details-list__value">1</li>
+                </ul>
+                <ul class="runtime">
+                    <li class="details-list__name">Runtime</li>
+                    <li class="details-list__value">60 or 90 mins</li>
+                </ul>
+                <ul class="definition">
+                    <li class="details-list__name">Definition</li>
+                    <li class="details-list__value">HD</li>
+                </ul>
+                <ul class="yearOfProduction">
+                    <li class="details-list__name">Year of Production</li>
+                    <li class="details-list__value">2017</li>
+                </ul>
+                <ul class="productionCompany">
+                    <li class="details-list__name">Production Company</li>
+                    <li class="details-list__value">Paddle Productions</li>
+                </ul>
+            </div>
+            <div class="film-detail__details_action">
+                <a href="#" class="btn">Add to WatchList</a> 
+                <a href="#" class="btn">Share</a> 
+            </div>
+        </div>
+  </div>
+
+  <section class="film-detail__history">
+    <div class="film-detail__history_header">
+        <h4>More From History</h4>
+    </div>
+    <div class="film-detail__history_images">
+        <a href="#">
+            <img src="img/emergence.jpg" alt="emergence image">
+        </a>
+        <a href="#">
+            <img src="img/humpback_whale.jpg" alt="whale image">
+        </a>
+        <a href="#">
+            <img src="img/forest.jpg" alt="forest image">
+        </a>
+        <a href="#">
+            <img src="img/emergence.jpg" alt="emergence image">
+        </a>
+        <a href="#">
+            <img src="img/humpback_whale.jpg" alt="whale image">
+        </a>
+        <a href="#" class='mobile-mockup'>
+            <img src="img/humpback_whale.jpg" alt="whale image">
+        </a>
+    </div>
+    <div class="film-detail__history_action">
+        <a href="#" class="btn">View All History</a> 
+    </div>
+  </section>
+
+<!-- Start .footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-copyright">
+            <span>Copyright &copy; LGI MEDIA</span>
+        </div>
+
+        <div class="footer-social">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Vimeo </a>
+        </div>
+    </div>
+</footer>
+<!-- End /.footer -->
+
+<!-- Optional JavaScript -->
+<!-- Main JS -->
+<script src="js/main.js" defer></script>
+</body>
+</html>
