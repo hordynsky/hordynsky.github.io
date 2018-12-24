@@ -1,0 +1,77 @@
+.story{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white, .6);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 8rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+
+    @include respond(tab-port){
+        width: 100%;
+        padding: 4rem;
+        padding-left: 6rem;
+    }
+
+    @include respond(phone){
+        transform: skew(0);
+    }
+
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        background-color: orangered;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+
+        @include respond(phone){
+            transform: translateX(-3rem) skew(0);
+        }
+    }
+
+    &__img{
+        height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden;
+        transition: all .5s;
+    }
+
+    &__text{
+        transform: skewX(12deg);
+
+        @include respond(phone){
+            transform: skew(0);
+        }
+    }
+
+    &__caption{
+        position: absolute;
+        color: $color-white;
+        font-size: 1.7rem;
+        top: 50%;
+        left: 50%;
+        backface-visibility: hidden;
+        text-transform: uppercase;
+        transform: translate(-50%, 20%);
+        transition: all .8s;
+        text-align: center;
+        opacity: 0;
+    }
+
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img{
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+}

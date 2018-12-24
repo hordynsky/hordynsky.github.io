@@ -1,0 +1,121 @@
+.popup{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color-black, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__content{
+        @include centrelized;
+        width: 75%;
+        background-color: $color-white;
+        border-radius: 3px;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        position: absolute;
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(.25);
+        transition: all .5s .2s;
+
+        @include respond(tab-land){
+            display: block;
+        }
+
+        &-close{
+            color: $color-grey-dark;
+            position: absolute;
+            font-size: 2rem;
+            top: 0rem;
+            right: 1rem;   
+            outline: none;
+            transition: all .2s;
+
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+
+    &:target &__content{
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__left{
+        width: 33.333333%;
+        display: table-cell;
+
+        @include respond(tab-land){
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__right{
+        width: 66.666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 4rem;
+
+        @include respond(tab-land){
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__img{
+        display: block;
+        width: 100%;
+
+        @include respond(tab-land){
+            display: inline-block;
+            width: 49.8%;
+        }
+
+        @include respond(tab-port){
+            width: 49%;
+        }
+
+        @include respond(phone){
+            width: 100%;
+            &:not(:last-child){
+                display: none;
+            }
+        }
+    }
+
+    &__text{
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem;
+        -moz-column-rule: 1px solid $color-grey-light-2;
+
+        -ms-column-count: 2;
+        -ms-column-gap: 4rem;
+        -ms-column-rule: 1px solid $color-grey-light-2;
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-grey-light-2;
+
+        -moz-hyphens: manual;
+        -ms-hyphens: manual;
+        -webkit-hyphens: manual;
+        hyphens: manual;
+    }
+}
