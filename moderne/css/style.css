@@ -39,14 +39,17 @@ html {
     html {
       font-size: 75%; } }
 
+.wrapper {
+  width: 140rem;
+  margin: 0 auto; }
+
 body {
   background-color: #e3f0f0;
   box-sizing: border-box;
   font-family: "Filson Pro", sans-serif;
   font-weight: 400;
   font-size: 1.9rem;
-  line-height: 1.42;
-  width: 140rem; }
+  line-height: 1.42; }
 
 .heading-primary {
   color: #3e3c43;
@@ -178,6 +181,7 @@ body {
   display: flex;
   padding-left: 15rem;
   align-items: center;
+  height: 90vh;
   margin-bottom: 11rem; }
   .main__cta {
     flex: 1; }
@@ -198,3 +202,45 @@ body {
       margin-right: 9rem; }
     .list__item p {
       color: #8c8d91; }
+
+.top-list {
+  margin-bottom: 6.8rem; }
+
+.how-it-works {
+  display: flex;
+  padding-right: 15rem;
+  padding-top: 10rem;
+  padding-bottom: 14rem; }
+  .how-it-works__img {
+    flex: 1;
+    margin: -12rem 13rem 0 -5rem; }
+    .how-it-works__img img {
+      width: 100%; }
+  .how-it-works__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-self: center; }
+  .how-it-works__list {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.8rem 6.5rem 2.4rem 2.7rem; }
+  .how-it-works__item:not(:last-child) {
+    margin-bottom: 2.4rem; }
+  .how-it-works__item .heading-quaternary {
+    position: relative; }
+  .how-it-works__item .heading-quaternary::before {
+    content: "";
+    border-left: 1px solid #7f63bd;
+    height: 2px;
+    width: 2.2rem;
+    background-color: #7f63bd;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -4rem; }
+  .how-it-works__item .paragraph {
+    color: #8c8d91;
+    margin-bottom: -.5rem; }
