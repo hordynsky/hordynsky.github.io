@@ -1,9 +1,13 @@
 body {
+    background-color: $color-primary-light;
     box-sizing: border-box;
+    
     font-family: $default-font-family, sans-serif;
     font-weight: 400;
     font-size: $default-font-size;
     line-height: 1.42;
+
+    width: $grid-width;
 }
 
 .heading-primary{
@@ -43,12 +47,4 @@ body {
 
 .paragraph{
     font-size: inherit;
-}
-
-.link{
-    color: $color-grey-dark;
-    font-size: inherit;
-    font-weight: inherit;
-    text-transform: uppercase;
-    letter-spacing: 0.36px;
 }
