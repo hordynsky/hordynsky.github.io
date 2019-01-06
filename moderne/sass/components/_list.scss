@@ -1,0 +1,17 @@
+.list{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 $gutter-horizontal;
+
+    &__item{
+        flex: 1;
+        
+        &:not(:last-child){
+            margin-right: 9rem;
+        }
+
+        p{
+            color: $color-grey;
+        }
+    }
+}

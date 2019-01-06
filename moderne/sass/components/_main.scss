@@ -1,0 +1,21 @@
+.main{
+    display: flex;
+    padding-left: $gutter-horizontal;
+    align-items: center;
+    
+    margin-bottom: 11rem;   
+
+    &__cta{
+        flex: 1;
+    }
+
+    &__img{
+        flex: 1;
+        margin-right: -5rem;
+        
+        & img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
