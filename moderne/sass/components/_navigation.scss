@@ -8,12 +8,21 @@
     @include respond(tab-port){
         padding: 0 $gutter-horizontal-medium;
     }
+
+    @include respond(phone){
+        padding: 0 1rem;    
+    }
 }
 
 .logo{
     text-transform: uppercase;
     letter-spacing: .36px;
     font-weight: 300;
+
+    @include respond(phone){
+        color: #85638d;
+        font-weight: 400;
+    }
 }
 
 .navigation{    
@@ -57,6 +66,10 @@
             -webkit-transform: translateX(0px);
             -moz-transform: translateX(0px);
             transform: translateX(0px);
+        }
+
+        @include respond(phone){
+            display: none;
         }
         
     }

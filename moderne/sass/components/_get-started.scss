@@ -2,12 +2,32 @@
     background-color: $color-primary-dark;
     margin: 0 4.5rem 6rem 4.5rem;
     padding: 5.5rem 10rem 0 5.5rem;
+    border-radius: $border-radius-medium;
    
     display: flex;
+
+    @include respond(tab-port){
+        padding: 3rem 3rem 0 3rem;
+    }
+
+    @media only screen and (max-width: 65em){
+        padding: 3rem 2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    @include respond(phone){
+        margin: 1rem;
+        margin-top: 2rem;
+    }
     
     &__header{
         flex: 1;
         margin-right: 7rem;
+        
+        @include respond(phone){
+            margin-right: 0;
+        }
 
         .heading-secondary{
             margin-bottom: 0;
@@ -16,6 +36,10 @@
         img{
             width: 100%;
             margin-bottom: -1rem;
+
+            @include respond(phone){
+                margin-bottom: 5rem;
+            }
         }
     }
 
@@ -24,6 +48,11 @@
 
         display: flex;
         align-items: center;
+        z-index: 99;
+
+        @include respond(phone){
+            margin-top: -12rem;
+        }
     }
 
     &__form{
@@ -31,6 +60,5 @@
         flex-direction: column;
         width: 100%;
     }
-
 
 }

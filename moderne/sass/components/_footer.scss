@@ -6,6 +6,10 @@
     align-items: center;    
     text-align: center;
 
+    @include respond(phone){
+        margin: 2.6rem 0;
+    }
+
     &__copyright{
         color: #87a0a5;
         font-size: 1.7rem;
@@ -16,11 +20,14 @@
 
     &-navigation{
         display: flex;
-
-        &__item{
-            &:not(:last-child){
-                margin-right: 1.5rem;
-            }
+       
+        @include respond(phone){
+            color: #627679;
+            flex-wrap: wrap;
+            text-align: center;
+            line-height: 4rem;
+            padding: 0 2rem;
+            justify-content: space-around;
         }
 
         &__link{

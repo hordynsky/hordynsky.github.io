@@ -7,6 +7,12 @@
         padding-right: $gutter-horizontal-medium;
     }
 
+    @include respond(phone){
+        flex-direction: column;
+        text-align: center;
+        padding: 5.5rem 1rem 3.8rem 1rem;
+    }
+
     &__img{
         flex: 1;
         margin-right: 9rem;
@@ -14,6 +20,12 @@
 
         img{
             width: 100%;
+        }
+
+        @include respond(phone){
+            margin-right: 0;
+            margin-bottom: 1.7rem;
+            order: 1;
         }
     }
 
@@ -28,6 +40,10 @@
     &__text{
         margin-bottom: 9.6rem;
 
+        @include respond(phone){
+            margin-bottom: 5rem;
+        }
+
         p{
             color: $color-grey;
             margin-top: 1rem;   
@@ -36,7 +52,20 @@
 
     &__cta{
         font-size: 2.9rem;
-        text-align: center;
+
+        @include respond(phone){
+            text-align: center;
+            display: none;
+        }
+
+        &-mobile{
+            display: none;
+
+            @include respond(phone){
+                display: block;
+            }
+            order: 2;
+        }
 
         span{
             color: #5e576c;

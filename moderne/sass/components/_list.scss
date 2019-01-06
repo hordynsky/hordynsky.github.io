@@ -12,6 +12,11 @@
         
         &:not(:last-child){
             margin-right: 9rem;
+
+            @media only screen and (max-width: 700px){
+                margin-right: 0;
+                margin-bottom: 5rem;
+            }
         }
 
         p{
@@ -22,4 +27,15 @@
 
 .top-list{
     margin-bottom: 6.8rem;
+    z-index: 99;
+    position: relative;
+
+    .heading-quaternary{
+        white-space: nowrap;
+    }
+    
+    @media only screen and (max-width: 700px){
+        flex-direction: column;
+        text-align: center;
+    }
 }

@@ -1,5 +1,4 @@
 .form{
-
     &__input{
         border: none;
         border-bottom: 3px solid transparent;
@@ -18,9 +17,18 @@
             width: 100%;
         }
 
+        @include respond(phone){
+            background-color: #8282a1;
+        }
+
         &::-webkit-input-placeholder{
+            font-size: 2.2rem;
             transform: translateY(.3rem);
             color: #a8a8c0;
+            
+            @include respond(phone){
+                text-align: center;
+            }
         }
 
         &:focus{
@@ -37,5 +45,11 @@
     .btn{
         width: 100%;
         margin-top: 1rem;
+
+        &{
+            @include respond(tab-port){
+                padding: 1.5rem 3.5rem;
+            }
+        }
     }
 }

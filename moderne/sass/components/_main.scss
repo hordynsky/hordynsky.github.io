@@ -3,15 +3,32 @@
     padding-left: $gutter-horizontal;
     align-items: center;
     
-    height: 90vh;
+    margin-top: 2rem;
     margin-bottom: 11rem;   
 
     @include respond(tab-port){
-        padding: 0 $gutter-horizontal-medium;
+        padding-left: $gutter-horizontal-medium;
+    }
+
+    @include respond(phone){
+        flex-direction: column;
+        height: auto;
+        margin-top: -4rem;
+        margin-bottom: 4rem;
+        padding: 4rem 0 0 0;
+        text-align: center;
+        overflow: hidden;
     }
 
     &__cta{
         flex: 1;
+        margin-right: 4rem;
+
+        @include respond(phone){
+            order: 1;
+            padding: 1.5rem 1rem 2rem 1rem;
+            margin-right: 0;
+        }
     }
 
     &__img{
@@ -21,8 +38,8 @@
         @include respond(tab-land){
             transform: none;
         }
-        
-        & img{
+
+        img{
             width: 100%;
             height: auto;
         }
