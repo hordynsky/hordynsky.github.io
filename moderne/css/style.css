@@ -232,12 +232,12 @@ body {
       padding: 0 1rem; } }
 
 .logo {
+  color: #85638d;
   text-transform: uppercase;
   letter-spacing: .36px;
   font-weight: 300; }
   @media (max-width: 37.5em) {
     .logo {
-      color: #85638d;
       font-weight: 400; } }
 
 .navigation__list {
@@ -246,36 +246,34 @@ body {
 .navigation__item {
   padding: 0 2rem; }
 
-.navigation__link::after, .navigation__link::before {
-  display: inline-block;
-  opacity: 0;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
-  transition: transform 0.3s, opacity 0.2s; }
-
-.navigation__link::after {
-  margin-left: 10px;
-  content: ']';
-  -webkit-transform: translateX(-20px);
-  -moz-transform: translateX(-20px);
-  transform: translateX(-20px); }
-
-.navigation__link::before {
-  margin-right: 10px;
-  content: '[';
-  -webkit-transform: translateX(20px);
-  -moz-transform: translateX(20px);
-  transform: translateX(20px); }
-
-.navigation__link:hover::after, .navigation__link:hover::before {
-  opacity: 1;
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  transform: translateX(0px); }
-
-@media (max-width: 37.5em) {
-  .navigation__link {
-    display: none; } }
+.navigation__link {
+  color: #3e3c43; }
+  .navigation__link::after, .navigation__link::before {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s; }
+  .navigation__link::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px); }
+  .navigation__link::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px); }
+  .navigation__link:hover::after, .navigation__link:hover::before {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px); }
+  @media (max-width: 37.5em) {
+    .navigation__link {
+      display: none; } }
 
 .link::after, .link::before {
   display: inline-block;

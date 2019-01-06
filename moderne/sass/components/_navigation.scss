@@ -15,12 +15,12 @@
 }
 
 .logo{
+    color: #85638d;
     text-transform: uppercase;
     letter-spacing: .36px;
     font-weight: 300;
 
     @include respond(phone){
-        color: #85638d;
         font-weight: 400;
     }
 }
@@ -35,6 +35,7 @@
     }
 
     &__link{
+        color: $color-grey-dark;
         &::after,
         &::before{
             display: inline-block;
