@@ -1,0 +1,122 @@
+/*
+    $breakpoint argument choices:
+        - phone
+        - tab-port
+        - tab-land
+        - big-desktop
+1m = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  font-family: "Filson Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 1.42; }
+
+.heading-primary {
+  color: #3e3c43;
+  font-size: 6.7rem;
+  font-weight: 300; }
+  .heading-primary__sub {
+    font-size: 2.1rem;
+    font-weight: 600;
+    line-height: 3rem; }
+
+.heading-secondary {
+  color: #f8f9a8;
+  font-size: 5.8rem;
+  font-weight: 300; }
+  .heading-secondary__sub {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 3.3rem; }
+
+.heading-tertiary {
+  font-size: 4.2rem;
+  font-weight: 400; }
+
+.heading-quaternary {
+  font-size: 2.6rem;
+  font-weight: 400; }
+
+.paragraph {
+  font-size: inherit; }
+
+.link {
+  color: #3e3c43;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.36px; }
+
+.form__input {
+  border: none;
+  border-bottom: 3px solid transparent;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  color: inherit;
+  display: block;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  width: 90%;
+  transition: all .9s; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(200, 226, 231, 0.8), rgba(72, 72, 118, 0.8)), url(../img/hero-small.jpg);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative; }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(200, 226, 231, 0.8), rgba(72, 72, 118, 0.8)), url(../img/hero.jpg); } }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
