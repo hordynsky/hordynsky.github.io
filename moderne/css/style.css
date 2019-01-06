@@ -80,6 +80,26 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.36px; }
 
+.btn, .btn:link, .btn:visited {
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: #fe6b72;
+  display: inline-block;
+  padding: 1.5rem 8.4rem;
+  font-size: 2.3rem;
+  transition: all .2s; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:active {
+  outline: none;
+  trasnform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
 .form__input {
   border: none;
   border-bottom: 3px solid transparent;
