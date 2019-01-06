@@ -2,21 +2,28 @@
     background-color: $color-primary-dark;
     margin: 0 4.5rem 6rem 4.5rem;
     padding: 7.5rem 10rem 0 5.5rem;
+   
     display: flex;
-
+    
     &__header{
-        margin-right: 7rem;
         flex: 1;
+        margin-right: 7rem;
     }
 
     &__cta{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         flex: 1;
+
+        display: flex;
+        align-items: center;
     }
 
     &__form{
-        
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__btn{
+        padding: 1.5rem 8rem;
     }
 }
