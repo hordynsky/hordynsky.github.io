@@ -90,6 +90,9 @@ body {
 .u-center-text {
   text-align: center !important; }
 
+.u-margin-bottom-big {
+  margin-bottom: 4.5rem !important; }
+
 .u-margin-bottom-medium {
   margin-bottom: 3.5rem !important; }
   @media (max-width: 56.25em) {
@@ -244,3 +247,29 @@ body {
   .how-it-works__item .paragraph {
     color: #8c8d91;
     margin-bottom: -.5rem; }
+
+.deliverables {
+  background-color: #c8e2e7;
+  border-radius: 3px;
+  padding: 5rem 5.9rem 7.4rem 9.5rem;
+  display: flex; }
+  .deliverables__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 9rem; }
+    .deliverables__info .heading-tertiary {
+      color: #fff; }
+    .deliverables__info .heading-quaternary {
+      margin-bottom: 0; }
+  .deliverables-list {
+    flex-direction: column;
+    padding: 0; }
+    .deliverables-list__item:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 2.8rem; }
+  .deliverables__img {
+    flex: 1; }
+    .deliverables__img img {
+      width: 100%; }
