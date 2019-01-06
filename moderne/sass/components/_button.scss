@@ -12,6 +12,7 @@
         font-size: 2.3rem;
 
         transition: all .2s;
+        white-space: nowrap;
     }
 
     &:hover{
@@ -21,7 +22,7 @@
 
     &:active{
         outline: none;
-        trasnform: translateY(-.1rem);
+        transform: translateY(-.1rem);
         box-shadow: $box-shadow-small;
     }
 }

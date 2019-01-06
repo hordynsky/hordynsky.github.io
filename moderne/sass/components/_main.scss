@@ -6,13 +6,21 @@
     height: 90vh;
     margin-bottom: 11rem;   
 
+    @include respond(tab-port){
+        padding: 0 $gutter-horizontal-medium;
+    }
+
     &__cta{
         flex: 1;
     }
 
     &__img{
         flex: 1;
-        margin-right: -5rem;
+        transform: translateX(5rem);
+
+        @include respond(tab-land){
+            transform: none;
+        }
         
         & img{
             width: 100%;

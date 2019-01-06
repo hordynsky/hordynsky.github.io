@@ -4,6 +4,10 @@
     align-items: center;
     height: 9rem;
     padding: 0 $gutter-horizontal;
+
+    @include respond(tab-port){
+        padding: 0 $gutter-horizontal-medium;
+    }
 }
 
 .logo{

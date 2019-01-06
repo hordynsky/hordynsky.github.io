@@ -4,6 +4,10 @@
     padding-top: 10rem;
     padding-bottom: 14rem;
 
+    @include respond(tab-port){
+        padding-right: $gutter-horizontal-medium;
+    }
+
     &__img{
         flex: 1;
         margin: -12rem 13rem 0 -5rem;

@@ -1,13 +1,22 @@
 .get-started{
     background-color: $color-primary-dark;
     margin: 0 4.5rem 6rem 4.5rem;
-    padding: 7.5rem 10rem 0 5.5rem;
+    padding: 5.5rem 10rem 0 5.5rem;
    
     display: flex;
     
     &__header{
         flex: 1;
         margin-right: 7rem;
+
+        .heading-secondary{
+            margin-bottom: 0;
+        }
+
+        img{
+            width: 100%;
+            margin-bottom: -1rem;
+        }
     }
 
     &__cta{
@@ -23,7 +32,5 @@
         width: 100%;
     }
 
-    &__btn{
-        padding: 1.5rem 8rem;
-    }
+
 }

@@ -14,7 +14,8 @@
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  box-sizing: border-box; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -39,7 +40,11 @@ html {
     html {
       font-size: 75%; } }
 
+body {
+  overflow-x: hidden; }
+
 .wrapper {
+  max-width: 140rem;
   margin: 0 auto; }
 
 body {
@@ -66,7 +71,8 @@ body {
 .heading-secondary {
   color: #f8f9a8;
   font-size: 5.8rem;
-  font-weight: 300; }
+  font-weight: 300;
+  white-space: nowrap; }
   .heading-secondary__sub {
     color: rgba(255, 255, 255, 0.5);
     font-size: 2.6rem;
@@ -81,7 +87,8 @@ body {
   color: #7f63bd;
   font-size: 2.6rem;
   font-weight: 400;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  white-space: nowrap; }
 
 .paragraph {
   font-size: inherit; }
@@ -110,7 +117,8 @@ body {
   display: inline-block;
   padding: 1.5rem 8.4rem;
   font-size: 2.3rem;
-  transition: all .2s; }
+  transition: all .2s;
+  white-space: nowrap; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -118,7 +126,7 @@ body {
 
 .btn:active {
   outline: none;
-  trasnform: translateY(-0.1rem);
+  transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .form__input {
@@ -131,7 +139,7 @@ body {
   padding: 1.5rem 2rem;
   font-size: 1.5rem;
   font-family: inherit;
-  width: 92%;
+  width: 100%;
   transition: all .9s;
   margin-bottom: 1.5rem; }
   @media (max-width: 56.25em) {
@@ -148,6 +156,7 @@ body {
     border-bottom: 3px solid #ff7730; }
 
 .form .btn {
+  width: 100%;
   margin-top: 1rem; }
 
 .footer {
@@ -177,6 +186,9 @@ body {
   align-items: center;
   height: 9rem;
   padding: 0 15rem; }
+  @media (max-width: 56.25em) {
+    .header {
+      padding: 0 8rem; } }
 
 .logo {
   text-transform: uppercase;
@@ -249,11 +261,17 @@ body {
   align-items: center;
   height: 90vh;
   margin-bottom: 11rem; }
+  @media (max-width: 56.25em) {
+    .main {
+      padding: 0 8rem; } }
   .main__cta {
     flex: 1; }
   .main__img {
     flex: 1;
-    margin-right: -5rem; }
+    transform: translateX(5rem); }
+    @media (max-width: 75em) {
+      .main__img {
+        transform: none; } }
     .main__img img {
       width: 100%;
       height: auto; }
@@ -262,6 +280,9 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 0 15rem; }
+  @media (max-width: 56.25em) {
+    .list {
+      padding: 0 8rem; } }
   .list__item {
     flex: 1; }
     .list__item:not(:last-child) {
@@ -277,6 +298,9 @@ body {
   padding-right: 15rem;
   padding-top: 10rem;
   padding-bottom: 14rem; }
+  @media (max-width: 56.25em) {
+    .how-it-works {
+      padding-right: 8rem; } }
   .how-it-works__img {
     flex: 1;
     margin: -12rem 13rem 0 -5rem; }
@@ -333,16 +357,24 @@ body {
       margin-right: 0;
       margin-bottom: 2.8rem; }
   .deliverables__img {
-    flex: 1; }
+    flex: 1;
+    align-self: center; }
     .deliverables__img img {
       width: 100%; }
 
 .who-we-are {
   display: flex;
   padding: 5rem 15rem 3rem 10rem; }
+  @media (max-width: 56.25em) {
+    .who-we-are {
+      padding-left: 4.6rem;
+      padding-right: 8rem; } }
   .who-we-are__img {
     flex: 1;
-    margin-right: 9rem; }
+    margin-right: 9rem;
+    align-self: center; }
+    .who-we-are__img img {
+      width: 100%; }
   .who-we-are__info {
     flex: 1;
     display: flex;
@@ -354,22 +386,31 @@ body {
       color: #8c8d91;
       margin-top: 1rem; }
   .who-we-are__cta {
-    font-size: 2.9rem; }
+    font-size: 2.9rem;
+    text-align: center; }
     .who-we-are__cta span {
       color: #5e576c; }
       .who-we-are__cta span a {
         color: #7f63bd;
         padding-bottom: .2rem;
         text-decoration: underline; }
+        @media (max-width: 56.25em) {
+          .who-we-are__cta span a {
+            display: block; } }
 
 .get-started {
   background-color: #484876;
   margin: 0 4.5rem 6rem 4.5rem;
-  padding: 7.5rem 10rem 0 5.5rem;
+  padding: 5.5rem 10rem 0 5.5rem;
   display: flex; }
   .get-started__header {
     flex: 1;
     margin-right: 7rem; }
+    .get-started__header .heading-secondary {
+      margin-bottom: 0; }
+    .get-started__header img {
+      width: 100%;
+      margin-bottom: -1rem; }
   .get-started__cta {
     flex: 1;
     display: flex;
@@ -378,8 +419,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%; }
-  .get-started__btn {
-    padding: 1.5rem 8rem; }
 
 .footer {
   margin-bottom: 8.3rem;

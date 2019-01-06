@@ -3,6 +3,10 @@
     justify-content: space-around;
     padding: 0 $gutter-horizontal;
 
+    @include respond(tab-port){
+        padding: 0 $gutter-horizontal-medium;
+    }
+
     &__item{
         flex: 1;
         
