@@ -1,0 +1,22 @@
+.get-started{
+    background-color: $color-primary-dark;
+    margin: 0 4.5rem 6rem 4.5rem;
+    padding: 7.5rem 10rem 0 5.5rem;
+    display: flex;
+
+    &__header{
+        margin-right: 7rem;
+        flex: 1;
+    }
+
+    &__cta{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+    }
+
+    &__form{
+        
+    }
+}
