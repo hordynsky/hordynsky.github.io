@@ -273,3 +273,28 @@ body {
     flex: 1; }
     .deliverables__img img {
       width: 100%; }
+
+.who-we-are {
+  display: flex;
+  padding: 5rem 15rem 3rem 10rem; }
+  .who-we-are__img {
+    flex: 1;
+    margin-right: 9rem; }
+  .who-we-are__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .who-we-are__text {
+    margin-bottom: 9.6rem; }
+    .who-we-are__text p {
+      color: #8c8d91;
+      margin-top: 1rem; }
+  .who-we-are__cta {
+    font-size: 2.9rem; }
+    .who-we-are__cta span {
+      color: #5e576c; }
+      .who-we-are__cta span a {
+        color: #7f63bd;
+        padding-bottom: .2rem;
+        text-decoration: underline; }

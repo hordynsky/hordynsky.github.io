@@ -1,0 +1,40 @@
+.who-we-are{
+    display: flex;
+    padding: 5rem 15rem 3rem 10rem;
+
+    &__img{
+        flex: 1;
+        margin-right: 9rem;
+    }
+
+    &__info{
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__text{
+        margin-bottom: 9.6rem;
+
+        p{
+            color: $color-grey;
+            margin-top: 1rem;
+        }
+    }
+
+    &__cta{
+        font-size: 2.9rem;
+
+        span{
+            color: #5e576c;
+
+            a{
+                color: $color-purple;
+                padding-bottom: .2rem;
+                text-decoration: underline;
+            }
+        }
+    }
+}
