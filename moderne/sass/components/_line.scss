@@ -1,0 +1,13 @@
+.top-line{
+    position: relative;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        left: 2.5%;
+        top: -1.5%;
+        z-index: -1;
+        width: 95%;
+        border-top: 1.4rem solid #e3e4af;
+    }
+}
