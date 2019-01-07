@@ -3,6 +3,21 @@
     margin: 0 4.5rem 6rem 4.5rem;
     padding: 5.5rem 10rem 0 5.5rem;
     border-radius: $border-radius-medium;
+    position: relative;
+
+    /* TEST BORDER WITH PSEUDO ::BEFORE ELEMENT */
+    
+    &::before{
+        content: "";
+        position: absolute;
+        left: 2.5%;
+        top: -1.5%;
+        z-index: -1;
+        width: 95%;
+        border-top: 1.4rem solid #e3e4af;
+    }
+
+    /* END OF THE TEST*/
    
     display: flex;
 

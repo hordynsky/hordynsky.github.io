@@ -5,6 +5,7 @@
     @include respond(tab-port){
         padding-left: $gutter-horizontal-small;
         padding-right: $gutter-horizontal-medium;
+        margin-bottom: 1.4rem;
     }
 
     @include respond(phone){

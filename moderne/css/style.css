@@ -486,7 +486,8 @@ body {
   @media (max-width: 56.25em) {
     .who-we-are {
       padding-left: 4.6rem;
-      padding-right: 8rem; } }
+      padding-right: 8rem;
+      margin-bottom: 1.4rem; } }
   @media (max-width: 37.5em) {
     .who-we-are {
       flex-direction: column;
@@ -543,7 +544,18 @@ body {
   margin: 0 4.5rem 6rem 4.5rem;
   padding: 5.5rem 10rem 0 5.5rem;
   border-radius: 3px;
+  position: relative;
+  /* TEST BORDER WITH PSEUDO ::BEFORE ELEMENT */
+  /* END OF THE TEST*/
   display: flex; }
+  .get-started::before {
+    content: "";
+    position: absolute;
+    left: 2.5%;
+    top: -1.5%;
+    z-index: -1;
+    width: 95%;
+    border-top: 1.4rem solid #e3e4af; }
   @media (max-width: 56.25em) {
     .get-started {
       padding: 3rem 3rem 0 3rem; } }
