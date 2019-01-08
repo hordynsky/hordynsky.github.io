@@ -84,7 +84,26 @@
         @include respond(tab-port){
             align-items: center;
         }
+<<<<<<< HEAD
 
+        &__img{
+            margin-right: $gutter-horizontal;
+
+            @include respond(tab-port){
+                margin-right: $gutter-horizontal-medium;
+            }
+
+            img{
+                width: 80%;
+            }
+        }
+
+        &__contact{
+            p > span{
+                color: #d4d4e4;
+            }
+=======
+        
         &__img{
             margin-right: $gutter-horizontal;
 
@@ -119,7 +138,28 @@
            .price{
                color: $color-white;
            }
+>>>>>>> before
         }
     }
+
+    &-contact{
+        display: flex;
+        flex-direction: column;
+        margin-top: $gutter-vertical-biggest;
+
+        &__text{
+            color: #a8a8c0;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: $gutter-vertical - .5rem;
+
+
+           .price{
+               color: $color-white;
+           }
+        }
+    }
+
+
 
 }

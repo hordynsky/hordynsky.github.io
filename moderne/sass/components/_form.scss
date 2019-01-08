@@ -63,6 +63,8 @@
 
 
 form{
+    width: 100%;
+    
     input, textarea{
         border: none;
         border-bottom: 3px solid transparent;
@@ -75,7 +77,6 @@ form{
         font-size: 1.5rem;
         font-family: inherit;
         min-width: 36rem;
-        max-width: 55.8rem;
         width: 100%;
         transition: all .9s;
         margin-bottom: $gutter-vertical-small;
@@ -128,15 +129,19 @@ form{
         border: 3px solid transparent;
 
         &:focus{
-            border: 3px solid #55c57a;
+            border: 3px solid #ff8086;;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
         }  
     }
 
     textarea:focus ~ label{
-       color: #55c57a;
-    }
+        color: #ff8086;
+     }
 
+    //  textarea:valid + label{
+    //     color: green;
+    //   }
+    
     .btn{
         width: 100%;
         margin-top: 1rem;
