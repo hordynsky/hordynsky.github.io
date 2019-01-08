@@ -447,6 +447,9 @@ form .btn {
   padding: 0 13.3rem; }
   @media (max-width: 56.25em) {
     .list {
+      padding: 0 7rem; } }
+  @media (max-width: 37.5em) {
+    .list {
       padding: 0; } }
   .list__item {
     flex: 1; }

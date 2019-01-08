@@ -4,6 +4,10 @@
     padding: 0 $gutter-horizontal;
 
     @include respond(tab-port){
+        padding: 0 $gutter-horizontal-medium;
+    }
+
+    @include respond(phone){
         padding: 0;
     }
 
