@@ -715,7 +715,7 @@ form .btn {
     content: "";
     position: absolute;
     left: 2.5%;
-    top: -1.5%;
+    top: -1.5rem;
     z-index: -1;
     width: 95%;
     border-top: 1.4rem solid #e3e4af; }
@@ -723,29 +723,69 @@ form .btn {
 .order {
   background-color: #484876;
   padding: 7rem 10.5rem; }
-  .order-brief {
+  .order img {
+    width: 100%; }
+  .order h4 {
+    margin-bottom: 1.5rem; }
+  .order__block {
+    width: 50%; }
+    @media (max-width: 56.25em) {
+      .order__block {
+        width: 58%; }
+        .order__block:nth-child(2) {
+          width: 42%; } }
+  .order__item {
     display: flex; }
-    .order-brief__contact {
-      display: flex;
-      flex-direction: column;
-      margin-right: 7rem;
-      flex-grow: 1; }
+    .order__item:not(:last-child) {
+      margin-bottom: 3rem; }
+  .order__form {
+    margin-right: 10.5rem; }
+    @media (max-width: 56.25em) {
+      .order__form {
+        margin-right: 7rem; } }
+  .order__text {
+    color: #a8a8c0;
+    padding-top: 3.6rem; }
+  .order__img img {
+    width: 100%; }
+  .order-brief {
+    display: flex;
+    align-items: center; }
     .order-brief__heading {
       margin-bottom: 9.2rem; }
-    .order-brief__img {
-      flex-grow: 1; }
-      .order-brief__img img {
-        width: 100%; }
+    .order-brief__contact {
+      margin-right: 10rem; }
+      @media (max-width: 56.25em) {
+        .order-brief__contact {
+          margin-right: 7rem; } }
   .order-background {
     display: flex;
-    justify-content: space-between; }
-    .order-background__form {
-      flex-grow: 1;
-      margin-right: 7rem;
-      flex-basis: 100%; }
-    .order-background__text {
-      padding-top: 6.9rem;
-      flex-grow: 1; }
-  .order p {
-    color: #a8a8c0;
-    font-size: 2rem; }
+    flex-direction: column;
+    margin-bottom: 7rem; }
+  .order-audience {
+    margin-bottom: 6rem; }
+  .order-cta {
+    display: flex; }
+    @media (max-width: 56.25em) {
+      .order-cta {
+        align-items: center; } }
+    .order-cta__img {
+      margin-right: 10.5rem; }
+      @media (max-width: 56.25em) {
+        .order-cta__img {
+          margin-right: 7rem; } }
+      .order-cta__img img {
+        width: 80%; }
+    .order-cta__contact p > span {
+      color: #d4d4e4; }
+  .order-contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem; }
+    .order-contact__text {
+      color: #a8a8c0;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem; }
+      .order-contact__text .price {
+        color: #fff; }
