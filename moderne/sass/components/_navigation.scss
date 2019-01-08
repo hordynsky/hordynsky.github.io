@@ -19,13 +19,32 @@
     text-transform: uppercase;
     letter-spacing: .36px;
     font-weight: 300;
+    font-size: 1.9rem;
 
     @include respond(phone){
+        color: $color-white;
         font-weight: 400;
+        font-size: 2.37rem;
+        // position: absolute;
+        // top: 2rem;
+        // left: 2rem;
+        // z-index: 101;   
     }
 }
 
 .navigation{    
+    // @include respond(phone){
+    //     background-color: $color-grey-dark;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: 100;
+    // }
+
     &__list{
         display: flex;
     }
@@ -70,9 +89,9 @@
         }
 
         @include respond(phone){
-            display: none;
+            color: #bfc5cd;
+            font-size: 2.12rem;
         }
-        
     }
     
 }

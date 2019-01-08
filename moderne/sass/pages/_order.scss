@@ -2,56 +2,126 @@
     background-color: $color-primary-dark;
     padding: 7rem $gutter-horizontal;
 
-    &-brief{
+    img{
+        width: 100%;
+    }
+
+    h4{
+        margin-bottom: $gutter-vertical-small;
+    }
+
+    &__block{
+        width: 50%;
+
+        @include respond(tab-port){
+            width: 58%;
+
+            &:nth-child(2){
+                width: 42%;
+            }
+        }
+    }
+
+    &__item{
         display: flex;
 
-        &__contact{
-            display: flex;
-            flex-direction: column;
-            margin-right: $gutter-horizontal-medium ;
-            flex-grow: 1;
+        &:not(:last-child){
+            margin-bottom: $gutter-vertical - .5rem;
         }
+    }
+
+    &__form{
+        margin-right: $gutter-horizontal;
+
+        @include respond(tab-port){
+            margin-right: $gutter-horizontal-medium;
+        }
+    }
+
+    &__text{
+        color: #a8a8c0;
+        padding-top: 3.6rem;
+    }
+    
+    &__img{
         
+        img{
+            width: 100%;
+        }
+    }
+
+    &-brief{
+        display: flex;
+        align-items: center;
+
         &__heading{
             margin-bottom: 9.2rem;
         }
 
-        &__img{
-            flex-grow: 1;
-            img{
-                width: 100%;
+        &__contact{
+            margin-right: 10rem;
+
+            @include respond(tab-port){
+                margin-right: $gutter-horizontal-medium;
             }
         }
     }
 
     &-background{
-       display: flex;
-       justify-content: space-between;
-
-       &__form{
-           flex-grow: 1;
-           margin-right: $gutter-horizontal-medium;
-           flex-basis: 100%;
-       }
-
-       &__text{
-           padding-top: 6.9rem;
-           flex-grow: 1;
-       }
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $gutter-vertical-biggest;
     }
 
     &-audience{
-        
+        margin-bottom: 6rem;
     }
 
-    &-order-cta{
+    &-cta{
+        display: flex;
         
+        @include respond(tab-port){
+            align-items: center;
+        }
+        
+        &__img{
+            margin-right: $gutter-horizontal;
+
+            @include respond(tab-port){
+                margin-right: $gutter-horizontal-medium;
+            }
+
+            img{
+                width: 80%;
+            }
+        }
+
+        &__contact{
+            p > span{
+                color: #d4d4e4;
+            }
+        }
     }
 
-    p {
-        color: #a8a8c0;
-        font-size: 2rem;
+    &-contact{
+        display: flex;
+        flex-direction: column;
+        margin-top: $gutter-vertical-biggest;
+
+        &__text{
+            color: #a8a8c0;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: $gutter-vertical - .5rem;
+
+
+           .price{
+               color: $color-white;
+           }
+        }
     }
+
+
 
 
 }
