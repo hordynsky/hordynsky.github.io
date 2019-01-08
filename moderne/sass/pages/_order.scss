@@ -1,7 +1,14 @@
 .order{
     background-color: $color-primary-dark;
-    padding: 7rem $gutter-horizontal;
-    
+    padding: $gutter-vertical-biggest $gutter-horizontal;
+
+    @include respond(tab-port){
+        padding: $gutter-vertical $gutter-horizontal-small;
+    }
+
+    @include respond(phone){
+        padding: 3.5rem 1.65rem;
+    }
 
     img{
         width: 100%;
@@ -19,7 +26,15 @@
 
             &:nth-child(2){
                 width: 42%;
+
+                @include respond(phone){
+                    width: 100%;
+                }
             }
+        }
+        
+        @include respond(phone){
+            width: 100%;
         }
     }
 
@@ -28,6 +43,10 @@
 
         &:not(:last-child){
             margin-bottom: $gutter-vertical - .5rem;
+        }
+
+        @include respond(phone){
+            flex-direction: column;
         }
     }
 
@@ -42,28 +61,68 @@
     &__text{
         color: #a8a8c0;
         padding-top: 3.6rem;
-    }
-    
-    &__img{
-        
-        img{
-            width: 100%;
+
+        @include respond(phone){
+            padding-top: 0;
         }
     }
-
+    
     &-brief{
         display: flex;
         align-items: center;
 
+        @include respond(tab-port){
+            margin-bottom: $gutter-vertical;
+        }
+
+        @include respond(phone){
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
         &__heading{
             margin-bottom: 9.2rem;
+            z-index: 99;
+
+            @include respond(tab-port){
+                margin-bottom: $gutter-vertical-big;
+            }
+            
+            @include respond(phone){
+                margin-bottom: 22rem;
+            }
         }
 
         &__contact{
             margin-right: 10rem;
+            z-index: 99;
 
             @include respond(tab-port){
                 margin-right: $gutter-horizontal-medium;
+            }
+
+            @include respond(phone){
+                margin-right: 0;
+                
+                .heading-form{
+                    display: none;
+                }
+            }
+        }
+
+        &__img{
+            @include respond(phone){
+                z-index: 1;
+                position: absolute;
+                left: 50%;
+                top: 25rem;
+                transform:translate(-50%, -50%);
+
+                img{
+                    width: 50%;
+                }
             }
         }
     }
@@ -72,6 +131,11 @@
         display: flex;
         flex-direction: column;
         margin-bottom: $gutter-vertical-biggest;
+
+        @include respond(tab-port){
+            margin-bottom: $gutter-vertical-big;
+        }
+        
     }
 
     &-audience{
@@ -84,13 +148,21 @@
         @include respond(tab-port){
             align-items: center;
         }
-<<<<<<< HEAD
+
+        @include respond(phone){
+            flex-direction: column;
+        }
 
         &__img{
             margin-right: $gutter-horizontal;
-
+            text-align: center;
             @include respond(tab-port){
                 margin-right: $gutter-horizontal-medium;
+            }
+
+            @include respond(phone){
+                margin-right: 0;
+                margin-bottom: 2rem;
             }
 
             img{
@@ -99,24 +171,9 @@
         }
 
         &__contact{
-            p > span{
-                color: #d4d4e4;
+            p:not(:last-child){
+                margin-bottom: $gutter-vertical-small;
             }
-=======
-        
-        &__img{
-            margin-right: $gutter-horizontal;
-
-            @include respond(tab-port){
-                margin-right: $gutter-horizontal-medium;
-            }
-
-            img{
-                width: 80%;
-            }
-        }
-
-        &__contact{
             p > span{
                 color: #d4d4e4;
             }
@@ -134,32 +191,16 @@
             justify-content: space-between;
             margin-bottom: $gutter-vertical - .5rem;
 
-
-           .price{
-               color: $color-white;
-           }
->>>>>>> before
-        }
-    }
-
-    &-contact{
-        display: flex;
-        flex-direction: column;
-        margin-top: $gutter-vertical-biggest;
-
-        &__text{
-            color: #a8a8c0;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: $gutter-vertical - .5rem;
-
-
            .price{
                color: $color-white;
            }
         }
+
+        @include respond(phone){
+            margin-top: 2.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid #7676a6;
+        }
     }
-
-
 
 }
