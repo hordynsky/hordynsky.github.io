@@ -2,16 +2,42 @@
     background-color: $color-primary-dark;
     padding: 7rem $gutter-horizontal;
 
-    &-block{
-
-    }
-
     &-brief{
+        display: flex;
 
+        &__contact{
+            display: flex;
+            flex-direction: column;
+            margin-right: $gutter-horizontal-medium ;
+            flex-grow: 1;
+        }
+        
+        &__heading{
+            margin-bottom: 9.2rem;
+        }
+
+        &__img{
+            flex-grow: 1;
+            img{
+                width: 100%;
+            }
+        }
     }
 
     &-background{
+       display: flex;
+       justify-content: space-between;
 
+       &__form{
+           flex-grow: 1;
+           margin-right: $gutter-horizontal-medium;
+           flex-basis: 100%;
+       }
+
+       &__text{
+           padding-top: 6.9rem;
+           flex-grow: 1;
+       }
     }
 
     &-audience{
@@ -21,5 +47,11 @@
     &-order-cta{
         
     }
-}
 
+    p {
+        color: #a8a8c0;
+        font-size: 2rem;
+    }
+
+
+}

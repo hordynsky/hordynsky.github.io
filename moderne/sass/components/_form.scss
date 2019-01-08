@@ -74,6 +74,8 @@ form{
         padding-top: 1.8rem;
         font-size: 1.5rem;
         font-family: inherit;
+        min-width: 36rem;
+        max-width: 55.8rem;
         width: 100%;
         transition: all .9s;
         margin-bottom: $gutter-vertical-small;
@@ -116,11 +118,13 @@ form{
         font-size: 2.2rem;
         font-weight: 400;
         transition: color .5s;
+        margin-bottom: .5rem;
     }
 
     textarea{
         outline: none;
         resize: none;
+        height: 16rem;
         border: 3px solid transparent;
 
         &:focus{
@@ -129,8 +133,8 @@ form{
         }  
     }
 
-    textarea:focus + .label{
-        color: #55c57a;
+    textarea:focus ~ label{
+       color: #55c57a;
     }
 
     .btn{
