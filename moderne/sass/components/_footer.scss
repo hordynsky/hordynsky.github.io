@@ -34,6 +34,11 @@
         &__link{
             color: #627679;
             letter-spacing: .32px;
+            margin-left: 2rem;
+
+            &:not(:last-child){
+                margin-right: 2rem;
+            }
         }
     }
 }

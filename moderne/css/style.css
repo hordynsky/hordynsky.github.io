@@ -77,8 +77,8 @@ body {
     margin-bottom: 3.5rem; }
     @media (max-width: 56.25em) {
       .heading-primary__sub {
-        font-size: 1.8rem;
-        line-height: 2.4rem; } }
+        font-size: 2.25rem;
+        line-height: 2.6rem; } }
   @media only screen and (max-width: 130em) {
     .heading-primary {
       font-size: 4.5rem;
@@ -135,6 +135,9 @@ body {
   font-family: 'Filson Pro';
   font-weight: normal;
   font-style: normal; }
+  @media (max-width: 37.5em) {
+    .paragraph {
+      font-size: 2.25rem; } }
 
 .link {
   font-size: 1.7rem;
@@ -346,7 +349,10 @@ form .btn {
         justify-content: space-around; } }
     .footer-navigation__link {
       color: #627679;
-      letter-spacing: .32px; }
+      letter-spacing: .32px;
+      margin-left: 2rem; }
+      .footer-navigation__link:not(:last-child) {
+        margin-right: 2rem; }
 
 .header {
   display: flex;
@@ -441,7 +447,7 @@ form .btn {
   padding: 0 13.3rem; }
   @media (max-width: 56.25em) {
     .list {
-      padding: 0 7rem; } }
+      padding: 0; } }
   .list__item {
     flex: 1; }
     .list__item:not(:last-child) {
@@ -480,12 +486,12 @@ form .btn {
     margin: -12rem 10rem 0 -5rem; }
     @media only screen and (max-width: 700px) {
       .how-it-works__img {
-        margin: -30rem 0 1.5rem -5rem; } }
+        margin: -34rem 0 1.5rem -5rem; } }
     .how-it-works__img img {
       width: 100%; }
       @media only screen and (max-width: 700px) {
         .how-it-works__img img {
-          width: 50%; } }
+          width: 90%; } }
     @media only screen and (max-width: 700px) {
       .how-it-works__img {
         flex-direction: column; } }
@@ -506,7 +512,8 @@ form .btn {
     padding: 3.5rem 6.5rem 3.5rem 2.7rem; }
     @media (max-width: 37.5em) {
       .how-it-works__list {
-        padding: 2.5rem 2rem; } }
+        padding: 2.5rem 2rem;
+        text-align: center; } }
   .how-it-works__item:not(:last-child) {
     margin-bottom: 2.4rem; }
   .how-it-works__item .heading-quaternary {
@@ -592,6 +599,9 @@ form .btn {
     flex-basis: 40%; }
     .who-we-are__img img {
       width: 100%; }
+      @media (max-width: 37.5em) {
+        .who-we-are__img img {
+          width: 80%; } }
     @media (max-width: 37.5em) {
       .who-we-are__img {
         margin-right: 0;
@@ -717,7 +727,10 @@ form .btn {
         justify-content: space-around; } }
     .footer-navigation__link {
       color: #627679;
-      letter-spacing: .32px; }
+      letter-spacing: .32px;
+      margin-left: 2rem; }
+      .footer-navigation__link:not(:last-child) {
+        margin-right: 2rem; }
 
 .top-line {
   position: relative; }

@@ -26,8 +26,8 @@ body {
         margin-bottom: $gutter-vertical;
 
         @include respond(tab-port){
-            font-size: 1.8rem;
-            line-height: 2.4rem;
+            font-size: 2.25rem;
+            line-height: 2.6rem;
         }  
     }
 
@@ -92,6 +92,10 @@ body {
     color: #959699;
     font-size: inherit;
     @include FilsonProRegular;
+
+    @include respond(phone){
+        font-size: 2.25rem;
+    }
 }
 
 .link{

@@ -22,6 +22,10 @@
 
         img{
             width: 100%;
+
+            @include respond(phone){
+                width: 80%;
+            }
         }
 
         @include respond(phone){
