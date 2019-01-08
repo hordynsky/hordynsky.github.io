@@ -3,7 +3,6 @@
     padding-left: $gutter-horizontal;
     align-items: center;
     
-    margin-top: 2rem;
     margin-bottom: 11rem;   
 
     @include respond(tab-port){
@@ -33,7 +32,8 @@
 
     &__img{
         flex: 1;
-        transform: translateX(5rem);
+        transform: translateX(2.2rem);
+        margin-top: 1rem;
 
         @include respond(tab-land){
             transform: none;

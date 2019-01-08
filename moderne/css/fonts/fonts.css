@@ -64,14 +64,14 @@
 }
 
 @font-face {
-  font-family: 'Filson Pro';
+  font-family: 'Filson Pro Book';
   src: url('FilsonPro-Book.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Filson Pro';
+  font-family: 'Filson Pro Book Italic';
   src: url('FilsonPro-RegularItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;

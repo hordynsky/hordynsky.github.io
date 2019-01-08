@@ -12,32 +12,35 @@ body {
 .heading-primary{
     color: $color-grey-dark;
     font-size: 6.7rem;
-    font-weight: 300;
-    margin-bottom: $gutter-vertical-small;
+    font-weight: 400;
+    font-family: "Filson Pro Book";
+    margin-bottom: $gutter-vertical-smallest;
+    line-height: 6.7rem;
 
     &__sub{
-        color: $color-grey;
+        color: $color-grey-light;
         font-size: 2.1rem;
         font-family: "Muli";
-        font-weight: 600;
+        font-weight: 500;
         line-height: 3rem;
         margin-bottom: $gutter-vertical;
 
         @include respond(tab-port){
             font-size: 1.8rem;
             line-height: 2.4rem;
-        }
-        
+        }  
     }
 
-    @include respond(tab-port){
+    @media only screen and(max-width: 130em){
         font-size: 4.5rem;
         font-weight: 400;
     }
+
 }
 
 .heading-secondary{
     color: $color-lemon;
+    font-family: "Filson Pro Book";
     font-size: 5.8rem;
     font-weight: 300;
     white-space: nowrap;
@@ -59,9 +62,10 @@ body {
 }
 
 .heading-tertiary{
+    color: $color-grey-medium;
     font-size: 4.2rem;
     font-weight: 400;
-
+    @include FilsonProRegular;
 }
 
 .heading-quaternary{
@@ -69,6 +73,7 @@ body {
     font-size: 2.6rem;
     font-weight: 400;
     margin-bottom: $gutter-vertical-smallest;
+    @include FilsonProRegular;
 
     @include respond(phone){
         font-size: 2.87rem;
@@ -84,5 +89,12 @@ body {
 }
 
 .paragraph{
+    color: #959699;
     font-size: inherit;
+    @include FilsonProRegular;
+}
+
+.link{
+    font-size: 1.7rem;
+    @include FilsonProRegular;
 }

@@ -8,10 +8,14 @@
         border-radius: $border-radius-medium;
         background-color: $color-candy;
         display: inline-block;
-        padding: 1.5rem 8.4rem;
+        padding: 1.5rem 5.4rem;
         font-size: 2.3rem;
+        font-family: 'Filson Pro';
+        font-weight: normal;
+        font-style: normal;
         text-align: center;
 
+        text-transform: uppercase;
         transition: all .2s;
         white-space: nowrap;
 
@@ -25,6 +29,7 @@
     }
 
     &:hover{
+        background-color: #E6656B;
         transform: translateY(-.3rem);
         box-shadow: $box-shadow-medium;
     }

@@ -13,6 +13,12 @@
 1m = 16px
 */
 
+@mixin FilsonProRegular{
+    font-family: 'Filson Pro';
+    font-weight: normal;
+    font-style: normal;
+}
+
 @mixin respond($breakpoint){
     @if $breakpoint == phone {
         @media (max-width: 37.5em){ //600px
