@@ -8,7 +8,7 @@ form{
         display: block;
         padding: 1.5rem 2rem;
         padding-top: 1.8rem;
-        font-size: 1.5rem;
+        font-size: 2.2rem;
         @include FilsonProRegular;
         min-width: 26rem;
         width: 100%;
@@ -25,6 +25,7 @@ form{
 
         &::-webkit-input-placeholder{
             font-size: 2.2rem;
+            @include FilsonProRegular;
             transform: translateY(.3rem);
             color: #a8a8c0;
         }

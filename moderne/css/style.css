@@ -220,7 +220,7 @@ form input, form textarea {
   display: block;
   padding: 1.5rem 2rem;
   padding-top: 1.8rem;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-family: 'Filson Pro Regular';
   font-weight: normal;
   font-style: normal;
@@ -236,6 +236,9 @@ form input, form textarea {
       background-color: #8282a1; } }
   form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
     font-size: 2.2rem;
+    font-family: 'Filson Pro Regular';
+    font-weight: normal;
+    font-style: normal;
     transform: translateY(0.3rem);
     color: #a8a8c0; }
   form input:focus:not(textarea), form textarea:focus:not(textarea) {
@@ -332,16 +335,13 @@ form .btn {
   position: relative; }
   @media (min-width: 112.5em) {
     .header {
-      padding: 0; } }
+      padding: 0 9.6rem; } }
   @media (max-width: 56.25em) {
     .header {
       padding: 0 7rem; } }
   @media (max-width: 37.5em) {
     .header {
       padding: 0 1rem; } }
-  @media (min-width: 112.5em) {
-    .header-order {
-      padding: 0 9.6rem; } }
 
 .logo {
   color: #85638d;
@@ -498,7 +498,7 @@ form .btn {
   margin-bottom: 11rem; }
   @media (min-width: 112.5em) {
     .main {
-      padding: 0; } }
+      padding: 0 9.6rem; } }
   @media (max-width: 56.25em) {
     .main {
       padding-left: 7rem; } }
