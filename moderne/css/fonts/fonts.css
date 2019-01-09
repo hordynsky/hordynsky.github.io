@@ -125,7 +125,7 @@
   font-weight: bold;
   font-style: normal;
 }
-
+  
 @font-face {
   font-family: 'Filson Pro';
   src: url('FilsonPro-BoldItalic.ttf') format('truetype');
@@ -134,7 +134,7 @@
 }
 
 @font-face {
-  font-family: 'Filson Pro';
+  font-family: 'Filson Pro Regular';
   src: url('FilsonPro-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;

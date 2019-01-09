@@ -5,6 +5,10 @@
     height: 9rem;
     padding: 0 $gutter-horizontal;
 
+    @include respond(big-desktop){
+        padding: 0;
+    }
+
     @include respond(tab-port){
         padding: 0 $gutter-horizontal-medium;
     }

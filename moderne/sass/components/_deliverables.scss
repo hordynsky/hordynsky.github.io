@@ -6,6 +6,10 @@
     display: flex;
     overflow: hidden;
 
+    @include respond(big-desktop){
+        margin: 0;
+    }
+
     @include respond(tab-port){
         margin: 0 1rem;
     }

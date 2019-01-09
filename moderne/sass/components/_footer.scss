@@ -21,9 +21,8 @@
 
     &-navigation{
         display: flex;
-       
+
         @include respond(phone){
-            color: #627679;
             flex-wrap: wrap;
             text-align: center;
             line-height: 4rem;
@@ -35,9 +34,14 @@
             color: #627679;
             letter-spacing: .32px;
             margin-left: 2rem;
+            transition: color .2s;
 
             &:not(:last-child){
                 margin-right: 2rem;
+            }
+
+            &:hover{
+                color: #313B3D;
             }
         }
     }

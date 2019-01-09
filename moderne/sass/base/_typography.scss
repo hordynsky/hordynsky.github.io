@@ -31,9 +31,16 @@ body {
         }  
     }
 
-    @media only screen and(max-width: 130em){
+    @media only screen and (max-width: 62.5em){
+        font-size: 5.5rem;
+    }
+
+    @media only screen and (max-width: 50em){
         font-size: 4.5rem;
-        font-weight: 400;
+    }
+
+    @include respond(phone){
+        font-size: 4.65rem;
     }
 
 }
@@ -75,9 +82,15 @@ body {
     margin-bottom: $gutter-vertical-smallest;
     @include FilsonProRegular;
 
+    a{
+        color: $color-purple;
+        text-decoration: underline;
+    }
+
     @include respond(phone){
         font-size: 2.87rem;
     }
+
 }
 
 .heading-form{

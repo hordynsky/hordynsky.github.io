@@ -36,9 +36,6 @@ html {
   @media (max-width: 56.25em) {
     html {
       font-size: 49%; } }
-  @media (min-width: 112.5em) {
-    html {
-      font-size: 110%; } }
 
 body {
   overflow-x: hidden; }
@@ -79,10 +76,15 @@ body {
       .heading-primary__sub {
         font-size: 2.25rem;
         line-height: 2.6rem; } }
-  @media only screen and (max-width: 130em) {
+  @media only screen and (max-width: 62.5em) {
     .heading-primary {
-      font-size: 4.5rem;
-      font-weight: 400; } }
+      font-size: 5.5rem; } }
+  @media only screen and (max-width: 50em) {
+    .heading-primary {
+      font-size: 4.5rem; } }
+  @media (max-width: 37.5em) {
+    .heading-primary {
+      font-size: 4.65rem; } }
 
 .heading-secondary {
   color: #f8f9a8;
@@ -106,18 +108,21 @@ body {
   color: #5c5a6a;
   font-size: 4.2rem;
   font-weight: 400;
-  font-family: 'Filson Pro';
+  font-family: 'Filson Pro Regular';
   font-weight: normal;
   font-style: normal; }
 
 .heading-quaternary {
-  color: #7271b4;
+  color: #7f63bd;
   font-size: 2.6rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
-  font-family: 'Filson Pro';
+  font-family: 'Filson Pro Regular';
   font-weight: normal;
   font-style: normal; }
+  .heading-quaternary a {
+    color: #7f63bd;
+    text-decoration: underline; }
   @media (max-width: 37.5em) {
     .heading-quaternary {
       font-size: 2.87rem; } }
@@ -132,7 +137,7 @@ body {
 .paragraph {
   color: #959699;
   font-size: inherit;
-  font-family: 'Filson Pro';
+  font-family: 'Filson Pro Regular';
   font-weight: normal;
   font-style: normal; }
   @media (max-width: 37.5em) {
@@ -141,7 +146,7 @@ body {
 
 .link {
   font-size: 1.7rem;
-  font-family: 'Filson Pro';
+  font-family: 'Filson Pro Regular';
   font-weight: normal;
   font-style: normal; }
 
@@ -168,6 +173,7 @@ body {
   background-color: #fe6b72;
   display: inline-block;
   padding: 1.5rem 5.4rem;
+  padding-top: 2rem;
   font-size: 2.3rem;
   font-family: 'Filson Pro';
   font-weight: normal;
@@ -193,68 +199,6 @@ body {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-/*
-.form{
-    &__input{
-        border: none;
-        border-bottom: 3px solid transparent;
-        background-color: rgba($color-white, .32);
-        border-radius: $border-radius-medium;
-        color: $color-white;
-        display: block;
-        padding: 1.5rem 2rem;
-        padding-top: 1.8rem;
-        font-size: 1.5rem;
-        font-family: inherit;
-        width: 100%;
-        transition: all .9s;
-        margin-bottom: $gutter-vertical-small;
-
-        @include respond(tab-port){
-            width: 100%;
-        }
-
-        @include respond(phone){
-            background-color: #8282a1;
-        }
-
-        &::-webkit-input-placeholder{
-            font-size: 2.2rem;
-            transform: translateY(.3rem);
-            color: #a8a8c0;
-            
-            @include respond(phone){
-                text-align: center;
-            }
-        }
-
-        &:focus{
-            outline: none;
-            border-bottom: 3px solid #55c57a;
-            box-shadow: 0 1rem 2rem rgba($color-black, .1);
-        }  
-
-        &:focus:invalid{
-            border-bottom: 3px solid #ff7730;
-        }
-
-        &-textarea{
-            word-break: break-word;
-        }
-    }
-
-    .btn{
-        width: 100%;
-        margin-top: 1rem;
-
-        &{
-            @include respond(tab-port){
-                padding: 1.5rem 3.5rem;
-            }
-        }
-    }
-}
-*/
 form input, form textarea {
   border: none;
   border-bottom: 3px solid transparent;
@@ -269,7 +213,7 @@ form input, form textarea {
   min-width: 26rem;
   width: 100%;
   transition: all .9s;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2rem; }
   @media (max-width: 56.25em) {
     form input, form textarea {
       width: 100%; } }
@@ -310,8 +254,7 @@ form textarea:focus ~ label {
   color: #55c57a; }
 
 form .btn {
-  width: 100%;
-  margin-top: 1rem; }
+  width: 100%; }
   @media (max-width: 56.25em) {
     form .btn {
       padding: 1.5rem 3.5rem; } }
@@ -341,7 +284,6 @@ form .btn {
     display: flex; }
     @media (max-width: 37.5em) {
       .footer-navigation {
-        color: #627679;
         flex-wrap: wrap;
         text-align: center;
         line-height: 4rem;
@@ -350,9 +292,12 @@ form .btn {
     .footer-navigation__link {
       color: #627679;
       letter-spacing: .32px;
-      margin-left: 2rem; }
+      margin-left: 2rem;
+      transition: color .2s; }
       .footer-navigation__link:not(:last-child) {
         margin-right: 2rem; }
+      .footer-navigation__link:hover {
+        color: #313B3D; }
 
 .header {
   display: flex;
@@ -360,6 +305,9 @@ form .btn {
   align-items: center;
   height: 9rem;
   padding: 0 13.3rem; }
+  @media (min-width: 112.5em) {
+    .header {
+      padding: 0; } }
   @media (max-width: 56.25em) {
     .header {
       padding: 0 7rem; } }
@@ -410,6 +358,9 @@ form .btn {
   padding-left: 13.3rem;
   align-items: center;
   margin-bottom: 11rem; }
+  @media (min-width: 112.5em) {
+    .main {
+      padding: 0; } }
   @media (max-width: 56.25em) {
     .main {
       padding-left: 7rem; } }
@@ -476,6 +427,9 @@ form .btn {
   padding-right: 6.3rem;
   padding-top: 10rem;
   padding-bottom: 14rem; }
+  @media (min-width: 112.5em) {
+    .how-it-works {
+      padding-right: 0; } }
   @media (max-width: 56.25em) {
     .how-it-works {
       padding-right: 7rem; } }
@@ -487,6 +441,9 @@ form .btn {
   .how-it-works__img {
     flex: 1;
     margin: -12rem 10rem 0 -5rem; }
+    @media (min-width: 112.5em) {
+      .how-it-works__img {
+        margin-left: 0; } }
     @media only screen and (max-width: 700px) {
       .how-it-works__img {
         margin: -34rem 0 1.5rem -5rem; } }
@@ -544,6 +501,9 @@ form .btn {
   margin: 0 3.5rem;
   display: flex;
   overflow: hidden; }
+  @media (min-width: 112.5em) {
+    .deliverables {
+      margin: 0; } }
   @media (max-width: 56.25em) {
     .deliverables {
       margin: 0 1rem; } }
@@ -623,7 +583,8 @@ form .btn {
         margin-bottom: 5rem; } }
     .who-we-are__text p {
       color: #8c8d91;
-      margin-top: 1rem; }
+      margin-top: 1rem;
+      line-height: 2.8rem; }
   .who-we-are__cta {
     font-size: 2.9rem; }
     @media (max-width: 37.5em) {
@@ -639,7 +600,7 @@ form .btn {
     .who-we-are__cta span {
       color: #5e576c; }
       .who-we-are__cta span a {
-        color: #7271b4;
+        color: #7f63bd;
         padding-bottom: .2rem;
         text-decoration: underline; }
         @media (max-width: 56.25em) {
@@ -652,6 +613,9 @@ form .btn {
   padding: 5.5rem 10rem 0 5.5rem;
   border-radius: 3px;
   display: flex; }
+  @media (min-width: 112.5em) {
+    .get-started {
+      margin: 0; } }
   @media (max-width: 56.25em) {
     .get-started {
       padding: 3rem 3rem 0 3rem; } }
@@ -700,6 +664,8 @@ form .btn {
     display: flex;
     flex-direction: column;
     width: 100%; }
+  .get-started__link a {
+    text-transform: none !important; }
 
 .footer {
   margin-top: 6rem;
@@ -722,7 +688,6 @@ form .btn {
     display: flex; }
     @media (max-width: 37.5em) {
       .footer-navigation {
-        color: #627679;
         flex-wrap: wrap;
         text-align: center;
         line-height: 4rem;
@@ -731,9 +696,12 @@ form .btn {
     .footer-navigation__link {
       color: #627679;
       letter-spacing: .32px;
-      margin-left: 2rem; }
+      margin-left: 2rem;
+      transition: color .2s; }
       .footer-navigation__link:not(:last-child) {
         margin-right: 2rem; }
+      .footer-navigation__link:hover {
+        color: #313B3D; }
 
 .top-line {
   position: relative; }

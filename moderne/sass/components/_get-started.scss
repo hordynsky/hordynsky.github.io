@@ -6,6 +6,10 @@
     
     display: flex;
 
+    @include respond(big-desktop){
+        margin: 0;
+    }
+
     @include respond(tab-port){
         padding: 3rem 3rem 0 3rem;
     }
@@ -77,4 +81,9 @@
         width: 100%;
     }
 
+    &__link{
+        a{  
+            text-transform: none !important;
+        }
+    }
 }

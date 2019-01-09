@@ -4,6 +4,10 @@
     align-items: center;
     
     margin-bottom: 11rem;   
+    
+    @include respond(big-desktop){
+        padding: 0;
+    }
 
     @include respond(tab-port){
         padding-left: $gutter-horizontal-medium;
