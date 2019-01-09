@@ -311,7 +311,7 @@ form .btn {
   justify-content: space-between;
   align-items: center;
   height: 9rem;
-  padding: 0 13.3rem;
+  padding: 0 15rem;
   position: relative; }
   @media (min-width: 112.5em) {
     .header {
@@ -383,8 +383,6 @@ form .btn {
 .navigation__link {
   color: #3e3c43;
   font-size: 1.9rem;
-  font-weight: normal;
-  font-style: normal;
   text-transform: uppercase;
   transition: color .2s; }
   .navigation__link:hover {
@@ -398,55 +396,58 @@ form .btn {
   .navigation {
     display: none; } }
 
-.navigation-mobile__menu {
-  background-color: #3e3c43;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 100;
-  flex-direction: column;
-  align-items: center;
+.navigation-mobile {
   display: none; }
-
-.navigation-mobile__button {
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  height: 20px;
-  width: 21px; }
-  .navigation-mobile__button span {
-    display: block;
-    height: 3px;
-    position: relative;
-    background: #595c63;
-    border-radius: 3px; }
-    .navigation-mobile__button span:not(:last-child) {
-      margin-bottom: 1px; }
-
-.navigation-mobile__logo {
-  color: #fff;
-  text-transform: uppercase;
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
-  z-index: 101; }
   @media (max-width: 37.5em) {
-    .navigation-mobile__logo {
-      font-weight: 400;
-      font-size: 2.37rem;
-      letter-spacing: .39px; } }
+    .navigation-mobile {
+      display: block; } }
+  .navigation-mobile__menu {
+    background-color: #3e3c43;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    display: none; }
+  .navigation-mobile__button {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    height: 20px;
+    width: 21px; }
+    .navigation-mobile__button span {
+      display: block;
+      height: 3px;
+      position: relative;
+      background: #595c63;
+      border-radius: 3px; }
+      .navigation-mobile__button span:not(:last-child) {
+        margin-bottom: 1px; }
+  .navigation-mobile__logo {
+    color: #fff;
+    text-transform: uppercase;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 101; }
+    @media (max-width: 37.5em) {
+      .navigation-mobile__logo {
+        font-weight: 400;
+        font-size: 2.37rem;
+        letter-spacing: .39px; } }
 
 #close_menu {
   color: #bfc5cd;
@@ -485,7 +486,7 @@ form .btn {
 
 .main {
   display: flex;
-  padding-left: 13.3rem;
+  padding-left: 15rem;
   align-items: center;
   margin-bottom: 11rem; }
   @media (min-width: 112.5em) {
@@ -525,7 +526,7 @@ form .btn {
 .list {
   display: flex;
   justify-content: space-around;
-  padding: 0 13.3rem; }
+  padding: 0 15rem; }
   @media (max-width: 56.25em) {
     .list {
       padding: 0 7rem; } }
@@ -554,7 +555,7 @@ form .btn {
 
 .how-it-works {
   display: flex;
-  padding-right: 6.3rem;
+  padding-right: 8rem;
   padding-top: 10rem;
   padding-bottom: 14rem; }
   @media (min-width: 112.5em) {
@@ -848,6 +849,9 @@ form .btn {
   background-color: #484876;
   padding: 5rem 9.6rem;
   margin: 1rem 2.5rem; }
+  @media (min-width: 112.5em) {
+    .order {
+      margin: 1rem 0; } }
   @media (max-width: 56.25em) {
     .order {
       padding: 3.5rem 4.6rem;

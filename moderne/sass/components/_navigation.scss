@@ -97,8 +97,6 @@
     &__link{
         color: $color-grey-dark;
         font-size: 1.9rem;
-        font-weight: normal;
-        font-style: normal;
         text-transform: uppercase;
         transition: color .2s;
 
@@ -117,6 +115,12 @@
     }
 
     &-mobile{
+        display: none;
+
+        @include respond(phone){
+            display: block;
+        }
+
         &__menu{
             background-color: $color-grey-dark;
             position: fixed;
