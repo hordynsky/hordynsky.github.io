@@ -1000,6 +1000,9 @@ form .btn {
         margin-bottom: 4.5rem; } }
   .order-audience {
     margin-bottom: 6rem; }
+    @media (max-width: 37.5em) {
+      .order-audience {
+        margin-bottom: 2rem; } }
   .order-cta {
     display: flex; }
     @media (max-width: 56.25em) {
