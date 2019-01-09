@@ -76,8 +76,8 @@
 
         @include respond(phone){
             margin-right: 0;
-            padding-left: 0;
-            margin-left: 2rem;
+            margin-left: 2rem !important;
+            padding-left: 0 !important;
             
             &:not(:last-child){
                 margin-bottom: 2.25rem;

@@ -390,8 +390,8 @@ form .btn {
   @media (max-width: 37.5em) {
     .navigation__item {
       margin-right: 0;
-      padding-left: 0;
-      margin-left: 2rem; }
+      margin-left: 2rem !important;
+      padding-left: 0 !important; }
       .navigation__item:not(:last-child) {
         margin-bottom: 2.25rem; }
       .navigation__item a {
