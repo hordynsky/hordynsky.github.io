@@ -722,6 +722,9 @@ form .btn {
   background-color: #484876;
   padding: 5rem 9.6rem;
   margin: 1rem 2.5rem; }
+  @media (min-width: 112.5em) {
+    .order {
+      margin: 1rem 0; } }
   @media (max-width: 56.25em) {
     .order {
       padding: 3.5rem 4.6rem;
