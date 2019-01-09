@@ -30,6 +30,8 @@
         font-weight: 400;
         font-size: 2.37rem;
         letter-spacing: .39px;
+        position: absolute;
+        top: 2.62rem;
     }
 }
 
@@ -164,6 +166,12 @@
                 &:not(:last-child){
                     margin-bottom: 1px;
                 }
+           }
+
+           @include respond(phone){
+               position: absolute;
+               top: 2.62rem;
+               right: 2.37rem;
            }
 
         }

@@ -112,7 +112,8 @@ body {
     @include FilsonProRegular;
 
     @include respond(phone){
-        font-size: 2.25rem;
+        font-size: 2rem;
+        line-height: 2.875rem;
     }
 }
 

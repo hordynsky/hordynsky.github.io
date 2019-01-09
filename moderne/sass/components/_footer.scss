@@ -35,13 +35,16 @@
             letter-spacing: .32px;
             margin-left: 2rem;
             transition: color .2s;
-
             &:not(:last-child){
                 margin-right: 2rem;
             }
 
             &:hover{
                 color: #313B3D;
+            }
+
+            @include respond(phone){
+                font-size: 1.875rem;
             }
         }
     }

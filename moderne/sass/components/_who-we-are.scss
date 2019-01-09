@@ -54,13 +54,12 @@
         p{
             color: $color-grey;
             margin-top: 1rem; 
-            line-height: 2.8rem;
         }
     }
 
     &__cta{
         font-size: 2.9rem;
-
+        
         @include respond(phone){
             text-align: center;
             display: none;
@@ -77,11 +76,13 @@
 
         span{
             color: #5e576c;
+            @include FilsonProRegular;        
 
             a{
                 color: $color-purple;
                 padding-bottom: .2rem;
                 text-decoration: underline;
+                font-family: inherit;
 
                 @include respond(tab-port){
                     display: block;

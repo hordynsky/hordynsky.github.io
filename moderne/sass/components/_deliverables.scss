@@ -2,7 +2,7 @@
     background-color: $color-primary;
     border-radius: $border-radius-medium;
     padding: 5rem 5.9rem 12.4rem 9.5rem;
-    margin: 0 3.5rem;
+    margin: 0 $gutter-horizontal-small;
     display: flex;
     overflow: hidden;
 

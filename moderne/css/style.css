@@ -43,6 +43,12 @@ body {
 .wrapper {
   max-width: 140rem;
   margin: 0 auto; }
+  @media (max-width: 37.5em) {
+    .wrapper {
+      margin: 0 1.25rem; } }
+  @media (max-width: 37.5em) {
+    .wrapper-order {
+      margin: 0; } }
 
 .block-info {
   flex-basis: 41% !important; }
@@ -148,7 +154,8 @@ body {
   font-style: normal; }
   @media (max-width: 37.5em) {
     .paragraph {
-      font-size: 2.25rem; } }
+      font-size: 2rem;
+      line-height: 2.875rem; } }
 
 .link {
   font-size: 1.7rem;
@@ -305,6 +312,9 @@ form .btn {
         margin-right: 2rem; }
       .footer-navigation__link:hover {
         color: #313B3D; }
+      @media (max-width: 37.5em) {
+        .footer-navigation__link {
+          font-size: 1.875rem; } }
 
 .header {
   display: flex;
@@ -335,7 +345,9 @@ form .btn {
     .logo {
       font-weight: 400;
       font-size: 2.37rem;
-      letter-spacing: .39px; } }
+      letter-spacing: .39px;
+      position: absolute;
+      top: 2.62rem; } }
 
 .navigation__list {
   display: flex; }
@@ -436,6 +448,11 @@ form .btn {
       border-radius: 3px; }
       .navigation-mobile__button span:not(:last-child) {
         margin-bottom: 1px; }
+    @media (max-width: 37.5em) {
+      .navigation-mobile__button {
+        position: absolute;
+        top: 2.62rem;
+        right: 2.37rem; } }
   .navigation-mobile__logo {
     color: #fff;
     text-transform: uppercase;
@@ -551,7 +568,11 @@ form .btn {
   @media only screen and (max-width: 700px) {
     .top-list {
       flex-direction: column;
-      text-align: center; } }
+      text-align: center; }
+      .top-list .paragraph {
+        font-family: Helvetica;
+        font-size: 2.25rem;
+        line-height: 3.125rem; } }
 
 .how-it-works {
   display: flex;
@@ -629,7 +650,7 @@ form .btn {
   background-color: #c8e2e7;
   border-radius: 3px;
   padding: 5rem 5.9rem 12.4rem 9.5rem;
-  margin: 0 3.5rem;
+  margin: 0 4.6rem;
   display: flex;
   overflow: hidden; }
   @media (min-width: 112.5em) {
@@ -714,8 +735,7 @@ form .btn {
         margin-bottom: 5rem; } }
     .who-we-are__text p {
       color: #8c8d91;
-      margin-top: 1rem;
-      line-height: 2.8rem; }
+      margin-top: 1rem; }
   .who-we-are__cta {
     font-size: 2.9rem; }
     @media (max-width: 37.5em) {
@@ -729,18 +749,22 @@ form .btn {
         .who-we-are__cta-mobile {
           display: block; } }
     .who-we-are__cta span {
-      color: #5e576c; }
+      color: #5e576c;
+      font-family: 'Filson Pro Regular';
+      font-weight: normal;
+      font-style: normal; }
       .who-we-are__cta span a {
         color: #7f63bd;
         padding-bottom: .2rem;
-        text-decoration: underline; }
+        text-decoration: underline;
+        font-family: inherit; }
         @media (max-width: 56.25em) {
           .who-we-are__cta span a {
             display: block; } }
 
 .get-started {
   background-color: #484876;
-  margin: 0 2.5rem 0 2.5rem;
+  margin: 0 4.6rem;
   padding: 5.5rem 10rem 0 5.5rem;
   border-radius: 3px;
   display: flex; }
@@ -757,8 +781,7 @@ form .btn {
       text-align: center; } }
   @media (max-width: 37.5em) {
     .get-started {
-      margin: 1rem;
-      margin-top: 2rem; } }
+      margin: 2rem 0 1rem 0; } }
   .get-started__header {
     flex: 1;
     margin-right: 7rem; }
@@ -833,6 +856,9 @@ form .btn {
         margin-right: 2rem; }
       .footer-navigation__link:hover {
         color: #313B3D; }
+      @media (max-width: 37.5em) {
+        .footer-navigation__link {
+          font-size: 1.875rem; } }
 
 .top-line {
   position: relative; }
