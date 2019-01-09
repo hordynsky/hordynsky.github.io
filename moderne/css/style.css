@@ -534,7 +534,7 @@ form .btn {
     @media (max-width: 37.5em) {
       .main__cta {
         order: 1;
-        padding: 1.5rem 1rem 2rem 1rem;
+        padding: 1.5rem 0rem 2rem 0rem;
         margin-right: 0; } }
   .main__img {
     flex: 1;
@@ -591,7 +591,13 @@ form .btn {
       padding-right: 0; } }
   @media (max-width: 56.25em) {
     .how-it-works {
-      padding-right: 7rem; } }
+      padding-right: 7rem;
+      margin: 0 1rem; } }
+  @media (max-width: 37.5em) {
+    .how-it-works {
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0; } }
   @media only screen and (max-width: 700px) {
     .how-it-works {
       flex-direction: column;
@@ -669,7 +675,8 @@ form .btn {
   @media (max-width: 37.5em) {
     .deliverables {
       flex-direction: column;
-      padding: 3.7rem .7rem 0 .7rem; } }
+      padding: 3.7rem .7rem 0 .7rem;
+      margin: 0; } }
   .deliverables__info {
     flex: 1;
     display: flex;
@@ -780,7 +787,8 @@ form .btn {
       margin: 0; } }
   @media (max-width: 56.25em) {
     .get-started {
-      padding: 3rem 3rem 0 3rem; } }
+      padding: 3rem 3rem 0 3rem;
+      margin: 2rem 1rem 1rem 1rem; } }
   @media only screen and (max-width: 65em) {
     .get-started {
       padding: 3rem 2rem;
