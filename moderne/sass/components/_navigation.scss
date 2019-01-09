@@ -17,6 +17,12 @@
     @include respond(phone){
         padding: 0 1rem;    
     }
+
+    &-order{
+        @include respond(big-desktop){
+            padding: 0 9.6rem;
+        }
+    }
 }
 
 .logo{
@@ -63,6 +69,10 @@
     &__item{
         margin-left: 2rem;
         transition: color .2s;
+        
+        a{
+            letter-spacing: .4px;
+        }
 
         &:not(:first-child){
             padding-left: 4px;
@@ -84,7 +94,6 @@
                 font-family: "Muli";
                 font-weight: 600;
                 line-height: 5.15rem;
-                letter-spacing: .4px;
 
                 &:hover,
                 &:focus,
