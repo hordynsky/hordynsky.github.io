@@ -39,6 +39,10 @@ body {
         font-size: 4.5rem;
     }
 
+    @media only screen and (max-width: 40.625em) and (min-width: 37.5em){
+        font-size: 4rem;
+    }
+
     @include respond(phone){
         font-size: 4.65rem;
     }

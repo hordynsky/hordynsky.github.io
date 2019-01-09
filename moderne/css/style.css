@@ -82,6 +82,9 @@ body {
   @media only screen and (max-width: 50em) {
     .heading-primary {
       font-size: 4.5rem; } }
+  @media only screen and (max-width: 40.625em) and (min-width: 37.5em) {
+    .heading-primary {
+      font-size: 4rem; } }
   @media (max-width: 37.5em) {
     .heading-primary {
       font-size: 4.65rem; } }
@@ -308,7 +311,8 @@ form .btn {
   justify-content: space-between;
   align-items: center;
   height: 9rem;
-  padding: 0 13.3rem; }
+  padding: 0 13.3rem;
+  position: relative; }
   @media (min-width: 112.5em) {
     .header {
       padding: 0; } }
@@ -323,21 +327,58 @@ form .btn {
   color: #85638d;
   text-transform: uppercase;
   letter-spacing: .36px;
+  font-family: 'Filson Pro Regular';
   font-weight: normal;
+  font-style: normal;
   font-size: 1.9rem; }
   @media (max-width: 37.5em) {
     .logo {
       font-weight: 400;
-      font-size: 2.37rem; } }
+      font-size: 2.37rem;
+      letter-spacing: .39px; } }
 
 .navigation__list {
   display: flex; }
+  @media (max-width: 37.5em) {
+    .navigation__list {
+      display: flex;
+      height: 80vh;
+      width: 100%;
+      margin-top: 9rem;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative; }
+      .navigation__list::after {
+        content: '';
+        align-self: center;
+        border: 1px solid #727272;
+        margin: 0 auto;
+        width: 90%;
+        position: absolute;
+        bottom: 5rem; } }
 
 .navigation__item {
   padding-left: 1rem;
-  margin-left: 2rem; }
+  margin-left: 2rem;
+  transition: color .2s; }
   .navigation__item:not(:last-child) {
     margin-right: 2rem; }
+  @media (max-width: 37.5em) {
+    .navigation__item {
+      margin-right: 0;
+      padding-left: 0;
+      margin-left: 2rem; }
+      .navigation__item:not(:last-child) {
+        margin-bottom: 2.25rem; }
+      .navigation__item a {
+        text-transform: none;
+        font-size: 2.125rem;
+        font-family: "Muli";
+        font-weight: 600;
+        line-height: 5.15rem;
+        letter-spacing: .4px; }
+        .navigation__item a:hover, .navigation__item a:focus, .navigation__item a:active {
+          color: #fff; } }
 
 .navigation__link {
   color: #3e3c43;
@@ -356,6 +397,91 @@ form .btn {
 @media (max-width: 37.5em) {
   .navigation {
     display: none; } }
+
+.navigation-mobile__menu {
+  background-color: #3e3c43;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  flex-direction: column;
+  align-items: center;
+  display: none; }
+
+.navigation-mobile__button {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 20px;
+  width: 21px; }
+  .navigation-mobile__button span {
+    display: block;
+    height: 3px;
+    position: relative;
+    background: #595c63;
+    border-radius: 3px; }
+    .navigation-mobile__button span:not(:last-child) {
+      margin-bottom: 1px; }
+
+.navigation-mobile__logo {
+  color: #fff;
+  text-transform: uppercase;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 101; }
+  @media (max-width: 37.5em) {
+    .navigation-mobile__logo {
+      font-weight: 400;
+      font-size: 2.37rem;
+      letter-spacing: .39px; } }
+
+#close_menu {
+  color: #bfc5cd;
+  cursor: pointer;
+  position: fixed;
+  font-size: 2.4rem;
+  top: 2rem;
+  right: 2rem; }
+
+.show {
+  display: flex;
+  animation: .5s slideLeft linear; }
+
+.hide {
+  display: none; }
+
+@keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
+
+@keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); } }
+
+.navigation-mobile__menu.visible {
+  display: flex;
+  animation: .5s slideRight linear; }
 
 .main {
   display: flex;
@@ -722,9 +848,6 @@ form .btn {
   background-color: #484876;
   padding: 5rem 9.6rem;
   margin: 1rem 2.5rem; }
-  @media (min-width: 112.5em) {
-    .order {
-      margin: 1rem 0; } }
   @media (max-width: 56.25em) {
     .order {
       padding: 3.5rem 4.6rem;
