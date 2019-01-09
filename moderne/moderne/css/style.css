@@ -185,7 +185,7 @@ body {
   border-radius: 3px;
   background-color: #fe6b72;
   display: inline-block;
-  padding: 1.5rem 5rem;
+  padding: 1.5rem 5.4rem;
   font-size: 2.3rem;
   font-family: 'Filson Pro Regular';
   font-weight: normal;
@@ -238,6 +238,9 @@ form input, form textarea {
     font-size: 2.2rem;
     transform: translateY(0.3rem);
     color: #a8a8c0; }
+    @media (max-width: 37.5em) {
+      form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+        text-align: center; } }
   form input:focus:not(textarea), form textarea:focus:not(textarea) {
     outline: none;
     border-bottom: 3px solid #55c57a;
@@ -286,11 +289,11 @@ form .btn {
     .footer {
       margin: 2.6rem 0; } }
   .footer__copyright {
-    color: #87A0A5;
-    font-size: 1.7rem;
+    color: #87a0a5;
+    font-size: 2.125rem;
     line-height: 3.6rem;
     letter-spacing: .32px;
-    line-height: 36px;
+    height: 36px;
     font-family: 'Filson Pro Regular';
     font-weight: normal;
     font-style: normal; }
@@ -311,10 +314,7 @@ form .btn {
       letter-spacing: .32px;
       margin-left: 2rem;
       transition: color .2s;
-      font-size: 1.7rem;
-      letter-spacing: 0.32px;
-      text-align: center;
-      line-height: 36px; }
+      font-size: 2.125rem; }
       .footer-navigation__link:not(:last-child) {
         margin-right: 2rem; }
       .footer-navigation__link:hover {
@@ -328,7 +328,7 @@ form .btn {
   justify-content: space-between;
   align-items: center;
   height: 9rem;
-  padding: 0 13rem;
+  padding: 0 15rem;
   position: relative; }
   @media (min-width: 112.5em) {
     .header {
@@ -377,11 +377,11 @@ form .btn {
         bottom: 5rem; } }
 
 .navigation__item {
+  padding-left: 1rem;
   margin-left: 2rem;
   transition: color .2s; }
-  .navigation__item:not(:first-child) {
-    padding-left: 4px;
-    margin-left: 44px; }
+  .navigation__item:not(:last-child) {
+    margin-right: 2rem; }
   @media (max-width: 37.5em) {
     .navigation__item {
       margin-right: 0;
@@ -482,14 +482,35 @@ form .btn {
   right: 2rem; }
 
 .show {
-  display: flex; }
+  display: flex;
+  animation: .5s slideLeft linear; }
 
 .hide {
   display: none; }
 
+@keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
+
+@keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); } }
+
+.navigation-mobile__menu.visible {
+  display: flex;
+  animation: .5s slideRight linear; }
+
 .main {
   display: flex;
-  padding-left: 13rem;
+  padding-left: 15rem;
   align-items: center;
   margin-bottom: 11rem; }
   @media (min-width: 112.5em) {
@@ -529,7 +550,7 @@ form .btn {
 .list {
   display: flex;
   justify-content: space-around;
-  padding: 0 13rem; }
+  padding: 0 15rem; }
   @media (max-width: 56.25em) {
     .list {
       padding: 0 7rem; } }
@@ -562,7 +583,7 @@ form .btn {
 
 .how-it-works {
   display: flex;
-  padding-right: 6rem;
+  padding-right: 8rem;
   padding-top: 10rem;
   padding-bottom: 14rem; }
   @media (min-width: 112.5em) {
@@ -827,11 +848,11 @@ form .btn {
     .footer {
       margin: 2.6rem 0; } }
   .footer__copyright {
-    color: #87A0A5;
-    font-size: 1.7rem;
+    color: #87a0a5;
+    font-size: 2.125rem;
     line-height: 3.6rem;
     letter-spacing: .32px;
-    line-height: 36px;
+    height: 36px;
     font-family: 'Filson Pro Regular';
     font-weight: normal;
     font-style: normal; }
@@ -852,10 +873,7 @@ form .btn {
       letter-spacing: .32px;
       margin-left: 2rem;
       transition: color .2s;
-      font-size: 1.7rem;
-      letter-spacing: 0.32px;
-      text-align: center;
-      line-height: 36px; }
+      font-size: 2.125rem; }
       .footer-navigation__link:not(:last-child) {
         margin-right: 2rem; }
       .footer-navigation__link:hover {
@@ -1026,7 +1044,5 @@ form .btn {
         margin-top: 2.5rem;
         padding-top: 2.5rem;
         border-top: 1px solid #7676a6; } }
-    .order-contact .btn {
-      text-transform: none !important; }
   .order p {
     color: #a5a9bc; }

@@ -1,0 +1,123 @@
+body {
+    background-color: $color-primary-light;
+    box-sizing: border-box;
+    
+    font-family: $default-font-family, sans-serif;
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 1.42;
+
+}
+
+.heading-primary{
+    color: $color-grey-dark;
+    font-size: 6.7rem;
+    font-weight: 400;
+    font-family: "Filson Pro Book";
+    margin-bottom: $gutter-vertical-smallest;
+    line-height: 6.7rem;
+
+    &__sub{
+        color: $color-grey-light;
+        font-size: 2.1rem;
+        font-family: "Muli";
+        font-weight: 500;
+        line-height: 3rem;
+        margin-bottom: $gutter-vertical;
+
+        @include respond(tab-port){
+            font-size: 2.25rem;
+            line-height: 2.6rem;
+        }  
+    }
+
+    @media only screen and (max-width: 62.5em){
+        font-size: 5.5rem;
+    }
+
+    @media only screen and (max-width: 50em){
+        font-size: 4.5rem;
+    }
+
+    @media only screen and (max-width: 40.625em) and (min-width: 37.5em){
+        font-size: 4rem;
+    }
+
+    @include respond(phone){
+        font-size: 4.65rem;
+    }
+
+}
+
+.heading-secondary{
+    color: $color-lemon;
+    font-family: "Filson Pro Book";
+    font-size: 5.8rem;
+    font-weight: 300;
+    white-space: nowrap;
+
+    &__sub{
+        color: rgba($color-white, .5);
+        font-size: 2.6rem;
+        font-weight: 400;
+        line-height: 3.3rem;
+        @include FilsonProRegular;
+
+        @include respond(phone){
+            font-size: 2rem;
+        }
+    }
+
+    @include respond(phone){
+        font-size: 4.25rem;
+    }
+}
+
+.heading-tertiary{
+    color: $color-grey-medium;
+    font-size: 4.2rem;
+    font-weight: 400;
+    @include FilsonProRegular;
+}
+
+.heading-quaternary{
+    color: $color-purple;
+    font-size: 2.6rem;
+    font-weight: 400;
+    margin-bottom: $gutter-vertical-smallest;
+    @include FilsonProRegular;
+
+    a{
+        color: $color-purple;
+        text-decoration: underline;
+    }
+
+    @include respond(phone){
+        font-size: 2.87rem;
+    }
+
+}
+
+.heading-form{
+    color: #9393bf;
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: $gutter-vertical-smallest;
+}
+
+.paragraph{
+    color: #959699;
+    font-size: inherit;
+    @include FilsonProRegular;
+
+    @include respond(phone){
+        font-size: 2rem;
+        line-height: 2.875rem;
+    }
+}
+
+.link{
+    font-size: 1.7rem;
+    @include FilsonProRegular;
+}

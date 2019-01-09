@@ -11,7 +11,10 @@ window.onload = function() {
 
 	close_menu.onclick = function() {
 		menu_mobile.classList.remove('show');
-		menu_mobile.classList.add('hide');
-	
+		menu_mobile.classList.add('visible');
+		setTimeout(function(){
+			menu_mobile.classList.remove('visible');
+			menu_mobile.classList.add('hide');
+		}, 500)
 	}
 }

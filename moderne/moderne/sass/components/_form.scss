@@ -27,6 +27,10 @@ form{
             font-size: 2.2rem;
             transform: translateY(.3rem);
             color: #a8a8c0;
+            
+            @include respond(phone){
+                text-align: center;
+            }
         }
 
         &:focus{
