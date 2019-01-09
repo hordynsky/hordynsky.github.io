@@ -135,7 +135,7 @@
 
 @font-face {
   font-family: 'Filson Pro Regular';
-  src: url('FilsonPro-Regular.ttf') format('truetype');
+  src: url('FilsonPro-Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
