@@ -56,6 +56,11 @@ body {
 .block-img {
   flex-basis: 59% !important; }
 
+span {
+  font-family: 'FilsonProRegular';
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   background-color: #e3f0f0;
   box-sizing: border-box;
@@ -261,6 +266,9 @@ form label {
   font-weight: 400;
   transition: color .5s;
   margin-bottom: .5rem; }
+  @media (max-width: 37.5em) {
+    form label {
+      font-size: 2.25rem; } }
 
 form textarea {
   outline: none;
@@ -332,7 +340,8 @@ form .btn {
         color: #313B3D; }
       @media (max-width: 37.5em) {
         .footer-navigation__link {
-          font-size: 1.875rem; } }
+          font-size: 1.875rem;
+          line-height: 4.5rem; } }
 
 .header {
   display: flex;
@@ -882,7 +891,8 @@ form .btn {
         color: #313B3D; }
       @media (max-width: 37.5em) {
         .footer-navigation__link {
-          font-size: 1.875rem; } }
+          font-size: 1.875rem;
+          line-height: 4.5rem; } }
 
 .top-line {
   position: relative; }
@@ -956,8 +966,7 @@ form .btn {
     padding-top: 3.6rem; }
     @media (max-width: 37.5em) {
       .order__text {
-        padding-top: 0;
-        margin-bottom: 5.9375rem; } }
+        padding-top: 0; } }
   .order-brief {
     display: flex;
     align-items: center; }
@@ -1041,6 +1050,8 @@ form .btn {
       margin-bottom: 1.5rem; }
     .order-cta__contact p > span {
       color: #d4d4e4; }
+    .order-cta__text {
+      margin-bottom: 5.9375rem; }
   .order-contact {
     display: flex;
     flex-direction: column;
@@ -1067,6 +1078,7 @@ form .btn {
     line-height: 2.875rem; }
     @media (max-width: 37.5em) {
       .order p {
-        line-height: 2.5rem; }
+        line-height: 2.5rem;
+        font-size: 1.875rem; }
         .order p:not(:last-child) {
           margin-bottom: 1.25rem; } }

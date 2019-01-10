@@ -60,3 +60,7 @@ body{
 .block-img{
     flex-basis: 59% !important;
 }
+
+span{
+    @include FilsonProRegular;
+}

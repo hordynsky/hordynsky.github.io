@@ -88,7 +88,6 @@
 
         @include respond(phone){
             padding-top: 0;
-            margin-bottom: 5.9375rem;
         }
     }
     
@@ -216,6 +215,10 @@
                 color: #d4d4e4;
             }
         }
+
+        &__text{
+            margin-bottom: 5.9375rem;   
+        }
     }
 
     &-contact{
@@ -255,6 +258,7 @@
         
         @include respond(phone){
             line-height: 2.5rem;
+            font-size: 1.875rem;
 
             &:not(:last-child){
                 margin-bottom: 1.25rem;
