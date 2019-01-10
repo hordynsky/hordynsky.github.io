@@ -703,6 +703,9 @@ form .btn {
     .deliverables-list__item:not(:last-child) {
       margin-right: 0;
       margin-bottom: 3.2rem; }
+      @media (max-width: 37.5em) {
+        .deliverables-list__item:not(:last-child) {
+          margin-bottom: 4.25rem; } }
   .deliverables__img {
     flex: 1;
     align-self: center;
