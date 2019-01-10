@@ -14,7 +14,13 @@
 */  
 
 @mixin FilsonProRegular{
-    font-family: 'Filson Pro Regular';
+    font-family: 'FilsonProRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin FilsonProBook{
+    font-family: 'FilsonProBook';
     font-weight: normal;
     font-style: normal;
 }

@@ -8,7 +8,7 @@
     text-align: center;
 
     @include respond(phone){
-        margin: 2.6rem 0;
+        margin: 3.25rem 0;
     }
 
     &__copyright{
@@ -20,6 +20,7 @@
         @include FilsonProRegular;
         @include respond(phone){
             font-size: 1.875rem;
+            margin-bottom: .3rem;
         }
     }
 

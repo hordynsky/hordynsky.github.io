@@ -67,8 +67,9 @@ body {
 .heading-primary {
   color: #3e3c43;
   font-size: 6.7rem;
-  font-weight: 400;
-  font-family: "Filson Pro Book";
+  font-family: 'FilsonProBook';
+  font-weight: normal;
+  font-style: normal;
   margin-bottom: 0.5rem;
   line-height: 6.7rem; }
   .heading-primary__sub {
@@ -97,16 +98,17 @@ body {
 
 .heading-secondary {
   color: #f8f9a8;
-  font-family: "Filson Pro Book";
   font-size: 5.8rem;
-  font-weight: 300;
+  font-family: 'FilsonProBook';
+  font-weight: normal;
+  font-style: normal;
   white-space: nowrap; }
   .heading-secondary__sub {
     color: rgba(255, 255, 255, 0.5);
     font-size: 2.6rem;
     font-weight: 400;
     line-height: 3.3rem;
-    font-family: 'Filson Pro Regular';
+    font-family: 'FilsonProRegular';
     font-weight: normal;
     font-style: normal; }
     @media (max-width: 37.5em) {
@@ -120,7 +122,7 @@ body {
   color: #5c5a6a;
   font-size: 4.2rem;
   font-weight: 400;
-  font-family: 'Filson Pro Regular';
+  font-family: 'FilsonProRegular';
   font-weight: normal;
   font-style: normal; }
 
@@ -129,12 +131,14 @@ body {
   font-size: 2.6rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
-  font-family: 'Filson Pro Regular';
+  font-family: 'FilsonProRegular';
   font-weight: normal;
   font-style: normal; }
   .heading-quaternary a {
     color: #7f63bd;
     text-decoration: underline; }
+    .heading-quaternary a:hover {
+      text-decoration: none; }
   @media (max-width: 37.5em) {
     .heading-quaternary {
       font-size: 2.87rem; } }
@@ -149,7 +153,7 @@ body {
 .paragraph {
   color: #959699;
   font-size: inherit;
-  font-family: 'Filson Pro Regular';
+  font-family: 'FilsonProRegular';
   font-weight: normal;
   font-style: normal; }
   @media (max-width: 37.5em) {
@@ -159,7 +163,7 @@ body {
 
 .link {
   font-size: 1.7rem;
-  font-family: 'Filson Pro Regular';
+  font-family: 'FilsonProRegular';
   font-weight: normal;
   font-style: normal; }
 
@@ -187,7 +191,7 @@ body {
   display: inline-block;
   padding: 1.5rem 5rem;
   font-size: 2.3rem;
-  font-family: 'Filson Pro Regular';
+  font-family: 'FilsonProRegular';
   font-weight: normal;
   font-style: normal;
   text-align: center;
@@ -203,13 +207,10 @@ body {
 
 .btn:hover {
   background-color: #E6656B;
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  transform: translateY(-0.3rem); }
 
 .btn:active {
-  outline: none;
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  transform: translateY(-0.1rem); }
 
 form input, form textarea {
   border: none;
@@ -221,7 +222,7 @@ form input, form textarea {
   padding: 1.5rem 2rem;
   padding-top: 1.8rem;
   font-size: 2.2rem;
-  font-family: 'Filson Pro Regular';
+  font-family: 'FilsonProRegular';
   font-weight: normal;
   font-style: normal;
   min-width: 26rem;
@@ -236,17 +237,23 @@ form input, form textarea {
       background-color: #8282a1; } }
   form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
     font-size: 2.2rem;
-    font-family: 'Filson Pro Regular';
+    font-family: 'FilsonProRegular';
     font-weight: normal;
     font-style: normal;
     transform: translateY(0.3rem);
     color: #a8a8c0; }
+    @media (max-width: 37.5em) {
+      form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+        text-align: center; } }
   form input:focus:not(textarea), form textarea:focus:not(textarea) {
     outline: none;
     border-bottom: 3px solid #55c57a;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
   form input:focus:invalid:not(textarea), form textarea:focus:invalid:not(textarea) {
     border-bottom: 3px solid #ff7730; }
+  @media (max-width: 37.5em) {
+    form input, form textarea {
+      margin-bottom: 1.25rem; } }
 
 form label {
   color: #fff;
@@ -287,19 +294,20 @@ form .btn {
   text-align: center; }
   @media (max-width: 37.5em) {
     .footer {
-      margin: 2.6rem 0; } }
+      margin: 3.25rem 0; } }
   .footer__copyright {
     color: #87A0A5;
     font-size: 1.7rem;
     line-height: 3.6rem;
     letter-spacing: .32px;
     line-height: 36px;
-    font-family: 'Filson Pro Regular';
+    font-family: 'FilsonProRegular';
     font-weight: normal;
     font-style: normal; }
     @media (max-width: 37.5em) {
       .footer__copyright {
-        font-size: 1.875rem; } }
+        font-size: 1.875rem;
+        margin-bottom: .3rem; } }
   .footer-navigation {
     display: flex; }
     @media (max-width: 37.5em) {
@@ -347,7 +355,7 @@ form .btn {
   color: #85638d;
   text-transform: uppercase;
   letter-spacing: .36px;
-  font-family: 'Filson Pro Regular';
+  font-family: 'FilsonProRegular';
   font-weight: normal;
   font-style: normal;
   font-size: 1.9rem; }
@@ -375,7 +383,7 @@ form .btn {
         align-self: center;
         border: 1px solid #727272;
         margin: 0 auto;
-        width: 90%;
+        width: 100%;
         position: absolute;
         bottom: 5rem; } }
 
@@ -390,7 +398,7 @@ form .btn {
   @media (max-width: 37.5em) {
     .navigation__item {
       margin-right: 0;
-      margin-left: 2rem !important;
+      margin-left: 0rem !important;
       padding-left: 0 !important; }
       .navigation__item:not(:last-child) {
         margin-bottom: 2.25rem; }
@@ -432,6 +440,7 @@ form .btn {
     height: 100vh;
     width: 100%;
     z-index: 100;
+    padding: 0 23px;
     flex-direction: column;
     align-items: center;
     display: none; }
@@ -468,8 +477,8 @@ form .btn {
     color: #fff;
     text-transform: uppercase;
     position: fixed;
-    top: 2rem;
-    left: 2rem;
+    top: 18px;
+    left: 23px;
     z-index: 101; }
     @media (max-width: 37.5em) {
       .navigation-mobile__logo {
@@ -482,8 +491,8 @@ form .btn {
   cursor: pointer;
   position: fixed;
   font-size: 2.4rem;
-  top: 2rem;
-  right: 2rem; }
+  top: 20px;
+  right: 23px; }
 
 .show {
   display: flex; }
@@ -560,7 +569,9 @@ form .btn {
       flex-direction: column;
       text-align: center; }
       .top-list .paragraph {
-        font-family: Helvetica;
+        font-family: 'FilsonProRegular';
+        font-weight: normal;
+        font-style: normal;
         font-size: 2.25rem;
         line-height: 3.125rem; } }
 
@@ -585,6 +596,7 @@ form .btn {
     .how-it-works {
       padding-left: 0;
       padding-right: 0;
+      padding-bottom: 10.8rem;
       margin: 0; } }
   .how-it-works__img {
     flex: 1;
@@ -659,7 +671,8 @@ form .btn {
     .deliverables {
       flex-direction: column;
       padding: 3.7rem .7rem 0 .7rem;
-      margin: 0; } }
+      margin: 0;
+      margin-bottom: 7rem; } }
   .deliverables__info {
     flex: 1;
     display: flex;
@@ -703,7 +716,7 @@ form .btn {
     .who-we-are {
       flex-direction: column;
       text-align: center;
-      padding: 5.5rem 1rem 3.8rem 1rem; } }
+      padding: 0 1rem 3.8rem 1rem; } }
   .who-we-are__img {
     flex: 1;
     margin-right: 9rem;
@@ -747,7 +760,7 @@ form .btn {
           display: block; } }
     .who-we-are__cta span {
       color: #5e576c;
-      font-family: 'Filson Pro Regular';
+      font-family: 'FilsonProRegular';
       font-weight: normal;
       font-style: normal; }
       .who-we-are__cta span a {
@@ -755,6 +768,8 @@ form .btn {
         padding-bottom: .2rem;
         text-decoration: underline;
         font-family: inherit; }
+        .who-we-are__cta span a:hover {
+          text-decoration: none; }
         @media (max-width: 56.25em) {
           .who-we-are__cta span a {
             display: block; } }
@@ -779,7 +794,7 @@ form .btn {
       text-align: center; } }
   @media (max-width: 37.5em) {
     .get-started {
-      margin: 2rem 0 1rem 0; } }
+      margin: 2rem 0 0 0; } }
   .get-started__header {
     flex: 1;
     margin-right: 7rem; }
@@ -829,19 +844,20 @@ form .btn {
   text-align: center; }
   @media (max-width: 37.5em) {
     .footer {
-      margin: 2.6rem 0; } }
+      margin: 3.25rem 0; } }
   .footer__copyright {
     color: #87A0A5;
     font-size: 1.7rem;
     line-height: 3.6rem;
     letter-spacing: .32px;
     line-height: 36px;
-    font-family: 'Filson Pro Regular';
+    font-family: 'FilsonProRegular';
     font-weight: normal;
     font-style: normal; }
     @media (max-width: 37.5em) {
       .footer__copyright {
-        font-size: 1.875rem; } }
+        font-size: 1.875rem;
+        margin-bottom: .3rem; } }
   .footer-navigation {
     display: flex; }
     @media (max-width: 37.5em) {
@@ -892,7 +908,8 @@ form .btn {
       margin: 0; } }
   @media (max-width: 37.5em) {
     .order {
-      padding: 3.5rem 1.65rem; } }
+      padding: 4.625rem 1.65rem;
+      padding-bottom: 2.5rem; } }
   .order img {
     width: 100%; }
   .order h4 {
@@ -924,18 +941,23 @@ form .btn {
       margin-bottom: 3rem; }
     @media (max-width: 37.5em) {
       .order__item {
-        flex-direction: column; } }
+        flex-direction: column;
+        margin-bottom: 5.87rem !important; } }
   .order__form {
     margin-right: 7rem; }
     @media (max-width: 56.25em) {
       .order__form {
         margin-right: 7rem; } }
+    @media (max-width: 37.5em) {
+      .order__form {
+        margin-right: 0; } }
   .order__text {
     color: #a8a8c0;
     padding-top: 3.6rem; }
     @media (max-width: 37.5em) {
       .order__text {
-        padding-top: 0; } }
+        padding-top: 0;
+        margin-bottom: 5.9375rem; } }
   .order-brief {
     display: flex;
     align-items: center; }
@@ -946,7 +968,7 @@ form .btn {
       .order-brief {
         flex-direction: column;
         text-align: center;
-        margin-bottom: 4rem;
+        margin-bottom: 3.625rem;
         position: relative; } }
     .order-brief__heading {
       margin-bottom: 10rem;
@@ -956,7 +978,7 @@ form .btn {
           margin-bottom: 4.5rem; } }
       @media (max-width: 37.5em) {
         .order-brief__heading {
-          margin-bottom: 22rem; } }
+          margin-bottom: 26.5rem; } }
     .order-brief__contact {
       margin-right: 7rem;
       z-index: 99; }
@@ -973,10 +995,10 @@ form .btn {
         z-index: 1;
         position: absolute;
         left: 50%;
-        top: 25rem;
+        top: 30rem;
         transform: translate(-50%, -50%); }
         .order-brief__img img {
-          width: 50%; } }
+          width: 80%; } }
   .order-background {
     display: flex;
     flex-direction: column;
@@ -984,11 +1006,16 @@ form .btn {
     @media (max-width: 56.25em) {
       .order-background {
         margin-bottom: 4.5rem; } }
+    @media (max-width: 37.5em) {
+      .order-background {
+        margin-bottom: 0; } }
   .order-audience {
     margin-bottom: 6rem; }
     @media (max-width: 37.5em) {
       .order-audience {
-        margin-bottom: 2rem; } }
+        margin-bottom: 2rem; }
+        .order-audience__invisible {
+          display: none; } }
   .order-cta {
     display: flex; }
     @media (max-width: 56.25em) {
@@ -1006,10 +1033,10 @@ form .btn {
       @media (max-width: 37.5em) {
         .order-cta__img {
           margin-right: 0;
-          margin-bottom: 2rem;
+          margin-bottom: 3.125rem;
           text-align: center; } }
       .order-cta__img img {
-        width: 70%; }
+        width: 81.5%; }
     .order-cta__contact p:not(:last-child) {
       margin-bottom: 1.5rem; }
     .order-cta__contact p > span {
@@ -1025,12 +1052,21 @@ form .btn {
       margin-bottom: 3rem; }
       .order-contact__text .price {
         color: #fff; }
+      @media (max-width: 37.5em) {
+        .order-contact__text {
+          margin-bottom: 2.75rem; } }
     @media (max-width: 37.5em) {
       .order-contact {
-        margin-top: 2.5rem;
-        padding-top: 2.5rem;
+        margin-top: 0;
+        padding-top: 3.4375rem;
         border-top: 1px solid #7676a6; } }
     .order-contact .btn {
       text-transform: none !important; }
   .order p {
-    color: #a5a9bc; }
+    color: #a5a9bc;
+    line-height: 2.875rem; }
+    @media (max-width: 37.5em) {
+      .order p {
+        line-height: 2.5rem; }
+        .order p:not(:last-child) {
+          margin-bottom: 1.25rem; } }

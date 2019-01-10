@@ -12,8 +12,7 @@ body {
 .heading-primary{
     color: $color-grey-dark;
     font-size: 6.7rem;
-    font-weight: 400;
-    font-family: "Filson Pro Book";
+    @include FilsonProBook;
     margin-bottom: $gutter-vertical-smallest;
     line-height: 6.7rem;
 
@@ -51,9 +50,8 @@ body {
 
 .heading-secondary{
     color: $color-lemon;
-    font-family: "Filson Pro Book";
     font-size: 5.8rem;
-    font-weight: 300;
+    @include FilsonProBook;
     white-space: nowrap;
 
     &__sub{
@@ -90,6 +88,10 @@ body {
     a{
         color: $color-purple;
         text-decoration: underline;
+
+        &:hover{
+            text-decoration: none;
+        }
     }
 
     @include respond(phone){

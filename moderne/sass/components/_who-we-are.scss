@@ -11,7 +11,7 @@
     @include respond(phone){
         flex-direction: column;
         text-align: center;
-        padding: 5.5rem 1rem 3.8rem 1rem;
+        padding: 0 1rem 3.8rem 1rem;
     }
 
     &__img{
@@ -83,6 +83,10 @@
                 padding-bottom: .2rem;
                 text-decoration: underline;
                 font-family: inherit;
+                
+                &:hover{
+                    text-decoration: none;
+                }
 
                 @include respond(tab-port){
                     display: block;

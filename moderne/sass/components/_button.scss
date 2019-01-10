@@ -29,12 +29,9 @@
     &:hover{
         background-color: #E6656B;
         transform: translateY(-.3rem);
-        box-shadow: $box-shadow-medium;
     }
 
     &:active{
-        outline: none;
         transform: translateY(-.1rem);
-        box-shadow: $box-shadow-small;
     }
 }

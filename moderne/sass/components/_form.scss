@@ -28,6 +28,10 @@ form{
             @include FilsonProRegular;
             transform: translateY(.3rem);
             color: #a8a8c0;
+
+            @include respond(phone){
+                text-align: center;
+            }
         }
 
         &:focus{
@@ -42,6 +46,10 @@ form{
             &:not(textarea){
                 border-bottom: 3px solid #ff7730;
             }
+        }
+
+        @include respond(phone){
+            margin-bottom: 1.25rem;
         }
     }
 
@@ -63,6 +71,8 @@ form{
             border: 3px solid #55c57a;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
         }  
+
+        
     }
 
     textarea:focus ~ label{
