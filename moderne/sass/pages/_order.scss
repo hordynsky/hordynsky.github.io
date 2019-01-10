@@ -116,6 +116,11 @@
             
             @include respond(phone){
                 margin-bottom: 26.5rem;
+
+                &-sub{
+                    font-size: 2rem;
+                    line-height: 2.875rem;
+                }
             }
         }
 
@@ -258,7 +263,7 @@
         
         @include respond(phone){
             line-height: 2.5rem;
-            font-size: 1.875rem;
+            font-size: 1.875rem;    
 
             &:not(:last-child){
                 margin-bottom: 1.25rem;
