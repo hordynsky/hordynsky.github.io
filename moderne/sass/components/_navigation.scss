@@ -44,7 +44,7 @@
             display: flex;
             height: 80vh; 
             width: 100%;
-            margin-top: 9rem;
+            margin-top: 86px;
             flex-direction: column;
             align-items: flex-start;
             position: relative;
@@ -67,6 +67,7 @@
         
         a{
             letter-spacing: .4px;
+            @include FilsonProRegular;
         }
 
         &:not(:first-child){
@@ -78,17 +79,18 @@
             margin-right: 0;
             margin-left: 0rem !important;
             padding-left: 0 !important;
+            margin-top: -2.1px;
             
             &:not(:last-child){
-                margin-bottom: 2.25rem;
+                margin-bottom: 0;
             }
             
             a{
                 text-transform: none;
-                font-size: 2.125rem;
+                font-size: 17px;
                 font-family: "Muli";
                 font-weight: 600;
-                line-height: 5.15rem;
+                line-height: 41px;
 
                 &:hover,
                 &:focus,
@@ -184,13 +186,13 @@
         &__logo{
             color: $color-white;
             text-transform: uppercase;
+            @include FilsonProRegular;
             position: fixed;
             top: 18px;
             left: 23px;
             z-index: 101;   
             @include respond(phone){
-                font-weight: 400;
-                font-size: 2.37rem;
+                font-size: 21px;
                 letter-spacing: .39px;
             }
         }
@@ -203,7 +205,7 @@
     position: fixed;
     font-size: 2.4rem;
     top: 20px;
-    right: 23px;
+    right: 22px;
 }
 
 .show{

@@ -130,10 +130,14 @@ body {
   font-family: 'FilsonProRegular';
   font-weight: normal;
   font-style: normal; }
+  @media (max-width: 37.5em) {
+    .heading-tertiary {
+      font-size: 34px;
+      line-height: 100%; } }
 
 .heading-quaternary {
   color: #7f63bd;
-  font-size: 2.6rem;
+  font-size: 26px;
   font-weight: 400;
   margin-bottom: 0.5rem;
   font-family: 'FilsonProRegular';
@@ -144,9 +148,6 @@ body {
     text-decoration: underline; }
     .heading-quaternary a:hover {
       text-decoration: none; }
-  @media (max-width: 37.5em) {
-    .heading-quaternary {
-      font-size: 2.87rem; } }
 
 .heading-form {
   color: #9393bf;
@@ -263,7 +264,9 @@ form input, form textarea {
 form label {
   color: #fff;
   font-size: 2.2rem;
-  font-weight: 400;
+  font-family: 'FilsonProRegular';
+  font-weight: normal;
+  font-style: normal;
   transition: color .5s;
   margin-bottom: .5rem; }
   @media (max-width: 37.5em) {
@@ -341,7 +344,8 @@ form .btn {
       @media (max-width: 37.5em) {
         .footer-navigation__link {
           font-size: 1.875rem;
-          line-height: 4.5rem; } }
+          line-height: 4.5rem;
+          margin-left: 13px; } }
 
 .header {
   display: flex;
@@ -383,7 +387,7 @@ form .btn {
       display: flex;
       height: 80vh;
       width: 100%;
-      margin-top: 9rem;
+      margin-top: 86px;
       flex-direction: column;
       align-items: flex-start;
       position: relative; }
@@ -400,7 +404,10 @@ form .btn {
   margin-left: 2rem;
   transition: color .2s; }
   .navigation__item a {
-    letter-spacing: .4px; }
+    letter-spacing: .4px;
+    font-family: 'FilsonProRegular';
+    font-weight: normal;
+    font-style: normal; }
   .navigation__item:not(:first-child) {
     padding-left: 4px;
     margin-left: 44px; }
@@ -408,15 +415,16 @@ form .btn {
     .navigation__item {
       margin-right: 0;
       margin-left: 0rem !important;
-      padding-left: 0 !important; }
+      padding-left: 0 !important;
+      margin-top: -2.1px; }
       .navigation__item:not(:last-child) {
-        margin-bottom: 2.25rem; }
+        margin-bottom: 0; }
       .navigation__item a {
         text-transform: none;
-        font-size: 2.125rem;
+        font-size: 17px;
         font-family: "Muli";
         font-weight: 600;
-        line-height: 5.15rem; }
+        line-height: 41px; }
         .navigation__item a:hover, .navigation__item a:focus, .navigation__item a:active {
           color: #fff; } }
 
@@ -485,14 +493,16 @@ form .btn {
   .navigation-mobile__logo {
     color: #fff;
     text-transform: uppercase;
+    font-family: 'FilsonProRegular';
+    font-weight: normal;
+    font-style: normal;
     position: fixed;
     top: 18px;
     left: 23px;
     z-index: 101; }
     @media (max-width: 37.5em) {
       .navigation-mobile__logo {
-        font-weight: 400;
-        font-size: 2.37rem;
+        font-size: 21px;
         letter-spacing: .39px; } }
 
 #close_menu {
@@ -501,7 +511,7 @@ form .btn {
   position: fixed;
   font-size: 2.4rem;
   top: 20px;
-  right: 23px; }
+  right: 22px; }
 
 .show {
   display: flex; }
@@ -690,8 +700,7 @@ form .btn {
     margin-right: 4rem; }
     @media (max-width: 37.5em) {
       .deliverables__info {
-        text-align: center;
-        margin-bottom: 3rem; } }
+        text-align: center; } }
     .deliverables__info .heading-tertiary {
       color: #fff; }
     @media (max-width: 37.5em) {
@@ -714,7 +723,7 @@ form .btn {
       width: 100%; }
     @media (max-width: 37.5em) {
       .deliverables__img {
-        margin-bottom: -17rem; } }
+        margin-bottom: -67px; } }
 
 .who-we-are {
   display: flex;
@@ -754,9 +763,14 @@ form .btn {
     margin-bottom: 9.6rem; }
     @media (max-width: 37.5em) {
       .who-we-are__text {
-        margin-bottom: 5rem; } }
+        margin-bottom: 5rem; }
+        .who-we-are__text p {
+          font-size: 16px;
+          line-height: 23px; } }
     .who-we-are__text p {
       color: #8c8d91;
+      line-height: 28px;
+      font-size: 19px;
       margin-top: 1rem; }
   .who-we-are__cta {
     font-size: 2.9rem; }
@@ -895,7 +909,8 @@ form .btn {
       @media (max-width: 37.5em) {
         .footer-navigation__link {
           font-size: 1.875rem;
-          line-height: 4.5rem; } }
+          line-height: 4.5rem;
+          margin-left: 13px; } }
 
 .top-line {
   position: relative; }
@@ -926,6 +941,9 @@ form .btn {
   .order img {
     width: 100%; }
   .order h4 {
+    font-family: 'FilsonProRegular';
+    font-weight: normal;
+    font-style: normal;
     margin-bottom: 1.5rem; }
   .order__block {
     width: 55%; }
@@ -1014,6 +1032,11 @@ form .btn {
         transform: translate(-50%, -50%); }
         .order-brief__img img {
           width: 80%; } }
+    .order-brief__input {
+      text-align: left; }
+      @media (max-width: 37.5em) {
+        .order-brief__input::-webkit-input-placeholder {
+          text-align: left; } }
   .order-background {
     display: flex;
     flex-direction: column;

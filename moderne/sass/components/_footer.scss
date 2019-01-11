@@ -57,6 +57,7 @@
             @include respond(phone){
                 font-size: 1.875rem;
                 line-height: 4.5rem;
+                margin-left: 13px;
             }
         }
     }

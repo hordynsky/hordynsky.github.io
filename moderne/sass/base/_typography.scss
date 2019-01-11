@@ -76,11 +76,16 @@ body {
     font-size: 4.2rem;
     font-weight: 400;
     @include FilsonProRegular;
+
+    @include respond(phone){
+        font-size: 34px;
+        line-height: 100%;
+    }
 }
 
 .heading-quaternary{
     color: $color-purple;
-    font-size: 2.6rem;
+    font-size: 26px;
     font-weight: 400;
     margin-bottom: $gutter-vertical-smallest;
     @include FilsonProRegular;
@@ -92,10 +97,6 @@ body {
         &:hover{
             text-decoration: none;
         }
-    }
-
-    @include respond(phone){
-        font-size: 2.87rem;
     }
 
 }

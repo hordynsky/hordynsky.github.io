@@ -56,7 +56,7 @@ form{
     label{
         color: $color-white;
         font-size: 2.2rem;
-        font-weight: 400;
+        @include FilsonProRegular;
         transition: color .5s;
         margin-bottom: .5rem;
 
