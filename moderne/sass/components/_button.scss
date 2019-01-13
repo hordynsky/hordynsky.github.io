@@ -28,14 +28,15 @@
 
     &:hover{
         background-color: #E6656B;
-        transform: translateY(-.3rem);
-    }
-
-    &:active{
-        transform: translateY(-.1rem);
     }
 
     &__main{
-        padding-top: 1.9rem !important;
+        height: 58px;
+        padding-top: 1.65rem !important;
+
+        @include respond(tab-land){
+            font-size: 21px !important;
+            padding-top: 1.97rem !important;
+        }
     }
 }
