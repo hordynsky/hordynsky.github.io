@@ -80,8 +80,9 @@ body {
   .heading-primary__sub {
     color: #8b8c8f;
     font-size: 2.1rem;
-    font-family: "Muli";
-    font-weight: 500;
+    font-family: 'FilsonProBook';
+    font-weight: normal;
+    font-style: normal;
     line-height: 3rem;
     margin-bottom: 3.5rem; }
     @media (max-width: 56.25em) {
@@ -103,10 +104,11 @@ body {
   @media (max-width: 37.5em) {
     .heading-primary {
       font-size: 4.65rem;
-      font-family: 'FilsonProRegular';
+      font-family: 'FilsonProBook';
       font-weight: normal;
       font-style: normal;
-      line-height: 100%; } }
+      line-height: 100%;
+      margin-bottom: 12px; } }
 
 .heading-secondary {
   color: #f8f9a8;
@@ -389,7 +391,9 @@ form .btn {
       padding: 0 7rem; } }
   @media (max-width: 37.5em) {
     .header {
-      padding: 0 1rem; } }
+      padding: 0 1rem; }
+      .header__order {
+        margin: 0 1.25rem; } }
 
 .logo {
   color: #85638d;

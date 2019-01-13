@@ -19,8 +19,7 @@ body {
     &__sub{
         color: $color-grey-light;
         font-size: 2.1rem;
-        font-family: "Muli";
-        font-weight: 500;
+        @include FilsonProBook;
         line-height: 3rem;
         margin-bottom: $gutter-vertical;
 
@@ -48,8 +47,9 @@ body {
 
     @include respond(phone){
         font-size: 4.65rem;
-        @include FilsonProRegular;
+        @include FilsonProBook;
         line-height: 100%;
+        margin-bottom: 12px;
     }
 
 }

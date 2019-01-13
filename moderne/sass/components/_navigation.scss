@@ -16,6 +16,10 @@
 
     @include respond(phone){
         padding: 0 1rem;    
+
+        &__order{
+            margin: 0 1.25rem;
+        }
     }
 
 }
