@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'FilsonProHeavy';
+    src: url('FilsonProHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FilsonProBook';
+    src: url('FilsonProBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FilsonProThin';
+    src: url('FilsonProThin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FilsonProRegular';
+    src: url('FilsonProRegular-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FilsonProLight';
+    src: url('FilsonProLight-Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FilsonProLight';
+    src: url('FilsonProLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FilsonProRegular';
+    src: url('FilsonProRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FilsonProThin';
+    src: url('FilsonProThin-Italic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FilsonProBlack';
+    src: url('FilsonProBlack-Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FilsonProHeavy';
+    src: url('FilsonProHeavy-Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FilsonProMedium';
+    src: url('FilsonProMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FilsonProMedium';
+    src: url('FilsonProMedium-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FilsonProBold';
+    src: url('FilsonProBold-Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FilsonProBook';
+    src: url('FilsonProBook-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FilsonProBold';
+    src: url('FilsonProBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FilsonProBlack';
+    src: url('FilsonProBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+

@@ -1,0 +1,14 @@
+.u-center-text{ text-align: center !important}
+
+.u-margin-bottom-big{
+    margin-bottom: $gutter-vertical-big !important;
+}
+
+.u-margin-bottom-medium{ 
+    margin-bottom: $gutter-vertical !important;
+
+    @include respond(tab-port){
+        margin-bottom: 3rem !important;
+    }
+}
+.u-margin-bottom-small{ margin-bottom: $gutter-vertical-small }

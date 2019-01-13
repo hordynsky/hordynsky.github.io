@@ -1,0 +1,51 @@
+.main{
+    display: flex;
+    padding-left: $gutter-horizontal;
+    align-items: center;
+    
+    margin-bottom: 11rem;   
+    
+    @include respond(big-desktop){
+        padding: 0 9.6rem;
+    }
+
+    @include respond(tab-port){
+        padding-left: $gutter-horizontal-medium;
+    }
+
+    @include respond(phone){
+        flex-direction: column;
+        height: auto;
+        margin-top: -4rem;
+        margin-bottom: 4rem;
+        padding: 4rem 0 0 0;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    &__cta{
+        flex: 1;
+        margin-right: 4rem;
+
+        @include respond(phone){
+            order: 1;
+            padding: 1.5rem 0rem 2rem 0rem;
+            margin-right: 0;
+        }
+    }
+
+    &__img{
+        flex: 1;
+        transform: translateX(2.2rem);
+        margin-top: 1rem;
+
+        @include respond(tab-land){
+            transform: none;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
