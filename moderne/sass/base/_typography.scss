@@ -65,7 +65,7 @@ body {
         font-size: 2.6rem;
         font-weight: 400;
         line-height: 3.3rem;
-        @include FilsonProRegular;
+        @include FilsonProBook;
 
         @include respond(phone){
             font-size: 2rem;
@@ -81,7 +81,7 @@ body {
     color: $color-grey-medium;
     font-size: 4.2rem;
     font-weight: 400;
-    @include FilsonProRegular;
+    @include FilsonProBook;
 
     @include respond(phone){
         font-size: 34px;
@@ -94,7 +94,7 @@ body {
     font-size: 26px;
     font-weight: 400;
     margin-bottom: $gutter-vertical-smallest;
-    @include FilsonProRegular;
+    @include FilsonProBook;
 
     a{
         color: $color-purple;
@@ -113,12 +113,13 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: $gutter-vertical-smallest;
+    @include FilsonProBook;
 }
 
 .paragraph{
     color: #959699;
     font-size: inherit;
-    @include FilsonProRegular;
+    @include FilsonProBook;
 
     @include respond(phone){
         font-size: 2rem;
@@ -128,5 +129,5 @@ body {
 
 .link{
     font-size: 1.7rem;
-    @include FilsonProRegular;
+    @include FilsonProBook;
 }

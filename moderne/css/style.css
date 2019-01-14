@@ -163,7 +163,10 @@ body {
   font-size: 2.2rem;
   font-weight: 400;
   text-transform: uppercase;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  font-family: 'FilsonProBook';
+  font-weight: normal;
+  font-style: normal; }
 
 .paragraph {
   color: #959699;
