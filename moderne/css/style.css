@@ -72,16 +72,16 @@ body {
 .heading-primary {
   color: #3e3c43;
   font-size: 6.7rem;
-  font-family: 'FilsonProThin';
-  font-weight: 100;
+  font-family: 'FilsonProLight';
+  font-weight: 300;
   font-style: normal;
   margin-bottom: 0.5rem;
   line-height: 6.7rem; }
   .heading-primary__sub {
     color: #8b8c8f;
     font-size: 2.1rem;
-    font-family: 'FilsonProThin';
-    font-weight: 100;
+    font-family: 'FilsonProLight';
+    font-weight: 300;
     font-style: normal;
     line-height: 3rem;
     margin-bottom: 3.5rem; }
@@ -104,17 +104,14 @@ body {
   @media (max-width: 37.5em) {
     .heading-primary {
       font-size: 4.65rem;
-      font-family: 'FilsonProBook';
-      font-weight: normal;
-      font-style: normal;
       line-height: 100%;
       margin-bottom: 12px; } }
 
 .heading-secondary {
   color: #f8f9a8;
   font-size: 5.8rem;
-  font-family: 'FilsonProThin';
-  font-weight: 100;
+  font-family: 'FilsonProLight';
+  font-weight: 300;
   font-style: normal;
   white-space: nowrap; }
   .heading-secondary__sub {
@@ -122,8 +119,8 @@ body {
     font-size: 2.6rem;
     font-weight: 400;
     line-height: 3.3rem;
-    font-family: 'FilsonProThin';
-    font-weight: 100;
+    font-family: 'FilsonProLight';
+    font-weight: 300;
     font-style: normal; }
     @media (max-width: 37.5em) {
       .heading-secondary__sub {
@@ -364,6 +361,10 @@ form .btn {
           font-size: 1.875rem;
           line-height: 4.5rem;
           margin-left: 10px; } }
+    .footer-navigation__item-first {
+      padding-right: 5px; }
+    .footer-navigation__item-second {
+      padding-left: 5px; }
     .footer-navigation__mobile {
       display: none; }
       @media (max-width: 37.5em) {
@@ -946,6 +947,10 @@ form .btn {
           font-size: 1.875rem;
           line-height: 4.5rem;
           margin-left: 10px; } }
+    .footer-navigation__item-first {
+      padding-right: 5px; }
+    .footer-navigation__item-second {
+      padding-left: 5px; }
     .footer-navigation__mobile {
       display: none; }
       @media (max-width: 37.5em) {

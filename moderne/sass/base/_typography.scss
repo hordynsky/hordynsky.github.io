@@ -12,14 +12,14 @@ body {
 .heading-primary{
     color: $color-grey-dark;
     font-size: 6.7rem;
-    @include FilsonProThin;
+    @include FilsonProLight;
     margin-bottom: $gutter-vertical-smallest;
     line-height: 6.7rem;
 
     &__sub{
         color: $color-grey-light;
         font-size: 2.1rem;
-        @include FilsonProThin;
+        @include FilsonProLight;
         line-height: 3rem;
         margin-bottom: $gutter-vertical;
 
@@ -47,7 +47,6 @@ body {
 
     @include respond(phone){
         font-size: 4.65rem;
-        @include FilsonProBook;
         line-height: 100%;
         margin-bottom: 12px;
     }
@@ -57,7 +56,7 @@ body {
 .heading-secondary{
     color: $color-lemon;
     font-size: 5.8rem;
-    @include FilsonProThin;
+    @include FilsonProLight;
     white-space: nowrap;
 
     &__sub{
@@ -65,7 +64,7 @@ body {
         font-size: 2.6rem;
         font-weight: 400;
         line-height: 3.3rem;
-        @include FilsonProThin;
+        @include FilsonProLight;
 
         @include respond(phone){
             font-size: 2rem;

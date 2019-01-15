@@ -19,6 +19,12 @@
     font-style: normal;
 }
 
+@mixin FilsonProLight{
+    font-family: 'FilsonProLight';
+    font-weight: 300;
+    font-style: normal;
+}
+
 @mixin FilsonProThin{
     font-family: 'FilsonProThin';
     font-weight: 100;
