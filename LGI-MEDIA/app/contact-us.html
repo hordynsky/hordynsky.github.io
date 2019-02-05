@@ -14,16 +14,67 @@
 	<header id="header">
 		<nav id="nav" class="header sticky">
 			<div class="header__logo">
-				<a href="index.html">LGI MEDIA</a>
+				<a href="index.html">
+					<img src="img/logo.png" alt="LGI MEDIA">
+				</a>
 			</div>
 
 			<div class="header__links">
 				<ul>
-					<li>
-						<a href="films.html">Films</a>
+					<li class="header__clone-parent">
+						<div class="header__clone" id="header__watchlist">
+							<span>2</span>
+						</div>
+						<div class="header__clone-hover" id="header__watchlist-hover">
+							<div class="header__clone-item header__clone-item__first">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-item">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-item">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-item">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-clear">
+							   <h5>Clear WatchList</h5>
+							</div>
+						</div>
 					</li>
 					<li>
 						<a href="about.html">About</a>
+					</li>
+					<li class="header__dropdown">
+						<span>Catalogue</span>
+						<div class="header__dropdown-container">
+							<div class="header__dropdown-menu">
+								<a href="films.html">Science</a>
+								<a href="#">History</a>
+								<a href="#">Natural History</a>
+								<a href="#">People & Places</a>
+								<a href="#">Travel & Adventure</a>
+								<a href="#">Arts & Culture</a>
+								<a href="#">Lifestyle</a>
+							</div>
+						</div>
 					</li>
 					<li>
 						<a href="news.html">News</a>
@@ -51,10 +102,19 @@
 
 					<ul>
 						<li>
-							<a href="films.html">Films</a>
-						</li>
-						<li>
 							<a href="about.html">About</a>
+						</li>
+						<li id="dropdown--mobile" class="header__dropdown--mobile">
+							<span>Catalogue</span>
+							<div id="dropdown-menu--mobile" class="header__dropdown-menu--mobile hide">
+								<a href="#">Science</a>
+								<a href="#">History</a>
+								<a href="#">Natural History</a>
+								<a href="#">People & Places</a>
+								<a href="#">Travel & Adventure</a>
+								<a href="#">Arts & Culture</a>
+								<a href="#">Lifestyle</a>
+							</div>
 						</li>
 						<li>
 							<a href="news.html">News</a>

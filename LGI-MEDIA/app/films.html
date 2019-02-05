@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Films</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Start #header -->
+    <header id="header">
+        <nav id="nav" class="header sticky">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="LGI MEDIA">
+                </a>
+            </div>
+
+            <div class="header__links">
+				<ul>
+					<li class="header__clone-parent">
+						<div class="header__clone" id="header__watchlist">
+							<span>2</span>
+						</div>
+						<div class="header__clone-hover" id="header__watchlist-hover">
+							<div class="header__clone-item header__clone-item__first">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-item">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-item">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-item">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-clear">
+							   <h5>Clear WatchList</h5>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li class="header__dropdown">
+						<span>Catalogue</span>
+						<div class="header__dropdown-container">
+							<div class="header__dropdown-menu">
+								<a href="films.html">Science</a>
+								<a href="#">History</a>
+								<a href="#">Natural History</a>
+								<a href="#">People & Places</a>
+								<a href="#">Travel & Adventure</a>
+								<a href="#">Arts & Culture</a>
+								<a href="#">Lifestyle</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="news.html">News</a>
+					</li>
+					<li>
+						<a href="contact-us.html">Contact</a>
+					</li>
+					<li>
+						<a href="#" id="search" class="header__search"><i class="im im-magnifier"></i></a>
+					</li>
+				</ul>
+			</div>
+
+            <div class="header__links_mobile">
+                <div id="button_mobile" class="header__button_mobile">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div id="menu_mobile" class="header__menu_mobile hide">
+                    <i id="close_menu" class="im im-x-mark header__close-menu"></i>
+
+                    <ul>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li id="dropdown--mobile" class="header__dropdown--mobile">
+                            <span>Catalogue</span>
+                            <div id="dropdown-menu--mobile" class="header__dropdown-menu--mobile hide">
+                                <a href="#">Science</a>
+                                <a href="#">History</a>
+                                <a href="#">Natural History</a>
+                                <a href="#">People & Places</a>
+                                <a href="#">Travel & Adventure</a>
+                                <a href="#">Arts & Culture</a>
+                                <a href="#">Lifestyle</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="news.html">News</a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#" id="search_mobile" class="header__search">Search</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End /#header -->
+
+    <!-- Start .search-popup -->
+    <div id="search_popup" class="search-popup hide">
+        <i id="search_popup_close" class="im im-x-mark search-popup__close"></i>
+
+        <input type="search" placeholder="SEARCH OUR COLLECTION">
+        <div class="search-popup__button">
+            <span>Search </span>
+            <i class="im im-magnifier" aria-hidden="true"></i>
+        </div>
+    </div>
+    <!-- End /.search-popup -->
+
+    <!-- Start .films-header -->
+    <div class="films-header">
+        <div class="films-header__title">
+            <h2>EXPLORE OUR FILMS</h2>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group__choice">
+                <span>
+                    Sort By : Latest
+                    <i class="im im-angle-down"></i>
+                </span>
+                
+                <div class="input-group__dropdown">
+                    <ul>
+                        <li>Latest</li>
+                        <li>Date</li>
+                        <li>Time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="input-group__choice">
+                <span>
+                    Genre : All
+                    <i class="im im-angle-down"></i>
+                </span>
+                
+                <div class="input-group__dropdown">
+                    <ul>
+                        <li>All</li>
+                        <li>Science</li>
+                        <li>History</li>
+                        <li>Natural History</li>
+                        <li>Ptople & Places</li>
+                        <li>Travel & Adventure</li>
+                        <li>Arts & Culture</li>
+                        <li>Lifestyle</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="input-group__search">
+                <input type="search" placeholder="search">
+                <i class="im im-magnifier"></i>
+            </div>
+
+            <div class="input-group__filter">
+                <button id="filter" class="input-group__button hide">filter</button>
+
+                <div id="filter-list" class="input-group__filter-list hide">
+                    <i id="close-filter" class="im im-x-mark input-group__close"></i>
+
+                    <div class="input-group__block">
+                        <h5>Film Type</h5>
+                        <div class="input-group__option">
+                            <label class="input-group__element">
+                              <input type="checkbox" checked="checked">
+                              <span class="input-group__heckmark"></span>
+                              Series
+                          </label>
+
+                          <label class="input-group__element">
+                              <input type="checkbox">
+                              <span class="input-group__heckmark"></span>
+                              One-off
+                          </label>
+                      </div>
+                  </div>
+
+                  <div class="input-group__block">
+                    <h5>Quality</h5>
+                    <div class="input-group__option">
+                        <label class="input-group__element">
+                          <input type="checkbox">
+                          <span class="input-group__heckmark"></span>
+                          4K
+                      </label>
+
+                      <label class="input-group__element">
+                          <input type="checkbox" checked="checked">
+                          <span class="input-group__heckmark"></span>
+                          HD
+                      </label>
+                  </div>
+              </div>
+
+              <div class="input-group__block">
+                <h5>Quality</h5>
+                <div class="input-group__option">
+                    <label class="input-group__element">
+                      <input type="checkbox" checked="checked">
+                      <span class="input-group__heckmark"></span>
+                      30 mins
+                  </label>
+
+                  <label class="input-group__element">
+                      <input type="checkbox">
+                      <span class="input-group__heckmark"></span>
+                      60 mins
+                  </label>
+
+                  <label class="input-group__element">
+                      <input type="checkbox">
+                      <span class="input-group__heckmark"></span>
+                      90 mins
+                  </label>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+<!-- End /.films-header -->
+
+<!-- Start .films-list -->
+<div class="films-list">
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, debitis.
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news2.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/humpback_whale.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/humpback_whale.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news2.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+
+    <div class="films-list__element">
+        <div class="films-list__image">
+            <img src="img/news1.jpg" alt="image">
+
+            <div class="films-list__time">
+                <span>08:80</span>
+            </div>
+
+            <div class="films-list__description">
+                <a href="film-detail.html">
+                    <h5>WATCH NOW</h5>
+                </a>
+                <a href="film-detail.html">
+                    <span>ADD TO WATCHLIST</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="films-list__title">
+            <h5>
+                EMPIRE OF TIME : ANCIENT CHINA
+            </h5>
+        </div>            
+    </div>
+</div>
+<!-- End /.films-list -->
+
+<!-- Start .films-pagination -->
+<div class="films-pagination">
+    <ul class="pagination">
+        <li class="pagination__item">
+            <a href="#" class="pagination__link select">1</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#" class="pagination__link">2</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#" class="pagination__link">3</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#" class="pagination__link">Show All</a>
+        </li>
+    </ul>
+</div>
+<!-- End /.films-pagination -->
+
+<!-- Start .footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-copyright">
+            <span>Copyright © LGI MEDIA 2018</span>
+        </div>
+
+        <div class="footer-social">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Vimeo </a>
+        </div>
+    </div>
+</footer>
+<!-- End /.footer -->
+
+<!-- Optional JavaScript -->
+<!-- Main JS -->
+<script src="js/main.js" defer></script>
+</body>
+</html>
