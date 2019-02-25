@@ -1,10 +1,15 @@
 const Mutations = {
-    async creatItem(parent, args, ctx, info){
-        const item =  ctx.db.mutation.createItem({
+    async createItem(parent, args, ctx, info){
+        const item =  await ctx.db.mutation.createItem(
+        {
             data: {
                 ...args
             }
         }, info)
+
+        console.log(item)
+
+        return item;
     }
 };
 
