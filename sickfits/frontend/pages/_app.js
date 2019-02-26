@@ -12,15 +12,16 @@ class MyApp extends App {
 
         // this express the query to the user
         pageProps.query = ctx.query;
-        return pageProps;
+        return {pageProps};
     }
     render(){
         const { Component, apollo, pageProps } = this.props;
+        
         return(
             <Container>
                 <ApolloProvider client={apollo}>
                     <Page>
-                        <Component/>
+                        <Component {...pageProps}/>
                     </Page>
                 </ApolloProvider>
             </Container>
