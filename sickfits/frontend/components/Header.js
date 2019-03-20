@@ -1,6 +1,8 @@
-import Nav from './ Nav';
+import Nav from './Nav';
 import Link from 'next/link';
 import styled from 'styled-components';
+import Cart from './Cart';
+import AutoComplete from './Search';
 
 const Logo = styled.h1`
     font-size: 4rem;
@@ -51,9 +53,9 @@ const Header = () => {
                 <Nav/>
             </div>
             <div className="sub-bar">
-                <p>Search</p>
+                <AutoComplete/>
             </div>
-            <div>Cart</div>
+            <Cart/>
        </StyledHeader>
     );
 };
