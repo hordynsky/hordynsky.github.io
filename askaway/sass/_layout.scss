@@ -109,6 +109,9 @@
     }
 }
 
+///////////////////////////////////
+//SECTION-BOSS
+
 .section-boss{
     display: flex;  
     @include container;
@@ -126,9 +129,44 @@
     }
 }
 
-.section-pain{
+///////////////////////////////////
+//SECTION-PAIN
+
+.section-pain__wrapper{
     background-image: url(../images/curveImage.png);
     background-size: 100% 100%;
     height: 85rem;
-    padding: 15rem 0;     
+    padding: 20rem 0 0 0;
+}
+
+.section-pain{
+    display: flex;
+    @include container;
+
+    & > *{
+        flex: 1;
+    }
+
+    img{
+        width: 80%;
+    }
+
+    h3, p.paragraph{
+        color: $color-white;
+    }
+
+    &__heading{
+        margin-bottom: 2rem;
+    }
+
+    p.paragraph{
+        font-size: 1.5rem;
+        letter-spacing: 1.2px;
+        line-height: 2.5rem;
+        text-shadow: 0 2px 4px rgba(255,255,255,.5);
+    }
+
+    p.paragraph:not(:last-child){
+        margin-bottom: 2rem;    
+    }
 }

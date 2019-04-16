@@ -72,7 +72,7 @@ video {
   cursor: pointer;
   outline: none; }
 
-img {
+section img {
   width: 100%;
   height: auto; }
 
@@ -108,8 +108,11 @@ section:not(:last-child) {
     .btn-orange:hover {
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
     .btn-orange:focus {
-      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-      transform: translateY(0.2rem); }
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
+  .btn:hover {
+    transform: translateY(-2px); }
+  .btn:focus {
+    transform: translateY(0); }
 
 .card {
   position: relative;
@@ -122,12 +125,16 @@ section:not(:last-child) {
   letter-spacing: 1.2px;
   background-color: #F8F8F8;
   border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px; }
+  border-bottom-right-radius: 5px;
+  transition: all .4s; }
   .card:not(:last-child) {
     margin-bottom: 3rem; }
   .card:nth-child(3) {
     margin-left: 2rem;
     margin-right: -2rem; }
+  .card:hover {
+    transform: translateX(4px);
+    cursor: pointer; }
 
 .container {
   max-width: 120rem;
@@ -202,8 +209,28 @@ section:not(:last-child) {
   .section-boss__heading {
     margin-bottom: 2rem; }
 
-.section-pain {
+.section-pain__wrapper {
   background-image: url(../images/curveImage.png);
   background-size: 100% 100%;
   height: 85rem;
-  padding: 15rem 0; }
+  padding: 20rem 0 0 0; }
+
+.section-pain {
+  display: flex;
+  margin: 8rem auto;
+  max-width: 120rem; }
+  .section-pain > * {
+    flex: 1; }
+  .section-pain img {
+    width: 80%; }
+  .section-pain h3, .section-pain p.paragraph {
+    color: #ffffff; }
+  .section-pain__heading {
+    margin-bottom: 2rem; }
+  .section-pain p.paragraph {
+    font-size: 1.5rem;
+    letter-spacing: 1.2px;
+    line-height: 2.5rem;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5); }
+  .section-pain p.paragraph:not(:last-child) {
+    margin-bottom: 2rem; }
