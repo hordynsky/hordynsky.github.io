@@ -92,6 +92,11 @@ h4{
     text-transform: uppercase;
 }
 
+h5{
+    font-size: $default-font-size;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
 
 ///////////////////////////////////
 //PARAGRAPHS
@@ -104,7 +109,6 @@ p, p.paragraph{
 ///////////////////////////////////
 //LINKS
 li{
-    color: $color-primary;
     font-weight: 500;
     list-style: none;
     font-size: 1.4rem;
@@ -112,10 +116,36 @@ li{
 
 ///////////////////////////////////
 //IFRAME
+
 video{
     height: 30rem;
     border-radius: 50px;
-    outline: none;
     border: none;
     cursor: pointer;
+    outline: none;
+}
+
+///////////////////////////////////
+//IMAGES
+
+img{
+    width: 100%;    
+    height: auto;
+}
+
+///////////////////////////////////
+//SECTION
+
+section{
+    &:not(:last-child){
+        margin-bottom: 8rem;
+    }
+}
+
+///////////////////////////////////
+//LAYOUT @CONTAINER
+
+@mixin container {
+    margin: 8rem auto;
+    max-width: 120rem;
 }
