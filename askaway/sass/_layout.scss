@@ -3,7 +3,7 @@
 
 .container{
     max-width: 120rem;
-    margin: 8rem auto;
+    margin: $gutter-horizontal-big auto;
 
     min-height: 50rem;
 
@@ -21,13 +21,35 @@
     min-height: 70rem;
     background-image: url(../images/banner.png);
     background-size: 100% 100%;
-    padding: 3rem 8rem;
-    
+    padding: 3rem $gutter-horizontal-big;
+
+    @include respond(big-desktop){
+        padding: 3rem 22rem;
+    }
+
+    @media only screen and(max-width: 62.5em){
+        min-height: 94rem;
+    }
+
+    @include respond(phone){
+        padding: 3rem $gutter-horizontal-small;
+    }
+        
     display: flex;
     flex-direction: column;
 
     &__top{
         display: flex;
+    }
+
+    &__entry{
+        display: flex;
+        align-items: center;
+
+        @include respond(phone){
+            flex-direction: column;
+            align-items: stretch;   
+        }
     }
 
     &__information{
@@ -39,10 +61,24 @@
         & > *{
             flex: 1;
         }
+
+        @media only screen and(max-width: 62.5em){
+            text-align: center;
+            flex-direction: column;     
+        }
     }
 
     &__text{
-        margin-right: 8rem;
+        margin-right: $gutter-horizontal-big;
+
+        @include respond(tab-port){
+            margin-right: 1rem;
+        }
+
+        @media only screen and(max-width: 62.5em){
+            margin-right: 0;
+            margin-bottom: $gutter-vertical-medium;
+        }
 
         .paragraph{
             margin-bottom: 2rem; 
@@ -53,9 +89,29 @@
         }
     }
     
+    &__video{
+
+        @media only screen and(max-width: 62.5em){
+            padding: 0 20%;
+        }
+
+        @media only screen and(max-width: 50em){
+            padding: 0 15%;
+        }
+
+        @include respond(phone){
+            padding: 0 10%;
+        }
+    }
+
     &__video-container{
         overflow: hidden;
         border-radius: 50px;
+        width: 100%;
+
+        @include respond(phone){
+            border-radius: 0;
+        }
     }
 }
 
@@ -71,8 +127,17 @@
         flex: 1;
     }
 
+    @media screen and (max-width: 62.5em){
+        padding-right: 4rem;
+    }
+
     &__image{
-        margin-right: 8rem;
+        margin-right: $gutter-horizontal-big;
+
+        @include respond(phone){
+            margin-right: 0;
+            width: 50%;
+        }
     }
 
     &__heading{
@@ -107,6 +172,24 @@
             box-shadow: 0 1rem 2rem rgba(0, 0, 0, .05);
         }
     }
+
+    @include respond(phone){
+        flex-direction: column;
+        padding-right: 0;
+
+        p{
+            padding: 0 4rem;
+        }
+
+        &__text{
+            margin-right: 0;
+            text-align: center;
+
+            ul li{
+                list-style: none;
+            }
+        }
+    }
 }
 
 ///////////////////////////////////
@@ -115,17 +198,43 @@
 .section-boss{
     display: flex;  
     @include container;
+    @include respond(tab-land){
+        margin: $gutter-vertical-big $gutter-horizontal-big;
+    }
+    @include respond(phone){
+        margin-left: $gutter-horizontal-small;
+        margin-right: $gutter-horizontal-small;
+        flex-direction: column;
+    }
 
     & > *{
         flex: 1;
     }
 
     &__text{
-        margin-right: 8rem;
+        margin-right: $gutter-horizontal-big;
+
+        @include respond(phone){
+            margin-right: $gutter-horizontal-small;
+            margin-bottom: $gutter-vertical-small;
+        }
     }
 
     &__heading{
         margin-bottom: 2rem;    
+    }
+
+    &__image{
+        display: flex;
+        justify-content: center;
+
+        img{
+            align-self: center;
+
+            @include respond(phone){
+                width: 80%; 
+            }
+        }
     }
 }
 
@@ -142,12 +251,22 @@
     display: flex;
     @include container;
 
+    @media only screen and(max-width: 62.5rem){
+        padding-right: 4rem;   
+    }
+
     & > *{
         flex: 1;
     }
 
-    img{
-        width: 80%;
+    &__image{
+        img{
+            width: 80%;
+
+            @include respond(phone){
+                width: 50%;
+            }
+        }
     }
 
     h3, p.paragraph{
@@ -168,6 +287,17 @@
     p.paragraph:not(:last-child){
         margin-bottom: 2rem;    
     }
+
+    @include respond(phone){
+        flex-direction: column;
+        text-align: center;
+        padding-right: 0;
+        padding-bottom: $gutter-vertical-small;
+
+        &__text{
+            padding: 0 4rem;
+        }
+    }
 }
 
 ///////////////////////////////////
@@ -175,7 +305,7 @@
 
 .section-grid{
     display: flex;
-    padding: 0 2rem 5rem 8rem;
+    padding: 0 2rem 5rem $gutter-horizontal-big;
     align-items: center;
 
     &>*{
@@ -184,7 +314,7 @@
 
     &__text{
         padding-left: 8rem;
-        margin-right: 8rem;
+        margin-right: $gutter-horizontal-big;
         position: relative;
         z-index: 10000;
 
@@ -200,10 +330,32 @@
             width: 100px;
             height: 100%;
         }
+
+        @include respond(phone){
+            margin-right: 0;
+            padding-left: 0;
+            margin-bottom: $gutter-vertical-medium;
+
+            &::before{
+                content: none;
+            }
+        }
     }
 
     &__heading{
         margin-bottom: 2rem;    
+    }
+
+    @include respond(phone){
+        padding: 0 $gutter-horizontal-medium;
+        text-align: center;
+        flex-direction: column; 
+
+        &__image{
+            img {
+                width: 80%;
+            }
+        }
     }
 }
 
@@ -211,7 +363,7 @@
 //SECTION-FAMILY
 
 .section-family{
-    padding: 0 0 8rem 0;
+    padding: 0 0 $gutter-horizontal-big 0;
     display: flex;
     justify-content: center;
 
@@ -220,11 +372,15 @@
         box-shadow: 0 0 2rem rgba($color-black, .3);
         border-radius: 5px;
         width: 70%;
-        padding: 2rem 6rem 4rem 6rem;       
+        padding: 2rem 6rem $gutter-vertical-medium 6rem;       
 
         display: flex;
         flex-direction: column;
         text-align: center;
+
+        @include respond(phone){
+            width: 80%;
+        }
     }
 
     &__image{  
@@ -271,16 +427,41 @@
     justify-content: center;
     flex-direction: column;
 
+    @include respond(tab-port){
+        margin-right: 0;
+        background-size: cover;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        height: 60rem;
+        padding: 20rem 0 20rem 0;
+    }
+
     &__wrapper, &__copyright{
         display: flex;
         width: 60%;
         margin: 0 auto;
+
+        @include respond(phone){
+            width: 90% !important;
+        }
     }
 
     &__wrapper{
-        padding-top: 8rem;
-        margin-top: 8rem;
-        margin-bottom: 4rem;
+        padding-top: $gutter-vertical-big;
+        margin-top: $gutter-vertical-big;
+        margin-bottom: $gutter-vertical-medium;
+
+        @include respond(tab-port){
+            flex-direction: column;
+            margin-left: 0;
+            margin-right: 0;
+            align-self: center;
+        }
+
+        @include respond(phone){
+            margin-bottom: $gutter-vertical-small;
+        }
     }
 
     &__logo{
@@ -290,6 +471,10 @@
         img{
             width: 70%;
         }
+
+        @include respond(tab-port){
+            display: none;
+        }
     }
 
     &__heading{
@@ -298,7 +483,15 @@
     }
 
     &__navigation{
-        margin-right: 8rem; 
+        margin-right: $gutter-horizontal-big; 
+
+        @include respond(tab-port){
+            margin-right: 0;
+        }
+
+        @include respond(phone){
+            margin-bottom: $gutter-vertical-small;
+        }
     }
 
     &__menu{
@@ -321,6 +514,31 @@
             color: #E0E0E0;     
             margin-bottom: 1.5rem;
         }
+
+        @include respond(tab-port){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            input{
+                align-self: center;
+                width: 50%;
+
+                &:hover{
+                    width: 60%;
+                }
+            }
+        }
+
+        @include respond(phone){
+            input{
+                width: 70%;
+
+                &:hover{
+                    width: 80%;
+                }
+            }
+        }
     }
 
     &__copyright{
@@ -340,6 +558,16 @@
 
         a:not(:last-child){
             margin-right: 2rem;
+        }
+
+        @include respond(tab-port){
+            text-align: center;
+            flex-direction: column;
+            padding-bottom: 0rem;
+
+            &-text{
+                margin-right: 0;
+            }
         }
     }
 

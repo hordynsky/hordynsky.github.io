@@ -12,14 +12,19 @@
 .btn{
     color: $color-white;
     padding: 1.2rem;
-    background-color: transparent;
+    background-color: transparent;  
     border-radius: 5px;
     font-size: $default-font-size;
     transition: all .2s;
     box-shadow: $shadow-dark-medium;
 
     &:not(:last-child){
-        margin-right: 2rem;
+        margin-right: $gutter-horizontal-small;
+
+        @include respond(phone){
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
     }
 
     &-white{
@@ -88,7 +93,7 @@
     }
 
     &:nth-child(3){
-        margin-left: 2rem;
+        margin-left: $gutter-vertical-small;
         margin-right: -2rem;
     }
 
