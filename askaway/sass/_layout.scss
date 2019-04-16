@@ -1,3 +1,6 @@
+///////////////////////////////////
+//CONTAINER
+
 .container{
     max-width: 120rem;
     margin: 8rem auto;
@@ -9,5 +12,44 @@
 
         width: 100%;
         max-width: 100%;
+    }
+}
+
+///////////////////////////////////
+//HEADER
+.header{
+    min-height: 70rem;
+    background-image: url(../images/banner.png);
+    background-size: 100% 100%;
+    padding: 3rem 8rem;
+    
+    display: flex;
+    flex-direction: column;
+
+    &__top{
+        display: flex;
+    }
+
+    &__information{
+        display: flex;
+        padding: 6rem 0;
+        color: $color-white;
+        align-items: center;
+
+        & > *{
+            flex: 1;
+        }
+    }
+
+    &__text{
+        margin-right: 4rem;
+
+        .paragraph{
+            margin-bottom: 2rem; 
+        }
+
+        .btn{
+            text-transform: uppercase;
+        }
     }
 }

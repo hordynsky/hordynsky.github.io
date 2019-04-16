@@ -2,6 +2,50 @@
 //LOGO
 
 .logo{
-    height: 3.25rem;
-    margin-left: 2rem;
+    height: 8.5rem;
+    margin-right: auto;
+}
+
+///////////////////////////////////
+//BUTTONS   
+
+.btn{
+    color: $color-white;
+    padding: 1.2rem;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: $default-font-size;
+    transition: all .2s;
+    box-shadow: $shadow-dark-medium;
+
+    &:not(:last-child){
+        margin-right: 2rem;
+    }
+
+    &-white{
+        border: 1px solid $color-white;
+
+        &:hover{
+            background-color: $color-white;
+            color: $color-tertiary;
+            box-shadow: $shadow-light-small;
+        }
+    }
+
+    &-orange{
+        padding: 2rem;
+        font-weight: 600;
+        background-color: $color-primary;
+        box-shadow: $shadow-dark-medium;
+        transition: all .2s;
+
+        &:hover{
+            box-shadow: $shadow-dark-small;
+        }
+
+        &:focus{
+            box-shadow: $shadow-dark-small;
+            transform: translateY(.2rem);
+        }
+    }
 }

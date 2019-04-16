@@ -1,37 +1,38 @@
 /*
-COLORS
-
-Primary: #eb2f64
-Primary light: #FF3366
-Primary dark: #BA265D
-
-Grey light 1: #faf9f9
-Grey light 2: #f4f2f2
-Grey light 3: #f0eeee
-Grey light 4: #ccc
-
-Grey dark 1: #333
-Grey dark 2: #777
-Grey dark 3: #999
-
+    COLORS
 */
 
 $color-primary: #ffa328;
 $color-secondary: #ebfaff; 
 $color-tertiary: #120bb0;
 
-$color-dark: #000000;
+$color-white: #ffffff;
+$color-black: #000;
 
-$shadow-dark: 0 2rem 6rem rgba(var(--color-black), .3);
-$shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
+$color-grey-dark: #999; 
+$color-grey-dark-1: #333; 
+
+/*
+    SHADOWS
+*/
+
+$shadow-dark-medium: 0 2rem 6rem rgba(0, 0, 0, .3);
+$shadow-dark-small: 0 1rem 3rem rgba(0, 0, 0, .3);
+$shadow-light-medium: 0 2rem 4rem rgba(255,255,255, .1);
+$shadow-light-small: 0 1rem 2rem rgba(255,255,255, .05);
 $line: 1px solid var(--color-grey-light-2);
 
+/*
+    BreakPoints
+*/
 
 $bp-largest : 75em;
 $bp-large : 68.75em;
 $bp-medium: 56.25em;
 $bp-small: 37em;
 $bp-smallest: 31.25em;
+
+$default-font-size: 1.6rem;
 
 *{
     padding: 0;
@@ -42,6 +43,15 @@ $bp-smallest: 31.25em;
 *::before,
 *::after{
     box-sizing: inherit
+}
+
+.btn{
+    border: none;
+    outline: none;
+
+    &:hover{
+        cursor: pointer;    
+    }
 }
 
 html{
@@ -55,20 +65,57 @@ html{
 
 body{ 
     font-family: "Open Sans", sans-serif;
-    background-image: linear-gradient(
-        to right bottom,
-        $color-primary,
-        $color-tertiary
-    );
-    background-repeat: no-repeat;
     min-height: 100vh;
 }
 
 ///////////////////////////////////
 //HEADINGS
 
+h1{
+    color: $color-white;
+    font-size: 2.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+h3{
+    color: $color-black;
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+h4{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: $color-primary;
+    text-transform: uppercase;
+}
+
+
 ///////////////////////////////////
 //PARAGRAPHS
+p, p.paragraph{
+    font-size: $default-font-size;
+    letter-spacing: 1.1px;  
+}
+
 
 ///////////////////////////////////
 //LINKS
+li{
+    color: $color-primary;
+    font-weight: 500;
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+///////////////////////////////////
+//IFRAME
+video{
+    height: 30rem;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
