@@ -380,6 +380,7 @@
 
         @include respond(phone){
             width: 80%;
+            padding: 2rem 2rem 4rem 2rem;
         }
     }
 
@@ -433,8 +434,12 @@
         text-align: center;
         justify-content: center;
         align-content: center;
-        height: 60rem;
-        padding: 20rem 0 20rem 0;
+        padding: 0;
+    }
+
+    @include respond(phone){
+        height: 55rem;
+        padding-top: $gutter-vertical-medium;
     }
 
     &__wrapper, &__copyright{
@@ -454,13 +459,13 @@
 
         @include respond(tab-port){
             flex-direction: column;
-            margin-left: 0;
-            margin-right: 0;
+            margin: $gutter-vertical-big 0 $gutter-vertical-small 0;  
             align-self: center;
         }
 
         @include respond(phone){
             margin-bottom: $gutter-vertical-small;
+            margin: $gutter-vertical-medium 0 $gutter-vertical-small 0;  
         }
     }
 
