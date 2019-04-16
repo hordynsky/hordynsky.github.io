@@ -175,7 +175,7 @@
 
 .section-grid{
     display: flex;
-    padding: 0 2rem 10rem 8rem;
+    padding: 0 2rem 5rem 8rem;
     align-items: center;
 
     &>*{
@@ -204,5 +204,73 @@
 
     &__heading{
         margin-bottom: 2rem;    
+    }
+}
+
+///////////////////////////////////
+//SECTION-FAMILY
+
+.section-family{
+    padding: 0 0 16rem 0;
+    display: flex;
+    justify-content: center;
+
+    &__banner{
+        background-color: $color-tertiary-light;
+        box-shadow: 0 0 2rem rgba($color-black, .3);
+        border-radius: 5px;
+        width: 70%;
+        padding: 2rem 6rem 4rem 6rem;       
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__image{  
+        margin-bottom: 2rem;
+        
+        img{
+            width: 60%;
+            height: auto;
+        }
+    }
+
+    &__heading{
+        margin-bottom: 2rem;
+    }
+
+    &__text{
+        font-size: 1.4rem;
+        font-weight: 300;
+        letter-spacing: 1px;    
+        margin-bottom: 2rem;
+    }
+
+    &__button{
+
+        button{
+            padding: 1.2rem 3rem;
+            text-transform: uppercase;
+            transition: all .2s;
+            animation: pulsate 2s infinite; 
+        }
+    }
+
+    @keyframes pulsate {
+        0% {
+            transform: scale(1);
+            box-shadow: none;
+        }
+    
+        50% {
+            transform: scale(1.1);
+            box-shadow: 0 1rem 4rem rgba(0, 0, 0, .25);
+        }
+    
+        100% {
+            transform: scale(1);
+            box-shadow: none;
+        }
     }
 }

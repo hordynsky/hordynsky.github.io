@@ -32,6 +32,10 @@
         }
     }
 
+    &-blue{
+        background-color: $color-tertiary;
+    }
+
     &-orange{
         padding: 2rem;
         font-weight: 600;

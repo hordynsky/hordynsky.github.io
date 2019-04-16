@@ -99,6 +99,8 @@ section:not(:last-child) {
       background-color: #ffffff;
       color: #120bb0;
       box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.05); }
+  .btn-blue {
+    background-color: #120bb0; }
   .btn-orange {
     padding: 2rem;
     font-weight: 600;
@@ -236,7 +238,7 @@ section:not(:last-child) {
 
 .section-grid {
   display: flex;
-  padding: 0 2rem 10rem 8rem;
+  padding: 0 2rem 5rem 8rem;
   align-items: center; }
   .section-grid > * {
     flex: 1; }
@@ -258,3 +260,45 @@ section:not(:last-child) {
       height: 100%; }
   .section-grid__heading {
     margin-bottom: 2rem; }
+
+.section-family {
+  padding: 0 0 16rem 0;
+  display: flex;
+  justify-content: center; }
+  .section-family__banner {
+    background-color: #edf9fe;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: 70%;
+    padding: 2rem 6rem 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+  .section-family__image {
+    margin-bottom: 2rem; }
+    .section-family__image img {
+      width: 60%;
+      height: auto; }
+  .section-family__heading {
+    margin-bottom: 2rem; }
+  .section-family__text {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 2rem; }
+  .section-family__button button {
+    padding: 1.2rem 3rem;
+    text-transform: uppercase;
+    transition: all .2s;
+    animation: pulsate 2s infinite; }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
