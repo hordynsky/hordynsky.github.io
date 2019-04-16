@@ -51,6 +51,11 @@
             box-shadow: $shadow-dark-small;
         }
     }
+    
+    &-signup:hover, 
+    &-login:hover{
+        transform: none !important;
+    }
 
     &:hover{
         transform: translateY(-2px);
