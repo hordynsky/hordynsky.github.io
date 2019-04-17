@@ -83,6 +83,7 @@ $bp-smallest: 31.25em;
 }
 
 $default-font-size: 1.6rem;
+$big-font-size: 2rem;
 
 *{
     padding: 0;
@@ -161,6 +162,10 @@ h5{
 p, p.paragraph{
     font-size: $default-font-size;
     letter-spacing: 1.1px;  
+
+    span{
+        text-decoration: underline;
+    }
 }
 
 

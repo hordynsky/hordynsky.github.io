@@ -106,12 +106,7 @@
 
     &__video-container{
         overflow: hidden;
-        border-radius: 50px;
         width: 100%;
-
-        @include respond(phone){
-            border-radius: 0;
-        }
     }
 }
 
