@@ -69,12 +69,12 @@ h4 {
   text-transform: uppercase; }
 
 h5 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem; }
 
 p, p.paragraph {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   letter-spacing: 1.1px; }
   p span, p.paragraph span {
     text-decoration: underline; }
@@ -82,7 +82,7 @@ p, p.paragraph {
 li {
   font-weight: 500;
   list-style: none;
-  font-size: 1.4rem; }
+  font-size: 1.8rem; }
 
 a {
   text-decoration: none;
@@ -111,7 +111,7 @@ section:not(:last-child) {
   padding: 1.2rem;
   background-color: transparent;
   border-radius: 5px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   transition: all .2s;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
   .btn:not(:last-child) {
@@ -150,8 +150,8 @@ section:not(:last-child) {
   padding: .5rem 0 .5rem 1.5rem;
   border-left: 0.2rem solid #938ff8;
   font-family: inherit;
-  font-size: 1.4rem;
-  line-height: 2.6rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
   letter-spacing: 1.2px;
   background-color: #F8F8F8;
   border-top-right-radius: 5px;
@@ -185,7 +185,7 @@ section:not(:last-child) {
   color: #edf9fe;
   display: block;
   padding: 1rem 4rem 1rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: inherit;
   width: 100%;
   transition: all .9s; }
@@ -260,12 +260,9 @@ section:not(:last-child) {
   @media only screen and (max-width: 62.5em) {
     .header__video {
       padding: 0 20%; } }
-  @media only screen and (max-width: 50em) {
-    .header__video {
-      padding: 0 15%; } }
   @media (max-width: 37.5em) {
     .header__video {
-      padding: 0 10%; } }
+      padding: 0 15%; } }
   .header__video-container {
     overflow: hidden;
     width: 100%; }
@@ -369,7 +366,7 @@ section:not(:last-child) {
   .section-pain__heading {
     margin-bottom: 2rem; }
   .section-pain p.paragraph {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     letter-spacing: 1.2px;
     line-height: 2.5rem;
     text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5); }
@@ -448,10 +445,20 @@ section:not(:last-child) {
   .section-family__heading {
     margin-bottom: 2rem; }
   .section-family__text {
-    font-size: 1.4rem;
-    font-weight: 300;
+    font-size: 1.8rem;
+    font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 2rem; }
+    .section-family__text p {
+      font-size: inherit; }
+  .section-family__list {
+    margin: 2rem 0; }
+    .section-family__list li {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #120bb0;
+      font-weight: 600; }
   .section-family__button button {
     padding: 1.2rem 3rem;
     text-transform: uppercase;
@@ -519,14 +526,14 @@ section:not(:last-child) {
       .footer__navigation {
         margin-bottom: 2rem; } }
   .footer__menu a {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #E0E0E0;
     line-height: 2.8rem;
     transition: color .2s; }
     .footer__menu a:hover {
       color: #fff; }
   .footer__updates p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #E0E0E0;
     margin-bottom: 1.5rem; }
   @media (max-width: 56.25em) {

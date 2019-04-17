@@ -14,7 +14,7 @@
     padding: 1.2rem;
     background-color: transparent;  
     border-radius: 5px;
-    font-size: $default-font-size;
+    font-size: $big-font-size;
     transition: all .2s;
     box-shadow: $shadow-dark-medium;
 
@@ -79,8 +79,8 @@
     padding: .5rem 0 .5rem 1.5rem;
     border-left: 0.2rem solid lighten($color-tertiary, 40%);
     font-family: inherit;
-    font-size: 1.4rem;
-    line-height: 2.6rem;
+    font-size: $big-font-size;
+    line-height: 2.8rem;
     letter-spacing: 1.2px;
     background-color: #F8F8F8;
     border-top-right-radius: 5px;
@@ -135,7 +135,7 @@
         color: $color-tertiary-light;
         display: block;
         padding: 1rem 4rem 1rem 1rem;
-        font-size: 1.5rem;
+        font-size: $default-font-size;
         font-family: inherit;
         width: 100%;
         transition: all .9s;

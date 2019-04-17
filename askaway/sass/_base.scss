@@ -82,7 +82,7 @@ $bp-smallest: 31.25em;
     }
 }
 
-$default-font-size: 1.6rem;
+$default-font-size: 1.8rem;
 $big-font-size: 2rem;
 
 *{
@@ -174,7 +174,7 @@ p, p.paragraph{
 li{
     font-weight: 500;
     list-style: none;
-    font-size: 1.4rem;
+    font-size: $default-font-size;
 }
 
 a{
