@@ -1,0 +1,100 @@
+/* 
+    RESET
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+
+/* 
+    VARIABLES
+*/
+
+:root{
+    --blue-color: #29bcd4;
+    --yellow-color: #f3ed44;
+    --green-color: #7ef162;
+    --grey-color: #808080;
+    --purple-color: #bf3081;
+    --link-color: #1118d6;
+}
+
+/* 
+    FONT-FAMILY
+*/
+
+@font-face {
+    font-family: 'Seguibl';
+    src: url('../font/seguibl.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../font/seguibl.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+    font-family: 'Segui';
+    src: url('../font/SEGOEUI.TTF') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+/* 
+    TYPOGRAPHY
+*/
+
+html{
+    font-size: 62.5%; /* 1rem = 10px; 10px/16px=62.5% */
+}
+
+h1{
+    color: #000000;
+    font-size: 8rem;
+    font-family: 'Seguibl', sans-serif;
+    font-weight: 900;
+}
+
+p{
+    color: #000000;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Segui', sans-serif;
+}
+
+p.paragraph--bold{
+    font-weight: 600;
+}
+
+/* 
+    BUTTON
+*/
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 0;
+    width: 33rem;
+}
