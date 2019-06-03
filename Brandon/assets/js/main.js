@@ -22,13 +22,14 @@ onePageScroll(".projects", {
      popupOpen = document.querySelector('.popup--open'),
      contactUs = document.querySelector('.contact-us'),
      contactUsOpen = document.querySelector('.contact-us--open'),
-     contactUsButton = document.querySelector('.contact-us__button');
+     contactUsButton = document.querySelector('.contact-us__button'),
+     contactUsButtonSuccess = document.querySelector('.contact-us__button--success'),
+     nameInput = document.getElementById('name'),
+     emailInput = document.getElementById('email');
 
  cta.onclick = () => {
      popup.classList.add('open');
      contactUs.classList.add('open');
-
-     
  }
  
 popup.onclick = (e) => {
@@ -37,3 +38,16 @@ popup.onclick = (e) => {
         contactUs.classList.remove('open');
     }
 } 
+
+contactUsButton.onclick = (e) => {
+    e.preventDefault();
+    if(nameInput.value && emailInput.value){
+        [nameInput, emailInput].forEach(input => input.classList.remove('invalid'))
+        contactUsButton.classList.add('contact-us__button--success');
+        setTimeout(() => {
+            contactUsButton.innerHTML = '&#10004;';
+        }, 1800)
+    }else{
+        [nameInput, emailInput].forEach(input => input.classList.add('invalid'))
+    }
+}
