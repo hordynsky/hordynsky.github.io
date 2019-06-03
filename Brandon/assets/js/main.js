@@ -1,3 +1,5 @@
+"use strict"; 
+
 onePageScroll(".projects", {
     sectionContainer: "article",     // sectionContainer accepts any kind of selector in case you don't want to use section
     easing: "ease-in-out",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
@@ -13,3 +15,25 @@ onePageScroll(".projects", {
                                      // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
                                      // the browser's width is less than 600, the fallback will kick in.
  });
+
+ // variables of button and popup classes
+ let cta = document.querySelector('.cta__button'), 
+     popup = document.querySelector('.popup'),
+     popupOpen = document.querySelector('.popup--open'),
+     contactUs = document.querySelector('.contact-us'),
+     contactUsOpen = document.querySelector('.contact-us--open'),
+     contactUsButton = document.querySelector('.contact-us__button');
+
+ cta.onclick = () => {
+     popup.classList.add('open');
+     contactUs.classList.add('open');
+
+     
+ }
+ 
+popup.onclick = (e) => {
+    if(!event.target.matches('[data-contact]')){
+        popup.classList.remove('open');
+        contactUs.classList.remove('open');
+    }
+} 
