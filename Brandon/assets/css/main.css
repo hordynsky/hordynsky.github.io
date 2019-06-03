@@ -22,6 +22,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -30,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  overflow: hidden;
 }
 
 /* 
@@ -37,12 +39,14 @@ body {
 */
 
 :root{
-    --blue-color: #29bcd4;
-    --yellow-color: #f3ed44;
-    --green-color: #7ef162;
-    --grey-color: #808080;
-    --purple-color: #bf3081;
-    --link-color: #1118d6;
+    --color-blue: #29bcd4;
+    --color-yellow: #f3ed44;
+    --color-green: #7ef162;
+    --color-grey: #808080;
+    --color-purple: #bf3081;
+    --color-link: #1118d6;
+    --padding-vertical: 12rem;
+    --padding-horizontal: 7.3rem;
 }
 
 /* 
@@ -60,6 +64,16 @@ body {
     src: url('../font/SEGOEUI.TTF') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
+@font-face {
+    font-family: 'Seguisb';
+    src: url('../font/SegoeUI-SemiBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+    font-family: 'Seguil';
+    src: url('../font/SegoeUI-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
 /* 
     TYPOGRAPHY
 */
@@ -68,11 +82,19 @@ html{
     font-size: 62.5%; /* 1rem = 10px; 10px/16px=62.5% */
 }
 
+@media only screen and (max-width: 1800px){
+    html{
+        font-size: 46%;
+    }
+}
+
 h1{
     color: #000000;
     font-size: 8rem;
+    line-height: 10rem;
     font-family: 'Seguibl', sans-serif;
     font-weight: 900;
+    margin-bottom: 5.9rem;
 }
 
 p{
@@ -80,10 +102,15 @@ p{
     font-size: 3rem;
     font-weight: 400;
     font-family: 'Segui', sans-serif;
+    line-height: 3.5rem;
 }
 
 p.paragraph--bold{
     font-weight: 600;
+}
+
+a{
+    color: var(--color-link);
 }
 
 /* 
@@ -95,6 +122,147 @@ p.paragraph--bold{
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+    border-radius: 100px;
     padding: 24px 0;
     width: 33rem;
+    outline: none;
+    transition: all .2s;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+}
+
+.button:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+
+.button:focus{
+    transform: translateY(0);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
+}
+
+/* 
+    #main 
+*/
+
+#main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 
+    sections & articles & footer
+*/
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    padding: var(--padding-vertical) var(--padding-horizontal) 0;
+    height: 100vh;
+}
+
+footer{
+    background-color: var(--color-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% + var(--padding-horizontal));
+    height: 12.3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* 
+    SECTION .cta 
+*/
+
+.cta{
+    flex: 1 0 37%;
+    padding: var(--padding-vertical) var(--padding-horizontal) 0;    
+}
+
+.cta__socials{
+    margin: 6.8rem 0;
+}
+
+.cta__socials img{
+    width: 60px;
+    height: 48px;
+}
+
+.cta__socials a:not(:last-child){
+    margin-right: 6rem;
+}
+
+.cta .button{
+    background-color: var(--color-purple);
+}
+
+/* 
+    SECTION .projects 
+*/
+
+.projects{
+    flex: 1 0 63%;
+}
+
+.projects__item{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-blue);
+}
+
+
+.projects p{
+    color: #fff;
+}
+
+.projects__name{
+    margin-bottom: 13rem;
+}
+
+.projects__image{
+    width: 33%;
+    align-self: center;
+    margin-bottom: 9rem;
+}
+
+.projects__image img{
+    width: 100%;
+    height: auto;
+}
+
+.projects__type--light{
+    font-family: 'Seguil', sans-serif;
+}
+
+.projects__type--bold{
+    font-family: 'Seguisb', sans-serif;
+}
+
+/* 
+    articles of .projects--items specicis css
+*/
+
+.projects__item-2{
+    background-color: var(--color-yellow);
+}
+
+.projects__item-2 p{
+    color: #000 !important;
+}
+
+.projects__item-3 {
+    background-color: var(--color-green);
+}
+
+.projects__item-3 .projects__image{
+    width: 100%;
 }
