@@ -169,7 +169,7 @@ input, textarea{
     border-radius: 10px;
     color: rgba(0, 0, 0, 0.5);
     font-size: 2.5rem;
-    padding: 2.4rem 0 2.4rem 2.4rem;
+    padding: 2.4rem 0 2.1rem 2.4rem;
     outline: none;
     border: none;
 }
@@ -180,6 +180,15 @@ input::placeholder, textarea::placeholder{
 
 input:not(:last-child){
     margin-right: 7.5rem;
+}
+
+input{
+    border-bottom: 3px solid transparent;
+}
+
+input.invalid{
+    transition: all 1s;
+    border-bottom: 3px solid var(--color-purple);
 }
 
 textarea{
@@ -367,8 +376,17 @@ footer p{
 /* Class to set or unset visibility of contact-us form */
 
 .open{
-    visibility: visible;
-    opacity: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    transition: all 1s;
+}
+
+.hidden{
+    visibility: hidden !important;
+    opacity: 0 !important;
+    display: none !important;
+    transition: all .5s;
 }
 
 .contact-us input{
@@ -380,10 +398,31 @@ footer p{
     margin-bottom: 4.2rem;
 }
 
+.contact-us__buttons-area{
+    max-height: 6rem;
+}
+
 .contact-us__button{
     width: 100%;
     padding: 15px 0;
     line-height: 3.6rem;
+    background-image: linear-gradient(120deg, var(--color-green), var(--color-green) 50%, transparent 0% 50%);
+    background-size: 220%;
+    background-position: 100%;
+    transform-origin: left;
+}
+
+.contact-us__button--success{
+    box-shadow: none;
+    border-radius: 10px;
+    transition: all 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    background-position: 0%;
+}
+
+
+.contact-us__button--success:hover, .contact-us__button--success:focus{
+    transform: none;
+    box-shadow: none;
 }
 
 /* RESPONSIVE VIEW */

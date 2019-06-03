@@ -113,11 +113,14 @@
                 <h2 data-contact="yes">Let's connect!</h2>
                 <form action="#" data-contact="yes">
                     <div class="contact-us__user" data-contact="yes">
-                        <input type="text" placeholder="Name" data-contact="yes" required>
-                        <input type="email" placeholder="Email address" data-contact="yes" required>
+                        <input type="text" placeholder="Name" data-contact="yes" id="name" required >
+                        <input type="email" placeholder="Email address" data-contact="yes" id="email" required>
                     </div>
                     <textarea name="contact-us__text" id="contact-us__text" class="contact-us__text" placeholder="Write a message" data-contact="yes"></textarea>
-                    <button class='button contact-us__button' data-contact="yes">Submit</button>
+                    <div class="contact-us__buttons-area">
+                        <button class='button contact-us__button' data-contact="yes">Submit</button>
+                        <!-- <button class='button contact-us__button contact-us__button--success' data-contact="yes">&#10004;</button> -->
+                    </div>
                 </form>
             </div>
         </div>
