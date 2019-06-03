@@ -439,6 +439,7 @@ footer p{
     footer{
         height: 8.3rem;
     }
+    
 }
 
 @media only screen and (max-height: 56.25em) { /* height less then a 900px */
