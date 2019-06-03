@@ -1,0 +1,448 @@
+/* 
+    RESET
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+
+/* 
+    VARIABLES
+*/
+
+:root{
+    --color-blue: #29bcd4;
+    --color-yellow: #e0da2b;
+    --color-green: #7ef162;
+    --color-grey: #808080;
+    --color-grey-light:#e6e4e4;
+    --color-purple: #bf3081;
+    --color-link: #1118d6;
+    --color-icon: rgb(150,162,164);
+    --padding-vertical: 12rem;
+    --padding-vertical--small: 6rem;
+    --padding-horizontal: 7.3rem;
+}
+
+/* 
+    FONT-FAMILY
+*/
+
+@font-face {
+    font-family: 'Seguibl';
+    src: url('../font/seguibl.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../font/seguibl.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+    font-family: 'Segui';
+    src: url('../font/SEGOEUI.TTF') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+    font-family: 'Seguisb';
+    src: url('../font/SegoeUI-SemiBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+    font-family: 'Seguil';
+    src: url('../font/SegoeUI-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+/* 
+    BASE
+*/
+
+
+html{
+    font-size: 62.5%; /* 1rem = 10px; 10px/16px=62.5% */
+}
+
+/* 
+    TYPOGRAPHY
+*/
+
+h1{
+    color: #000000;
+    font-size: 8rem;
+    line-height: 10rem;
+    font-family: 'Seguibl', sans-serif;
+    font-weight: 900;
+    margin-bottom: 5.9rem;
+}
+
+h2{
+    font-size: 5rem;
+    line-height: 7.1rem;
+    font-family: "Seguibl";
+    margin-bottom: 5.7rem;
+    text-align: center;
+}
+
+p{
+    color: #000000;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Segui', sans-serif;
+    line-height: 3.5rem;
+}
+
+p.paragraph--bold{
+    font-weight: 600;
+}
+
+a{
+    color: var(--color-link);
+}
+
+/* 
+    BUTTON
+*/
+
+.button{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-purple);
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+    border-radius: 100px;
+    padding: 24px 0;
+    width: 33rem;
+    outline: none;
+    transition: all .2s;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+}
+
+.button:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+
+.button:focus{
+    transform: translateY(0);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
+}
+
+/* FORM */
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea{
+    background-color: var(--color-grey-light);
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+    padding: 2.4rem 0 2.4rem 2.4rem;
+    outline: none;
+    border: none;
+}
+
+input::placeholder, textarea::placeholder{
+    font-size: inherit;
+}
+
+input:not(:last-child){
+    margin-right: 7.5rem;
+}
+
+textarea{
+    height: 29.4rem;
+    margin-bottom: 6rem;
+    resize: none;
+}
+
+/* 
+    #main 
+*/
+
+#main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 
+    sections & articles & footer
+*/
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    padding: var(--padding-vertical) var(--padding-horizontal) 0;
+    height: 100vh;
+}
+
+footer{
+    background-color: var(--color-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12.3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer p{
+    font-size: 2rem;
+}
+/* 
+    SECTION .cta 
+*/
+
+.cta{
+    flex: 1 0 37%;
+    padding: var(--padding-vertical) var(--padding-horizontal) 0;    
+}
+
+.cta__socials{
+    margin: 6.8rem 0;
+}
+
+/* .cta__socials--svg */
+
+.cta__socials svg{
+    width: 6rem;
+    height: 6rem;
+    fill: var(--color-icon);
+    transition: transform .2s;
+}
+
+.cta__socials a svg:hover{
+    transform: translateY(-.2rem);
+}
+
+.cta__socials img{
+    width: 60px;
+    height: 48px;
+}
+
+.cta__socials a:not(:last-child){
+    margin-right: 6rem;
+}
+
+.cta__socials--letter svg{
+    transform: scale(1.4) !important;
+}
+
+.cta__socials--letter svg:hover{
+    transform: scale(1.4) translateY(-.2rem)  !important;
+}
+
+/* 
+    SECTION .projects 
+*/
+
+.projects{
+    flex: 1 0 63%;
+}
+
+.projects__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-blue);
+    padding-bottom: 4.8rem;
+}
+
+
+.projects p{
+    color: #fff;
+}
+/* 
+.projects__name{
+    margin-bottom: 13rem;
+} */
+
+.projects__image{
+    width: 33%;
+    align-self: center;
+    /* margin-bottom: 9rem; */
+}
+
+.projects__image img{
+    width: 100%;
+    height: auto;
+}
+
+.projects__type--light{
+    font-family: 'Seguil', sans-serif;
+}
+
+.projects__type--bold{
+    font-family: 'Seguisb', sans-serif;
+}
+
+/* 
+    ARTICLES of .projects--items specific css
+*/
+
+.projects__item-2{
+    background-color: var(--color-yellow);
+}
+
+.projects__item-3 {
+    background-color: var(--color-green);
+    padding-bottom: 13.1rem;
+}
+
+.projects__item-3 .projects__image{
+    width: 100%;
+}
+
+/* CONTACT-US */
+
+.popup{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+.contact-us{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 .3rem .6rem rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-direction: column;
+    width: 94rem;
+    padding: 6.8rem;
+    transition: all .5s;
+}
+
+/* Class to set or unset visibility of contact-us form */
+
+.open{
+    visibility: visible;
+    opacity: 1;
+}
+
+.contact-us input{
+    flex: 1;
+}
+
+.contact-us__user{
+    display: flex;
+    margin-bottom: 4.2rem;
+}
+
+.contact-us__button{
+    width: 100%;
+    padding: 15px 0;
+    line-height: 3.6rem;
+}
+
+/* RESPONSIVE VIEW */
+
+@media only screen and (max-width: 37.5em){ /* 600px */
+
+}
+
+@media only screen and (max-width: 56.25em){ /* 900px */
+    html{
+        font-size: 50%; /* 1rem=8px, 8/16=50% */
+    }
+}
+
+@media only screen and (max-width: 90em){ /* 1440px */
+    html{   
+        font-size: 50%; /* 1rem = 8px, 8/16=50% */
+    }
+
+    article{
+        padding: var(--padding-vertical--small) var(--padding-horizontal) 0;
+    }
+
+    .cta{
+        flex: 1 0 37%;
+        padding: var(--padding-vertical--small) var(--padding-horizontal) 0;    
+    }
+
+    .projects__name {
+        margin-bottom: 6rem;
+    }
+    
+    footer{
+        height: 8.3rem;
+    }
+}
+
+
+@media only screen and (min-width: 112.5em ) and (min-height: 62.5em){ /* 1800px & 1000px height*/
+    html{
+        font-size: 75%;  /* 1rem = 12px, 12/16=75% */
+    }
+
+    article{
+        padding: var(--padding-vertical--small) var(--padding-horizontal) 0;
+    }
+
+    .cta{
+        flex: 1 0 37%;
+        padding: var(--padding-vertical--small) var(--padding-horizontal) 0;    
+    }
+
+    footer{
+        height: 8.3rem;
+    }
+}
+
+@media only screen and (max-height: 56.25em) { /* height less then a 900px */
+    footer{
+        height: 8.3rem;
+    }
+}
