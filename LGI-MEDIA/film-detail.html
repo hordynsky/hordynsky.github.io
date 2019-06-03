@@ -10,32 +10,82 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<!-- Start #header -->
+    <!-- Start #header -->
     <header id="header">
         <nav id="nav" class="header sticky">
             <div class="header__logo">
-                <a href="index.html">LGI MEDIA</a>
+                <a href="index.html">
+                    <img src="img/logo.png" alt="LGI MEDIA">
+                </a>
             </div>
-
             <div class="header__links">
-                <ul>
-                    <li>
-                        <a href="films.html">Films</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="news.html">News</a>
-                    </li>
-                    <li>
-                        <a href="contact-us.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#" id="search" class="header__search"><i class="im im-magnifier"></i></a>
-                    </li>
-                </ul>
-            </div>
+				<ul>
+					<li class="header__clone-parent">
+						<div class="header__clone" id="header__watchlist">
+							<span>2</span>
+						</div>
+						<div class="header__clone-hover" id="header__watchlist-hover">
+							<div class="header__clone-item header__clone-item__first">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-item">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-item">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-item">
+								<img src="img/news1.jpg" alt="news 1">
+								<div class="header__clone-text">
+									<h5>Empire of time: Ancient China</h5>
+									<p><span>8:80</span></p>
+								</div>
+							</div>
+							<div class="header__clone-clear">
+							   <h5>Clear WatchList</h5>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li class="header__dropdown">
+						<span>Catalogue</span>
+						<div class="header__dropdown-container">
+							<div class="header__dropdown-menu">
+								<a href="films.html">Science</a>
+								<a href="#">History</a>
+								<a href="#">Natural History</a>
+								<a href="#">People & Places</a>
+								<a href="#">Travel & Adventure</a>
+								<a href="#">Arts & Culture</a>
+								<a href="#">Lifestyle</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="news.html">News</a>
+					</li>
+					<li>
+						<a href="contact-us.html">Contact</a>
+					</li>
+					<li>
+						<a href="#" id="search" class="header__search"><i class="im im-magnifier"></i></a>
+					</li>
+				</ul>
+			</div>
 
             <div class="header__links_mobile">
                 <div id="button_mobile" class="header__button_mobile">
@@ -51,10 +101,19 @@
 
                     <ul>
                         <li>
-                            <a href="films.html">Films</a>
-                        </li>
-                        <li>
                             <a href="about.html">About</a>
+                        </li>
+                        <li id="dropdown--mobile" class="header__dropdown--mobile">
+                            <span>Catalogue</span>
+                            <div id="dropdown-menu--mobile" class="header__dropdown-menu--mobile hide">
+                                <a href="#">Science</a>
+                                <a href="#">History</a>
+                                <a href="#">Natural History</a>
+                                <a href="#">People & Places</a>
+                                <a href="#">Travel & Adventure</a>
+                                <a href="#">Arts & Culture</a>
+                                <a href="#">Lifestyle</a>
+                            </div>
                         </li>
                         <li>
                             <a href="news.html">News</a>
@@ -84,20 +143,21 @@
     </div>
     <!-- End /.search-popup -->
 
-  <div class="film-detail__preview">
-    <img src="img/humpback_whale.jpg" alt="film-detail previw">
-  </div>
+    <div class="film-detail__preview">
+        <img src="img/humpback_whale.jpg" alt="film-detail previw">
+    </div>
 
-  <div class="film-detail__header">
-    <h1>Humbpack Wales</h1>
-  </div>
+    <div class="film-detail__header">
+        <h1>Humbpack Wales</h1>
+    </div>
 
-  <div class="film-detail__action-mobile">
+    <div class="film-detail__action-mobile">
         <a href="#" class="btn">Add to WatchList</a> 
-        <a href="#" class="btn">Share</a> 
-  </div>
+        <a class="btn share-mobile">Share</a> 
+        <a href="#" class="btn">Download The Flyer</a> 
+    </div>
 
-  <div class="film-detail__information">
+    <div class="film-detail__information">
         <div class="film-detail__synopsis">
             <div class="film-details__header">
                 <h4>Synopsis</h4>
@@ -121,6 +181,15 @@
                 <a href="#" class='mobile-mockup'>
                     <img src="img/emergence.jpg" alt="emergence image">
                 </a>
+            </div>
+
+            <div class="film-detail__awards">
+                <h4>Awards</h4>
+
+                <div class="film-detail__awards-image">
+                    <img src="img/awards-1.jpg" alt="awards">
+                    <img src="img/awards-2.jpg" alt="awards">
+                </div>
             </div>
         </div>
         <div class="film-detail__details">
@@ -151,58 +220,73 @@
             </div>
             <div class="film-detail__details_action">
                 <a href="#" class="btn">Add to WatchList</a> 
-                <a href="#" class="btn">Share</a> 
+                <a class="btn share">Share</a> 
+                <a href="#" class="btn">Download The Flyer</a> 
             </div>
         </div>
-  </div>
+    </div>
 
-  <section class="film-detail__history">
-    <div class="film-detail__history_header">
-        <h4>More From History</h4>
-    </div>
-    <div class="film-detail__history_images">
-        <a href="#">
-            <img src="img/emergence.jpg" alt="emergence image">
-        </a>
-        <a href="#">
-            <img src="img/humpback_whale.jpg" alt="whale image">
-        </a>
-        <a href="#">
-            <img src="img/forest.jpg" alt="forest image">
-        </a>
-        <a href="#">
-            <img src="img/emergence.jpg" alt="emergence image">
-        </a>
-        <a href="#">
-            <img src="img/humpback_whale.jpg" alt="whale image">
-        </a>
-        <a href="#" class='mobile-mockup'>
-            <img src="img/humpback_whale.jpg" alt="whale image">
-        </a>
-    </div>
-    <div class="film-detail__history_action">
-        <a href="#" class="btn">View All History</a> 
-    </div>
-  </section>
-
-<!-- Start .footer -->
-<footer>
-    <div class="footer-container">
-        <div class="footer-copyright">
-            <span>Copyright &copy; LGI MEDIA</span>
+    <section class="film-detail__history">
+        <div class="film-detail__history_header">
+            <h4>More From History</h4>
         </div>
-
-        <div class="footer-social">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Vimeo </a>
+        <div class="film-detail__history_images">
+            <a href="#">
+                <img src="img/emergence.jpg" alt="emergence image">
+            </a>
+            <a href="#">
+                <img src="img/humpback_whale.jpg" alt="whale image">
+            </a>
+            <a href="#">
+                <img src="img/forest.jpg" alt="forest image">
+            </a>
+            <a href="#">
+                <img src="img/emergence.jpg" alt="emergence image">
+            </a>
+            <a href="#">
+                <img src="img/humpback_whale.jpg" alt="whale image">
+            </a>
+            <a href="#" class='mobile-mockup'>
+                <img src="img/humpback_whale.jpg" alt="whale image">
+            </a>
         </div>
-    </div>
-</footer>
-<!-- End /.footer -->
+        <div class="film-detail__history_action">
+            <a href="#" class="btn">View All History</a> 
+        </div>
+    </section>
 
-<!-- Optional JavaScript -->
-<!-- Main JS -->
-<script src="js/main.js" defer></script>
+    <!-- Start .footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copyright">
+                <span>Copyright &copy; LGI MEDIA</span>
+            </div>
+
+            <div class="footer-social">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Vimeo </a>
+            </div>
+        </div>
+    </footer>
+    <!-- End /.footer -->   
+    <!-- Share PopUp -->
+   <div class="share-popup__overlay">
+        <div class="share-popup">
+           <i class="im im-x-mark input-group__close share-popup__close"></i>
+            <h4>Share this program</h4>
+            <div class="share-popup__social">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.718 10.528c0 .792-.268 1.829-.684 2.642-1.009 1.98-3.063 1.967-3.063-.14 0-.786.27-1.799.687-2.58 1.021-1.925 3.06-1.624 3.06.078zm10.282 1.472c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm-5-1.194c0-3.246-2.631-5.601-6.256-5.601-4.967 0-7.744 3.149-7.744 7.073 0 3.672 2.467 6.517 7.024 6.517 2.52 0 4.124-.726 5.122-1.288l-.687-.991c-1.022.593-2.251 1.136-4.256 1.136-3.429 0-5.733-2.199-5.733-5.473 0-5.714 6.401-6.758 9.214-5.071 2.624 1.642 2.524 5.578.582 7.083-1.034.826-2.199.799-1.821-.756 0 0 1.212-4.489 1.354-4.975h-1.364l-.271.952c-.278-.785-.943-1.295-1.911-1.295-2.018 0-3.722 2.19-3.722 4.783 0 1.73.913 2.804 2.38 2.804 1.283 0 1.95-.726 2.364-1.373-.3 2.898 5.725 1.557 5.725-3.525z"/></svg></a>
+            </div>
+            <h5>Or Copy This Link</h5>
+            <input type="text" class="share-popup__input" value="https://www.google.com.au/search?q=abcd&oq=abcd&"/>
+        </div>
+   </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- Main JS -->
+    <script src="js/main.js" defer></script>
 </body>
 </html>

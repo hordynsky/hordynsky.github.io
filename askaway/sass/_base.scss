@@ -1,0 +1,219 @@
+/*
+    COLORS
+*/
+
+$color-primary: #ffa328;
+$color-secondary: #ebfaff; 
+$color-tertiary: #120bb0;
+$color-tertiary-light: rgb(237,249, 254);
+
+$color-white: #ffffff;
+$color-black: #000;
+
+$color-grey-dark: #999; 
+$color-grey-dark-1: #333; 
+
+/*
+    GUTTERS
+*/
+
+$gutter-vertical-big: 8rem;
+$gutter-vertical-medium: 4rem;
+$gutter-vertical-small: 2rem;
+
+$gutter-horizontal-big: 8rem;
+$gutter-horizontal-medium: 4rem;
+$gutter-horizontal-small: 2rem;
+
+/*
+    SHADOWS
+*/
+
+$shadow-dark-medium: 0 2rem 6rem rgba(0, 0, 0, .3);
+$shadow-dark-small: 0 1rem 3rem rgba(0, 0, 0, .3);
+$shadow-light-medium: 0 2rem 4rem rgba(255,255,255, .1);
+$shadow-light-small: 0 1rem 2rem rgba(255,255,255, .05);
+$line: 1px solid var(--color-grey-light-2);
+
+/*
+    BreakPoints
+*/
+
+$bp-largest : 75em;
+$bp-large : 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 37em;
+$bp-smallest: 31.25em;
+
+///////////////////////////////////
+//MIXIN FOR A BREAKPOINTS FOR A RESPONSIVE VIEW
+
+/*
+    $breakpoint argument choices:
+        - phone
+        - tab-port
+        - tab-land
+        - big-desktop
+1m = 16px
+*/
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em){ //600px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em){ //900px
+            @content;
+        }
+    }
+
+    @if $breakpoint == tab-land{
+        @media (max-width: 75em){ //1200px
+            @content;
+        }
+    }
+
+    @if $breakpoint == big-desktop{
+        @media (min-width: 112.5em){ //1800px
+            @content
+        }
+    }
+}
+
+$default-font-size: 1.8rem;
+$big-font-size: 2rem;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit
+}
+
+.btn{
+    border: none;
+    outline: none;
+
+    &:hover{
+        cursor: pointer;    
+    }
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @include respond(tab-land){ // width <= 1200 ?
+        font-size: 56.25%;  //1rem = 9px, 9/16=56.25%
+    }
+
+    @include respond(tab-port){ // width <= 900 ?
+        font-size: 50%; // 1rem=8px, 8/16=50%
+    }
+
+    @include respond(big-desktop){
+        font-size: 75%; // 1rem = 12px, 12/16=75%
+    }
+}
+
+body{ 
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+}
+
+///////////////////////////////////
+//HEADINGS
+
+h1{
+    color: $color-white;
+    font-size: 2.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+h3{
+    color: $color-black;
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+h4{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: $color-primary;
+    text-transform: uppercase;
+}
+
+h5{
+    font-size: $default-font-size;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+///////////////////////////////////
+//PARAGRAPHS
+p, p.paragraph{
+    font-size: $default-font-size;
+    letter-spacing: 1.1px;  
+
+    span{
+        text-decoration: underline;
+    }
+}
+
+
+///////////////////////////////////
+//LINKS
+li{
+    font-weight: 500;
+    list-style: none;
+    font-size: $default-font-size;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+}
+
+///////////////////////////////////
+//IFRAME
+
+video{
+    width: 100%;
+    height: auto;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+///////////////////////////////////
+//IMAGES
+
+section img{
+    width: 100%;    
+    height: auto;
+}
+
+///////////////////////////////////
+//SECTION
+
+section{
+    &:not(:last-child){
+        margin-bottom: 8rem;
+    }
+}
+
+///////////////////////////////////
+//LAYOUT @CONTAINER
+
+@mixin container {
+    margin: 8rem auto;
+    max-width: 120rem;
+}

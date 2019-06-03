@@ -7,20 +7,20 @@
         padding: 0 $gutter-horizontal-medium;
     }
 
+    @include respond(phone){
+        padding: 0;
+    }
+
     &__item{
         flex: 1;
         
-        &:not(:last-child){
+        &:not(:last-child){ 
             margin-right: 9rem;
 
             @media only screen and (max-width: 700px){
                 margin-right: 0;
                 margin-bottom: 5rem;
             }
-        }
-
-        p{
-            color: $color-grey;
         }
     }
 }
@@ -37,5 +37,12 @@
     @media only screen and (max-width: 700px){
         flex-direction: column;
         text-align: center;
+
+        .paragraph{
+            @include FilsonProRegular;
+            font-size: 2.25rem;
+            line-height: 3.125rem;
+        }
     }
+
 }

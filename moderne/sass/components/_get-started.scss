@@ -1,13 +1,18 @@
 .get-started{
     background-color: $color-primary-dark;
-    margin: 0 4.5rem 6rem 4.5rem;
+    margin: 0 $gutter-horizontal-small;
     padding: 5.5rem 10rem 0 5.5rem;
     border-radius: $border-radius-medium;
-
+    
     display: flex;
+
+    @include respond(big-desktop){
+        margin: 0;
+    }
 
     @include respond(tab-port){
         padding: 3rem 3rem 0 3rem;
+        margin: 2rem 1rem 1rem 1rem;
     }
 
     @media only screen and (max-width: 65em){
@@ -17,20 +22,35 @@
     }
 
     @include respond(phone){
-        margin: 1rem;
-        margin-top: 2rem;
+        margin: 2rem 0 0 0;
     }
     
     &__header{
         flex: 1;
         margin-right: 7rem;
         
-        @include respond(phone){
+        @include respond(tab-land){
             margin-right: 0;
         }
 
         .heading-secondary{
             margin-bottom: 0;
+        }
+
+        h2, p{
+            padding-left: 5rem;
+
+            @include respond(tab-port){
+                padding-left: 0;
+            }
+        }
+
+        p{
+            margin-bottom: 6rem;
+
+            @include respond(tab-port){
+                margin-bottom: 4rem;    
+            }
         }
 
         img{
@@ -61,4 +81,9 @@
         width: 100%;
     }
 
+    &__link{
+        a{  
+            text-transform: none !important;
+        }
+    }
 }

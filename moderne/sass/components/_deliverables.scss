@@ -1,10 +1,14 @@
 .deliverables{
     background-color: $color-primary;
     border-radius: $border-radius-medium;
-    padding: 5rem 5.9rem 7.4rem 9.5rem;
-    margin: 0 4.5rem;
+    padding: 5rem 5.9rem 12.4rem 9.5rem;
+    margin: 0 $gutter-horizontal-small;
     display: flex;
     overflow: hidden;
+
+    @include respond(big-desktop){
+        margin: 0;
+    }
 
     @include respond(tab-port){
         margin: 0 1rem;
@@ -13,6 +17,8 @@
     @include respond(phone){
         flex-direction: column;
         padding: 3.7rem .7rem 0 .7rem;
+        margin: 0;
+        margin-bottom: 7rem;
     }
 
     &__info{
@@ -22,19 +28,14 @@
         flex-direction: column;
         justify-content: center;
 
-        margin-right: 9rem;
+        margin-right: 4rem;
 
         @include respond(phone){
             text-align: center;
-            margin-bottom: 3rem;
         }
 
         .heading-tertiary{
             color: $color-white;
-        }
-
-        .heading-quaternary{
-            margin-bottom: 0;
         }
 
         @include respond(phone){
@@ -49,7 +50,11 @@
         &__item{
             &:not(:last-child){
                 margin-right: 0;
-                margin-bottom: 2.8rem;
+                margin-bottom: 3.2rem;
+
+                @include respond(phone){
+                    margin-bottom: 4.25rem;
+                }
             }
         }
     }
@@ -64,7 +69,7 @@
         }
 
         @include respond(phone){
-            margin-bottom: -17rem;
+            margin-bottom: -67px;
         }
     }
 }

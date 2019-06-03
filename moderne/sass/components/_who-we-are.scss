@@ -1,6 +1,6 @@
 .who-we-are{
     display: flex;
-    padding: 5rem 15rem 3rem 10rem;
+    padding: 5rem 8rem 3rem 8rem;
 
     @include respond(tab-port){
         padding-left: $gutter-horizontal-small;
@@ -11,16 +11,21 @@
     @include respond(phone){
         flex-direction: column;
         text-align: center;
-        padding: 5.5rem 1rem 3.8rem 1rem;
+        padding: 0 1rem 3.8rem 1rem;
     }
 
     &__img{
         flex: 1;
         margin-right: 9rem;
         align-self: center;
+        flex-basis: 40%;
 
         img{
             width: 100%;
+
+            @include respond(phone){
+                width: 80%;
+            }
         }
 
         @include respond(phone){
@@ -35,6 +40,7 @@
         
         display: flex;
         flex-direction: column;
+        flex-basis: 60%;
         justify-content: center;
     }
 
@@ -43,17 +49,24 @@
 
         @include respond(phone){
             margin-bottom: 5rem;
+
+            p{
+                font-size: 16px;
+                line-height: 23px;
+            }
         }
 
         p{
             color: $color-grey;
-            margin-top: 1rem;   
+            line-height: 28px;
+            font-size: 19px;
+            margin-top: 1rem; 
         }
     }
 
     &__cta{
         font-size: 2.9rem;
-
+        
         @include respond(phone){
             text-align: center;
             display: none;
@@ -70,11 +83,17 @@
 
         span{
             color: #5e576c;
+            @include FilsonProRegular;        
 
             a{
                 color: $color-purple;
                 padding-bottom: .2rem;
                 text-decoration: underline;
+                font-family: inherit;
+                
+                &:hover{
+                    text-decoration: none;
+                }
 
                 @include respond(tab-port){
                     display: block;

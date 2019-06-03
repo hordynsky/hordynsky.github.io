@@ -8,11 +8,18 @@
         border-radius: $border-radius-medium;
         background-color: $color-candy;
         display: inline-block;
-        padding: 1.5rem 8.4rem;
+        padding: 1.5rem 5rem;
         font-size: 2.3rem;
+        @include FilsonProRegular;
+        text-align: center;
 
+        text-transform: uppercase;
         transition: all .2s;
         white-space: nowrap;
+
+        @include respond(tab-port){
+            padding: 1.5rem 4rem;
+        }
 
         @include respond(phone){
             width: 100%;
@@ -20,13 +27,16 @@
     }
 
     &:hover{
-        transform: translateY(-.3rem);
-        box-shadow: $box-shadow-medium;
+        background-color: #E6656B;
     }
 
-    &:active{
-        outline: none;
-        transform: translateY(-.1rem);
-        box-shadow: $box-shadow-small;
+    &__main{
+        height: 58px;
+        padding-top: 1.60rem !important;
+
+        @include respond(tab-land){
+            font-size: 21px !important;
+            padding-top: 1.97rem !important;
+        }
     }
 }
