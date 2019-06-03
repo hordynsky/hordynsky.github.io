@@ -33,6 +33,9 @@ body {
   line-height: 1;
   overflow: hidden;
 }
+a{
+    text-decoration: none;
+}
 
 /* 
     VARIABLES
@@ -45,6 +48,7 @@ body {
     --color-grey: #808080;
     --color-purple: #bf3081;
     --color-link: #1118d6;
+    --color-icon: rgb(150,162,164);
     --padding-vertical: 12rem;
     --padding-horizontal: 7.3rem;
 }
@@ -179,6 +183,10 @@ footer{
     left: 0;
     right: 0;
 }
+
+footer p{
+    font-size: 2rem;
+}
 /* 
     SECTION .cta 
 */
@@ -190,6 +198,13 @@ footer{
 
 .cta__socials{
     margin: 6.8rem 0;
+}
+
+/* .cta__socials--svg */
+.cta__socials svg{
+    width: 6rem;
+    height: 6rem;
+    fill: var(--color-icon);
 }
 
 .cta__socials img{
