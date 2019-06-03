@@ -51,6 +51,7 @@ a{
     --color-link: #1118d6;
     --color-icon: rgb(150,162,164);
     --padding-vertical: 12rem;
+    --padding-vertical--small: 6rem;
     --padding-horizontal: 7.3rem;
 }
 
@@ -80,18 +81,17 @@ a{
 }
 
 /* 
-    TYPOGRAPHY
+    BASE
 */
+
 
 html{
     font-size: 62.5%; /* 1rem = 10px; 10px/16px=62.5% */
 }
 
-@media only screen and (max-width: 1800px){
-    html{
-        font-size: 46%;
-    }
-}
+/* 
+    TYPOGRAPHY
+*/
 
 h1{
     color: #000000;
@@ -281,22 +281,24 @@ footer p{
 .projects__item{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: var(--color-blue);
+    padding-bottom: 4.8rem;
 }
 
 
 .projects p{
     color: #fff;
 }
-
+/* 
 .projects__name{
     margin-bottom: 13rem;
-}
+} */
 
 .projects__image{
     width: 33%;
     align-self: center;
-    margin-bottom: 9rem;
+    /* margin-bottom: 9rem; */
 }
 
 .projects__image img{
@@ -322,6 +324,7 @@ footer p{
 
 .projects__item-3 {
     background-color: var(--color-green);
+    padding-bottom: 13.1rem;
 }
 
 .projects__item-3 .projects__image{
@@ -381,4 +384,65 @@ footer p{
     width: 100%;
     padding: 15px 0;
     line-height: 3.6rem;
+}
+
+/* RESPONSIVE VIEW */
+
+@media only screen and (max-width: 37.5em){ /* 600px */
+
+}
+
+@media only screen and (max-width: 56.25em){ /* 900px */
+    html{
+        font-size: 50%; /* 1rem=8px, 8/16=50% */
+    }
+}
+
+@media only screen and (max-width: 90em){ /* 1440px */
+    html{   
+        font-size: 50%; /* 1rem = 8px, 8/16=50% */
+    }
+
+    article{
+        padding: var(--padding-vertical--small) var(--padding-horizontal) 0;
+    }
+
+    .cta{
+        flex: 1 0 37%;
+        padding: var(--padding-vertical--small) var(--padding-horizontal) 0;    
+    }
+
+    .projects__name {
+        margin-bottom: 6rem;
+    }
+    
+    footer{
+        height: 8.3rem;
+    }
+}
+
+
+@media only screen and (min-width: 112.5em ) and (min-height: 62.5em){ /* 1800px & 1000px height*/
+    html{
+        font-size: 75%;  /* 1rem = 12px, 12/16=75% */
+    }
+
+    article{
+        padding: var(--padding-vertical--small) var(--padding-horizontal) 0;
+    }
+
+    .cta{
+        flex: 1 0 37%;
+        padding: var(--padding-vertical--small) var(--padding-horizontal) 0;    
+    }
+
+    footer{
+        height: 8.3rem;
+    }
+}
+
+@media only screen and (max-height: 56.25em) { /* height less then a 900px */
+    footer{
+        height: 8.3rem;
+    }
 }
