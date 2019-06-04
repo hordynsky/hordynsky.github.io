@@ -53,6 +53,7 @@ a{
     --padding-vertical: 12rem;
     --padding-vertical--small: 6rem;
     --padding-horizontal: 7.3rem;
+    --padding-horizontal--small: 3rem;
 }
 
 /* 
@@ -427,15 +428,10 @@ footer p{
 
 /* RESPONSIVE VIEW */
 
-@media only screen and (max-width: 37.5em){ /* 600px */
-
+.mobile-cta{
+    display: none;
 }
 
-@media only screen and (max-width: 56.25em){ /* 900px */
-    html{
-        font-size: 50%; /* 1rem=8px, 8/16=50% */
-    }
-}
 
 @media only screen and (max-width: 90em){ /* 1440px */
     html{   
@@ -457,6 +453,78 @@ footer p{
     
     footer{
         height: 8.3rem;
+    }
+}
+
+@media only screen and (max-width: 68.75em){ /* 1100px */
+    .cta{
+        padding: var(--padding-vertical--small) var(--padding-horizontal--small) 0 !important;
+    }
+
+    article{
+        padding-left: var(--padding-horizontal--small) !important;
+        padding-right: var(--padding-horizontal--small) !important;
+    }
+
+    .projects__item-3 .projects__image {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 62.5em){ /* 1000px */
+    #main{
+        flex-direction: column;
+    }
+    
+    .cta{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: var(--padding-vertical--small);
+    }
+
+    body{
+        overflow: auto;
+    }
+}
+
+@media only screen and (max-width: 56.25em){ /* 900px */
+    html{
+        font-size: 50%; /* 1rem=8px, 8/16=50% */
+    }
+
+    h2{
+        margin-bottom: 2rem;
+    }
+
+    .contact-us__user, textarea{
+        margin-bottom: 3rem;
+    }
+
+   .contact-us{
+       width: 90%;
+       margin: 2rem 0;
+       padding: 4rem;
+   }
+
+   .contact-us__user{
+       flex-direction: column;
+   }
+
+    input:not(:last-child){
+        margin-right: 0rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-us__button {
+        padding: 10px 0;
+    }
+   
+}
+
+@media only screen and (max-width: 37.5em){ /* 600px */
+    html{
+        font-size: 37.5%; /* 1rem=6px, 6/16=37.5% */
     }
 }
 
@@ -486,3 +554,4 @@ footer p{
         height: 8.3rem;
     }
 }
+
