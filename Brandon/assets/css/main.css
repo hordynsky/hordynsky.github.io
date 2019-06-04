@@ -566,6 +566,10 @@ footer p{
         max-height: 12rem;
         padding-bottom: 0;
     }
+
+    .contact-us{
+        margin-bottom: 2rem;
+    }
 }
 
 
