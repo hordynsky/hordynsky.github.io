@@ -146,6 +146,7 @@ a{
     outline: none;
     transition: all .2s;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+    border: none;
 }
 
 .button:hover{
@@ -414,7 +415,6 @@ footer p{
 }
 
 .contact-us__button--success{
-    color: #fff;
     box-shadow: none;
     transition: all 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     background-position: 0%;

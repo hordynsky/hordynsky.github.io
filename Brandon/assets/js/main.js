@@ -25,7 +25,8 @@ popup.onclick = (e) => {
 
 contactUsButton.onclick = (e) => {
     e.preventDefault();
-    if(nameInput.value && emailInput.value){
+    let pattern = /^[a-zA-Z0-9.!#$%&*+/=?^_'{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(nameInput.value && emailInput.value && pattern.test(emailInput.value)){
         [nameInput, emailInput].forEach(input => input.classList.remove('invalid'))
         contactUsButton.classList.add('contact-us__button--success');
         setTimeout(() => {
