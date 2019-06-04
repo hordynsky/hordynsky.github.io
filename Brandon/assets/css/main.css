@@ -414,8 +414,8 @@ footer p{
 }
 
 .contact-us__button--success{
+    color: #fff;
     box-shadow: none;
-    border-radius: 10px;
     transition: all 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     background-position: 0%;
 }
@@ -474,6 +474,7 @@ footer p{
 @media only screen and (max-width: 62.5em){ /* 1000px */
     #main{
         flex-direction: column;
+        height: unset !important;
     }
     
     .cta{
@@ -484,7 +485,7 @@ footer p{
     }
 
     body{
-        overflow: auto;
+        overflow: scroll;
     }
 }
 
@@ -493,8 +494,26 @@ footer p{
         font-size: 50%; /* 1rem=8px, 8/16=50% */
     }
 
+    h1{
+        margin-bottom: 4rem;
+        line-height: 7rem;
+    }
+
     h2{
         margin-bottom: 2rem;
+    }
+
+    article{
+        padding-top: 3.8rem !important;
+        padding-bottom: 3.8rem !important;
+    }
+
+    .projects__item-3{
+        padding-bottom: 11.8rem !important;
+    }
+
+    .projects__image{
+        margin-bottom: 3rem;
     }
 
     .contact-us__user, textarea{
@@ -516,8 +535,21 @@ footer p{
         margin-bottom: 1rem;
     }
 
+    .button{
+        padding: 15px 0;
+    }
+
     .contact-us__button {
         padding: 10px 0;
+    }
+
+    .cta__socials{
+        margin: 4rem 0;
+    }
+
+    .cta__socials svg{
+        width: 5rem;
+        height: 5rem;
     }
    
 }
