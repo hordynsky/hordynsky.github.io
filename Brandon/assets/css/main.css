@@ -560,6 +560,14 @@ footer p{
     }
 }
 
+@media only screen and (max-width: 29.25em){ /* 468px */
+    textarea{
+        height: 10rem;
+        max-height: 12rem;
+        padding-bottom: 0;
+    }
+}
+
 
 @media only screen and (min-width: 112.5em ) and (min-height: 62.5em){ /* 1800px & 1000px height*/
     html{
