@@ -18,17 +18,18 @@
 ///////////////////////////////////
 //HEADER
 .header{
-    min-height: 70rem;
+    min-height: 80rem;
     background-image: url(../images/banner.png);
     background-size: 100% 100%;
     padding: 3rem $gutter-horizontal-big;
+    
 
     @include respond(big-desktop){
         padding: 3rem 22rem;
     }
 
     @media only screen and(max-width: 62.5em){
-        min-height: 94rem;
+        min-height: 100rem;
     }
 
     @include respond(phone){
@@ -45,6 +46,29 @@
     &__entry{
         display: flex;
         align-items: center;
+        position: relative;
+
+        &--cta{
+            color: #fff;
+            font-family: 'Itim', cursive;
+            font-size: 2.2rem;
+            position: absolute;
+            top: -2rem;
+            display: flex;
+            align-items: center;
+
+            svg{
+                height: 5rem;
+                width: 5rem;
+                margin-left: -1rem;
+                margin-right: 1rem;
+                fill: rgb(106, 198, 204);
+            }
+        }
+
+        &:hover svg{
+            animation: 1s linear 0s infinite moveTop;
+        }
 
         @include respond(phone){
             flex-direction: column;
@@ -54,9 +78,8 @@
 
     &__information{
         display: flex;
-        padding: 6rem 0;
+        padding: 4rem 0;
         color: $color-white;
-        align-items: center;
 
         & > *{
             flex: 1;
@@ -298,6 +321,7 @@
     display: flex;
     padding: 0 2rem 5rem $gutter-horizontal-big;
     align-items: center;
+    margin-bottom: 0 !important;
 
     &>*{
         flex: 1;
@@ -354,7 +378,7 @@
 //SECTION-FAMILY
 
 .section-family{
-    padding: 0 0 $gutter-horizontal-big 0;
+    padding: 8rem 0 $gutter-horizontal-big 0;
     display: flex;
     justify-content: center;
 
@@ -423,6 +447,63 @@
 }
 
 ///////////////////////////////////
+//OFFER
+
+.offer{
+    background-color: $color-white;
+    padding: 8rem; 
+    padding-top: 6rem;
+    box-shadow: 0rem 0rem 2rem rgba($color-black, .3);
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative; 
+    width: 80%;        
+    margin-bottom: $gutter-vertical-medium;
+    
+    &__heading{
+        color: $color-black;
+        text-align: center;
+        padding: 0 20%;
+        margin-bottom: 3rem;
+        
+        h1{
+            color: inherit;
+            font-family: "Seguibl";
+            font-size: 3rem;     
+            white-space: nowrap; 
+            margin-bottom: 1rem;   
+        }
+
+        h3{
+            color: $color-grey-dark-1;
+            font-weight: 400;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+    
+        h4{
+            color: $color-grey-dark-2;
+            font-weight: 600;
+        }
+
+        @include respond(tab-land){
+            padding: 0;
+        }
+
+        @include respond(phone){
+            h1{
+                white-space: normal;
+            }
+        }
+    }
+
+    @include respond(phone){
+        width: 100%;
+        padding: 4rem;
+    }
+}
+
+///////////////////////////////////
 //FOOTER
 
 .footer{
@@ -446,7 +527,7 @@
 
     @include respond(phone){
         height: 55rem;
-        padding-top: $gutter-vertical-medium;
+        padding-top: 6rem;
     }
 
     &__wrapper, &__copyright{
@@ -479,6 +560,7 @@
     &__logo{
         margin-right: auto;
         margin-top: -10rem;
+        width: 30%;
 
         img{
             width: 70%;
