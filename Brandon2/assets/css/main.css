@@ -125,16 +125,16 @@ h3{
 h4{
     font-size: 4rem;
     font-weight: 700;
-    font-family: "Seguisb", sans-serif;
-    margin-bottom: 2rem;
+    font-family: "Seguisb", sans-serif; 
+    margin-bottom: 3rem;
 }
 
 p{
     color: #000000;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 400;
     font-family: 'Segui', sans-serif;
-    line-height: 3.5rem;
+    line-height: 4rem;
 }
 
 p.paragraph--bold{
@@ -242,6 +242,7 @@ ul li{
     list-style: none;
     display: flex;
     transition: all .2s;
+    white-space: nowrap;
 }
 
 ul li:not(:first-child){
@@ -326,6 +327,10 @@ header.header{
     margin-bottom: 15rem;
 }
 
+header.header__townview{
+    background: transparent;
+}
+
 .logo{
     margin-right: auto;
 }
@@ -353,6 +358,10 @@ header.header{
 .information__text{
     flex-direction: column;
     padding: 6rem 4.5rem;
+}
+
+.information__text p{
+    font-size: 2.5rem;
 }
 
 .information__text p:not(:last-child){
@@ -392,6 +401,7 @@ header.header{
 }
 
 .projects__heading p{
+    font-size: 2rem;
     font-family: inherit;
 }
 
@@ -469,6 +479,7 @@ header.header{
 }
 
 .footer p{
+    font-size: 2rem;
     color: var(--color-grey-dark-1);
 }
 
@@ -519,17 +530,15 @@ header.header{
         font-size: 7rem;
     }
 
+    .information{
+        flex-direction: column;
+    }
+
     .projects__image {
         margin-right: 2rem;
     }
 }
 
-
-@media only screen and (max-width: 45em){ /* 720px */
-    .information{
-        flex-direction: column;
-    }
-}
 
 @media only screen and (max-width: 37.5em){ /* 600px */
     html{
@@ -566,16 +575,15 @@ header.header{
     .contact-us{
         width: 80%;
     }
+
+    .cta{
+        padding-bottom: 7rem;
+    }
 }
 
 @media only screen and (max-width: 28.125em){ /* 450px */
     .header{
         padding: 2rem 1rem;
-    }
-
-    p{
-        font-size: 3rem;
-        line-height: 4rem;
     }
 
     .contact-us__user{
@@ -636,4 +644,139 @@ header.header{
     justify-content: center;
     padding: 0rem 2rem;
     box-sizing: border-box;
+}
+
+/* TOWNVIEW PAGE */
+
+.main__townview{
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0,0.3)),url(../images/townview.png);
+    background-size: cover;
+}
+
+/* MAIN section */
+
+.slogan{
+    background: transparent;
+    display: flex;
+    width: 80%;
+    border: 10px solid #fff;
+    padding: 0 7rem;
+    margin: 0 auto 8rem;
+    align-items: center;
+    height: 25rem;
+}
+
+.slogan__img{
+    width: 20%;
+    margin-right: 5rem;
+}
+
+.slogan img{
+    height: auto;
+}
+
+.slogan h1{
+    font-size: 15rem;
+    font-family: 'Seguibl', sans-serif;
+    letter-spacing: 13.3px;
+}
+
+.main__townview h2{
+    color: #fff;
+}
+
+/* Section .townview__information */
+
+.townview__information{
+    background: #fff;
+    padding: 9rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.townview__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 67%;
+}
+
+.townview__item:not(:last-child){
+    margin-bottom: 7rem;
+}
+
+.townview__heading{
+    flex: 1 0 35%;
+}
+
+.townview__heading h2{
+    font-size: 3rem;
+    text-align: left;
+    font-family: 'Seguibl', sans-serif;
+}
+
+.townview__text{
+    flex: 1 0 65%;
+}
+
+.townview__text p{
+    font-size: 2.5rem;
+    font-family: 'Segui', sans-serif;
+}
+
+.townview__text p:not(:last-child){
+    margin-bottom: 3.3rem;
+}
+
+/* Townview Mobile */
+
+@media only screen and (max-width: 90em){ /* 1440px */
+    .slogan{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 68.75em){ /* 1100px */
+    .slogan{
+        flex-direction: column;
+        height: 38rem;
+        padding: 3rem 0;
+    }
+
+    .slogan__img{
+        margin-right: 0;
+        margin-bottom: 3rem;
+        width: unset;
+    }
+}
+
+@media only screen and (max-width: 53.125em){ /* 850px */
+    header.header__townview{
+        margin-bottom: 5rem;
+    }
+
+    .main{
+        height: 100%;
+        padding-bottom: 4rem;
+    }
+
+    .slogan h1{
+        font-size: 10rem;
+    }
+
+    .townview__item{
+        flex-direction: column;
+    }
+
+    .townview__heading h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 37.5em){ /* 600px */
+    .townview__item{
+        width: 90%;
+    }
 }
