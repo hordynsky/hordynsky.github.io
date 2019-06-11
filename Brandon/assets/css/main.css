@@ -287,6 +287,7 @@ footer p{
 
 .projects{
     flex: 1 0 63%;
+    flex-shrink: 0;
 }
 
 .projects__item{
