@@ -5,13 +5,22 @@
 $color-primary: #ffa328;
 $color-secondary: #ebfaff; 
 $color-tertiary: #120bb0;
+$color-tertiary-medium: #007bff;
 $color-tertiary-light: rgb(237,249, 254);
 
 $color-white: #ffffff;
 $color-black: #000;
 
 $color-grey-dark: #999; 
-$color-grey-dark-1: #333; 
+$color-grey-dark-1: rgb(85, 39, 39); 
+$color-grey-dark-2: #393D41;
+
+$darkBlue: #217093;
+
+/* OFFER COLORS */
+$color-offer-1: rgb(220,125,148);
+$color-offer-2: rgb(130,143,197);
+$color-offer-3: rgb(114,172,133);
 
 /*
     GUTTERS
@@ -103,11 +112,16 @@ $big-font-size: 2rem;
     &:hover{
         cursor: pointer;    
     }
+
+    &-entry{
+        margin: 0 auto;
+    }
 }
 
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 
     @include respond(tab-land){ // width <= 1200 ?
         font-size: 56.25%;  //1rem = 9px, 9/16=56.25%
@@ -128,6 +142,24 @@ body{
 }
 
 ///////////////////////////////////
+//FONTS
+
+@font-face {
+    font-family: 'Seguibl';
+    src: url('seguibl.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
+
+///////////////////////////////////
+//UTILITIES
+.u-margin-top-medium{
+    margin-top: 4rem;
+}
+
+.u-margin-top-small{
+    margin-top: 2rem;
+}
+
+///////////////////////////////////
 //HEADINGS
 
 h1{
@@ -135,7 +167,7 @@ h1{
     font-size: 2.9rem;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 h3{
@@ -157,6 +189,13 @@ h5{
     margin-bottom: 1rem;
 }
 
+.heading-primary{
+    font-size: 3.5rem;
+
+    @include respond(tab-land){
+        font-size: 2.9rem;
+    }
+}
 ///////////////////////////////////
 //PARAGRAPHS
 p, p.paragraph{

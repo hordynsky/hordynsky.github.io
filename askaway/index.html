@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600|Itim" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <title>AskAway</title>
 </head>
 <body>
@@ -14,29 +15,42 @@
             <img src="images/logo.png" alt="logo" class="logo">
 
             <div class="header__entry">
-                <button class="btn btn-white btn-signup">
-                    Create account
+                <div class="header__entry--cta">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="60.731px" height="60.731px" viewBox="0 0 60.731 60.731" style="enable-background:new 0 0 60.731 60.731;"
+                        xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M44.853,42.952h11.031L38.101,60.731L20.324,42.952h11.16C29.908,22.001,18.995,5.075,4.847,0.96
+                                    C7.007,0.332,9.243,0,11.529,0C28.812,0,43.037,18.8,44.853,42.952z"/>
+                            </g>
+                        </g>
+                   </svg>
+                   Try your First interview for free
+                </div>
+                <button class="btn btn-white btn-signup" onclick="jumpToAnchor('section-family')">
+                    Try FastStart
                 </button>
-                <button class="btn btn-white btn-login">
-                    Login
+                <button class="btn btn-white btn-login" onclick="window.location.href='https://app.askaway.io/'">
+                    <span>Login</span> / Create Account
                 </button>
             </div>
         </div>
         <div class="header__information">
             <div class="header__text">
                 <h1 class="heading-primary">
-                    A Better Interview
+                    Pre-screening interviews have never been <span></span>
                 </h1>
                 <p class="paragraph">
-                    Pre-screening interviews will never be easier or more convenient.  AskAway was created by managers who understand how hard this process can be.  From scheduling panel interviews, meeting with candidates, and sorting out the good ones out, this process can be painful.  AskAway will make it enjoyable, we promise.
+                    AskAway was created by managers who understand how hard this process can be.  From scheduling panel interviews, meeting with candidates, and sorting out the good ones, this process can be painful.  AskAway will make it enjoyable, we promise.
                 </p>
-                <button class="btn btn-orange">
-                    Create Account Today
+                <button class="btn btn-orange btn-entry" onclick="jumpToAnchor('section-family')">
+                    Try FastStart
                 </button>
             </div>
             <div class="header__video">
                 <div class="header__video-container">
-                    <video src="images/our.mp4" controls="controls" muted type="video/mp4" autoplay="false" preload="none"></video>
+                    <video src="images/our.mp4" controls="controls" muted type="video/mp4" preload="true" poster="images/video-bg.png"></video>
                 </div>
             </div>
         </div>
@@ -61,8 +75,8 @@
                     <li>Share the interview with your team leads and get their input</li>
                     <li>Compare answers from questions across a grid of candidates</li>
                 </ul>
-                <button class="btn btn-orange section-win__btn">
-                    Create Account Today
+                <button class="btn btn-orange section-win__btn" onclick="jumpToAnchor('section-family')">
+                    Try FastStart
                 </button>
             </div>
         </section>
@@ -119,7 +133,7 @@
                 <img src="images/browserPage.png" alt="What are you waiting for? Login and see our Candidate View Grid, it's simplify a life a lot!">
             </div>
         </section>
-        <section class="section-family">
+        <section id="section-family" class="section-family" >
             <div class="section-family__banner">
                 <div class="section-family__image">
                     <img src="images/askawaFamily.png" alt="Our friendly family, why you're not here still??">
@@ -140,12 +154,87 @@
                     <p class="paragraph">That’s it.  If you have the answers to these questions, you are all set.</p>
                 </div>
                 <div class="section-family__button">
-                    <button class="btn btn-blue">
+                    <button class="btn btn-blue" onclick="window.location.href='https://app.askaway.io/admin-fast-start/admin'">
                         FastStart
                     </button>
                 </div>
             </div>
         </section>
+        <section class="offer">
+                <div class="offer__heading">
+                    <h1>
+                        Please choose your membership
+                    </h1>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-card__item offer-card__item--1">
+                        <div class="offer-card__heading">
+                            <h3>
+                                Small   
+                            </h3>
+                            <p class="offer-card__count">
+                                <span>Interviews -</span> 10
+                            </p>
+                            <p class="offer-card__price-small">
+                                <span>Price -</span> $50
+                            </p>
+                            <p class="offer-card__count">
+                                <span>Discount -</span> 0%
+                            </p>
+                        </div>  
+                        <div class="offer-card__price offer-card__price--1">
+                            <p>Total <span>$50</span></p>
+                        </div>
+                        <button class="offer-card__button offer-card__button--1">
+                            I Like it, but got to try it first
+                        </button>
+                    </div>
+                    <div class="offer-card__item offer-card__item--2">
+                        <div class="offer-card__heading">
+                            <h3>
+                                Medium
+                            </h3>
+                            <p class="offer-card__count">
+                                <span>Interviews -</span> 100
+                            </p>
+                            <p class="offer-card__price-small">
+                                <span>Price -</span> $500
+                            </p>
+                            <p class="offer-card__count">
+                                <span>Discount -</span> 25%
+                            </p>
+                        </div>  
+                        <div class="offer-card__price offer-card__price--2">
+                            <p>Total <span>$375</span></p>
+                        </div>
+                        <button class="offer-card__button offer-card__button--2">
+                            OK, I’m ready to commit
+                        </button>
+                    </div>
+                    <div class="offer-card__item offer-card__item--3">
+                        <div class="offer-card__heading">
+                            <h3>
+                                Large
+                            </h3>
+                            <p class="offer-card__count">
+                                <span>Interviews -</span> Unlimited
+                            </p>
+                            <p class="offer-card__price-small">
+                                <span>Price -</span> $500 / monthly subscription
+                            </p>
+                            <p class="offer-card__count--empty">
+                                &ensp;
+                            </p>
+                        </div>  
+                        <div class="offer-card__price offer-card__price--3">
+                            <p>Total <span>$500</span></p>
+                        </div>
+                        <button class="offer-card__button offer-card__button--3">
+                            Hold my beer
+                        </button>
+                    </div>
+                </div> 
+            </section>
     </main>
     <footer class="footer">
         <div class="footer__wrapper">
@@ -180,6 +269,9 @@
             </div>
         </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="main.js"></script>
    
 </body>
 </html>

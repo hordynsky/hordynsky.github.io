@@ -100,7 +100,7 @@ h1{
     line-height: 10rem;
     font-family: 'Seguibl', sans-serif;
     font-weight: 900;
-    margin-bottom: 5.9rem;
+    margin-bottom: 0rem;
 }
 
 h2{
@@ -495,7 +495,7 @@ footer p{
     }
 
     h1{
-        margin-bottom: 4rem;
+        /* margin-bottom: 4rem; */
         line-height: 7rem;
     }
 
@@ -599,3 +599,116 @@ footer p{
     }
 }
 
+/* Animation */
+
+.text-animation{
+    margin-bottom: 4.8rem;
+    height: 100px;
+    overflow: hidden;
+}
+
+.text-animation__transform{
+    height: 100px;
+    animation: 5s infinite textanimation;
+    white-space: nowrap;
+}
+
+.text-animation h1{
+    font-size: 80px;
+    line-height: 100px;
+}
+
+
+@media only screen and (max-width: 62.5em){ /* 1000px */
+    h1{
+        font-size: 80px;
+        line-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 37.5em){ /* 600px */
+    h1{
+        font-size: 60px !important;
+        line-height: 80px !important;
+    }
+
+    .text-animation{
+        margin-bottom: 4.8rem;
+        height: 80px;
+        overflow: hidden;
+    }
+    
+    .text-animation__transform{
+        height: 80px;
+        animation: 5s infinite textanimationMobile;
+        white-space: nowrap;
+    }
+}
+
+@keyframes textanimation{
+    0%{
+        transform: translateY(-200px);
+    }
+
+    5%{
+        transform: translateY(-100px);
+    }
+
+    33%{
+        transform: translateY(-100px);
+    }
+
+    38%{
+        transform: translateY(0);
+    }
+
+    66%{
+        transform: translateY(0);
+    }
+
+    71%{
+        transform: translateY(-200px);
+    }
+
+    99.99%{
+        transform: translateY(-200px);
+    }
+
+    100%{
+        transform: translateY(-200px);
+    }
+}
+
+@keyframes textanimationMobile{
+    0%{
+        transform: translateY(-160px);
+    }
+
+    5%{
+        transform: translateY(-80px);
+    }
+
+    33%{
+        transform: translateY(-80px);
+    }
+
+    38%{
+        transform: translateY(0);
+    }
+
+    66%{
+        transform: translateY(0);
+    }
+
+    71%{
+        transform: translateY(-160px);
+    }
+
+    99.99%{
+        transform: translateY(-160px);
+    }
+
+    100%{
+        transform: translateY(-160px);
+    }
+}
