@@ -445,14 +445,9 @@ footer p{
         padding: var(--padding-vertical--small) var(--padding-horizontal) 0;
     }
 
-    h1{
-        font-size: 58px;
-    }
-
     .cta{
         flex: 1 0 37%;
         padding: var(--padding-vertical--small) var(--padding-horizontal) 0;    
-        justify-content: center;
     }
 
     .projects__name {
@@ -627,6 +622,7 @@ footer p{
 }
 
 .text-animation h1{
+    font-size: 80px;
     line-height: 100px;
 }
 
