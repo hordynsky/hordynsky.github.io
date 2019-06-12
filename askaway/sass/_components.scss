@@ -4,6 +4,10 @@
 .logo{
     height: 14.5rem;
     margin-right: auto;
+
+    @include respond(phone){
+        height: 10rem;
+    }
 }
 
 ///////////////////////////////////

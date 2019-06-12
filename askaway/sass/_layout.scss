@@ -30,6 +30,7 @@
 
     @media only screen and(max-width: 62.5em){
         min-height: 100rem;
+        padding: 3rem $gutter-horizontal-medium;
     }
 
     @include respond(phone){
@@ -79,7 +80,7 @@
     &__information{
         display: flex;
         flex-direction: column;
-        // padding: 2rem 0;
+        padding: 2rem 0;
         color: $color-white;
 
         & > *{
@@ -96,17 +97,23 @@
         display: flex;
         flex-direction: column;
 
-        @include respond(tab-port){
-            // margin-right: 1rem;
-        }
-
         @media only screen and(max-width: 62.5em){
             margin-right: 0;
             margin-bottom: $gutter-vertical-medium;
+
+            .heading-primary{
+                font-size: 2.5rem;
+            }
+
+            .paragraph{
+                font-size: 1.8rem;
+            }
         }
 
         .paragraph{
             margin-bottom: 2rem; 
+            text-align: justify;
+            letter-spacing: 1.4px;
         }
 
         .btn{
@@ -118,14 +125,14 @@
         width: 50%;
         margin: 0 auto;
         margin-bottom: 2rem;
+        
+        @media only screen and (max-width: 62.5em){ // 1000px
+            width: 80%;
+        }
 
-        // @media only screen and(max-width: 62.5em){
-            // padding: 0 20%;
-        // }
-
-        // @include respond(phone){
-            // padding: 0 15%;
-        // }
+        @include respond(phone){
+            width: 90%;
+        }
     }
 
     &__video-container{

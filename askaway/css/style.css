@@ -125,6 +125,9 @@ section:not(:last-child) {
 .logo {
   height: 14.5rem;
   margin-right: auto; }
+  @media (max-width: 37.5em) {
+    .logo {
+      height: 10rem; } }
 
 .btn {
   color: #ffffff;
@@ -369,7 +372,8 @@ section:not(:last-child) {
       padding: 3rem 22rem; } }
   @media only screen and (max-width: 62.5em) {
     .header {
-      min-height: 100rem; } }
+      min-height: 100rem;
+      padding: 3rem 4rem; } }
   @media (max-width: 37.5em) {
     .header {
       padding: 3rem 2rem; } }
@@ -402,6 +406,7 @@ section:not(:last-child) {
   .header__information {
     display: flex;
     flex-direction: column;
+    padding: 2rem 0;
     color: #ffffff; }
     .header__information > * {
       flex: 1; }
@@ -415,15 +420,27 @@ section:not(:last-child) {
     @media only screen and (max-width: 62.5em) {
       .header__text {
         margin-right: 0;
-        margin-bottom: 4rem; } }
+        margin-bottom: 4rem; }
+        .header__text .heading-primary {
+          font-size: 2.5rem; }
+        .header__text .paragraph {
+          font-size: 1.8rem; } }
     .header__text .paragraph {
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      text-align: justify;
+      letter-spacing: 1.4px; }
     .header__text .btn {
       text-transform: uppercase; }
   .header__video {
     width: 50%;
     margin: 0 auto;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 62.5em) {
+      .header__video {
+        width: 80%; } }
+    @media (max-width: 37.5em) {
+      .header__video {
+        width: 90%; } }
   .header__video-container {
     overflow: hidden;
     width: 100%; }
