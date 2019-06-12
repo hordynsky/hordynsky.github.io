@@ -18,7 +18,7 @@
 ///////////////////////////////////
 //HEADER
 .header{
-    min-height: 80rem;
+    min-height: 90rem;
     background-image: url(../images/banner.png);
     background-size: 100% 100%;
     padding: 3rem $gutter-horizontal-big;
@@ -78,7 +78,8 @@
 
     &__information{
         display: flex;
-        padding: 4rem 0;
+        flex-direction: column;
+        // padding: 2rem 0;
         color: $color-white;
 
         & > *{
@@ -92,10 +93,11 @@
     }
 
     &__text{
-        margin-right: $gutter-horizontal-big;
+        display: flex;
+        flex-direction: column;
 
         @include respond(tab-port){
-            margin-right: 1rem;
+            // margin-right: 1rem;
         }
 
         @media only screen and(max-width: 62.5em){
@@ -113,14 +115,17 @@
     }
     
     &__video{
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
 
-        @media only screen and(max-width: 62.5em){
-            padding: 0 20%;
-        }
+        // @media only screen and(max-width: 62.5em){
+            // padding: 0 20%;
+        // }
 
-        @include respond(phone){
-            padding: 0 15%;
-        }
+        // @include respond(phone){
+            // padding: 0 15%;
+        // }
     }
 
     &__video-container{
