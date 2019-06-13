@@ -50,12 +50,12 @@ a{
     --color-grey-light-1: #ececec;
     --color-grey-light:#e6e4e4;
     --color-purple: #bf3081;
-    --color-link: #1118d6;
     --color-icon: rgb(150,162,164);
     --padding-vertical: 12rem;
     --padding-vertical--small: 6rem;
     --padding-horizontal: 7.3rem;
     --padding-horizontal--small: 3rem;
+    --font: 'Saira Semi Condensed', sans-serif;
 }
 
 /* 
@@ -100,9 +100,9 @@ html{
 
 h1{
     color: #fff;
-    font-size: 5.7rem;
-    line-height: 7rem;
-    font-family: 'Segui', sans-serif;
+    font-size: 7rem;
+    line-height: 9rem;
+    font-family: var(--font);
     font-weight: 900;
     margin-bottom: 0rem;
 }
@@ -110,8 +110,8 @@ h1{
 h2{
     font-size: 5rem;
     line-height: 7.1rem;
-    font-family: "Segui", sans-serif;
-    margin-bottom: 5.7rem;
+    font-family: var(--font);
+    margin-bottom: 9rem;
     text-align: center;
 }
 
@@ -119,13 +119,13 @@ h3{
     font-size: 10rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    font-family: "Seguibl", sans-serif;
+    font-family: var(--font);
 }
 
 h4{
     font-size: 4rem;
     font-weight: 700;
-    font-family: "Seguisb", sans-serif; 
+    font-family: var(--font);
     margin-bottom: 3rem;
 }
 
@@ -133,16 +133,12 @@ p{
     color: #000000;
     font-size: 3rem;
     font-weight: 400;
-    font-family: 'Segui', sans-serif;
+    font-family: var(--font);
     line-height: 4rem;
 }
 
 p.paragraph--bold{
     font-weight: 600;
-}
-
-a{
-    color: var(--color-link);
 }
 
 /* 
@@ -194,6 +190,9 @@ input, textarea{
     font-size: 2rem;
     outline: none;
     flex: 1;
+    font-family: var(--font);
+    font-weight: 400;
+    transition: all 1s;
 }
 
 input::placeholder,
@@ -212,6 +211,11 @@ input:not(:last-child){
 
 input{
     border-bottom: 2px solid rgba(255,255,255, .6);
+}
+
+input:hover,
+input:active {
+    border-bottom: 2px solid var(--color-blue);
 }
 
 input.invalid{
@@ -255,13 +259,14 @@ ul li:last-child{
 
 ul li.active{
     background: var(--color-blue);
+    width: 18rem;
     border-radius: 5px;
 }
 
 ul li a{
     color: #fff;
     font-size: 2rem;
-    font-family: 'Segui', sans-serif;
+    font-family: var(--font);
     font-weight: 700;
     text-decoration: none;
 }
@@ -298,8 +303,17 @@ ul li:hover{
 
 .main__text{
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
 }   
+
+.main__text span a{
+    color: inherit;
+    text-decoration: underline;
+}
+
+.main__text span a:hover{
+    text-decoration: none;
+}
 
 /* 
     sections & articles & footer
@@ -344,18 +358,24 @@ header.header__townview{
     flex-direction: row;
 }
 
+.information__picture,
+.information__text{
+    display: flex;
+}
+
+.information__picture{
+    background: url(../images/canyon.jpeg);
+    background-size: 100% 100%;
+    flex: 1 0 57%;
+}
+
 .information__picture img{
     height: auto;
     width: 100%;
 }
 
-.information__picture,
 .information__text{
-    display: flex;
-    flex: 1 0 50%;
-}
-
-.information__text{
+    flex: 1 0 43%;
     flex-direction: column;
     padding: 6rem 4.5rem;
 }
@@ -383,7 +403,7 @@ header.header__townview{
 
 .projects__item{
     display: flex;
-    font-family: "Seguisb", sans-serif;
+    font-family: var(--font);
 }
 
 .projects__image{
@@ -403,6 +423,7 @@ header.header__townview{
 .projects__heading p{
     font-size: 2rem;
     font-family: inherit;
+    font-style: italic;
 }
 
 .projects__item a{
@@ -410,7 +431,7 @@ header.header__townview{
     font-family: inherit;
     text-decoration: underline;
     transition: all .2s;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .projects__item a:hover{
@@ -435,6 +456,8 @@ header.header__townview{
 
 .contact-us{
     width: 66%;
+    font-family: var(--font);
+    font-weight: 800;
 }
 
 .contact-us__user{
@@ -452,6 +475,7 @@ header.header__townview{
     background-size: 220%;
     background-position: 100%;
     transform-origin: left;
+    font-family: inherit;
 }
 
 .contact-us__button--success{
@@ -515,9 +539,9 @@ header.header__townview{
 
 /* MOBILE */
 
-@media only screen and (max-width: 90em){ /* 1440px */
-    html{   
-        font-size: 50%; /* 1rem = 8px, 8/16=50% */
+@media only screen and (max-width: 62.5em){  /* 1000px */
+    .projects__image{
+        margin-right: 8rem;
     }
 }
 
@@ -526,8 +550,12 @@ header.header__townview{
         font-size: 50%; /* 1rem=8px, 8/16=50% */
     }
 
+    .projects{
+        padding: 8rem;
+    }
+
     h3{
-        font-size: 7rem;
+        font-size: 8rem;
     }
 
     .information{
@@ -548,6 +576,14 @@ header.header__townview{
     h1{
         font-size: 5.7rem !important;
         line-height: 7rem !important;
+    }
+
+    header.header{
+        margin-bottom: 10rem;
+    }
+
+    .header__navigation{
+        display: none;
     }
 
     .information__picture{
@@ -624,26 +660,85 @@ header.header__townview{
 
 .text-animation{
     margin-bottom: 4.8rem;
-    /* height: 100px; */
-    min-height: 100px;
+    height: 100px;
     overflow: hidden;
-}
-
-.text-animation__transform{
-    /* animation: 5s infinite textanimation; */
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-yellow);
-}
-
-.text-animation h1{
+    font-family: var(--font);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0rem 2rem;
-    box-sizing: border-box;
+}
+
+.text-animation__transform{
+    height: 100px;
+    animation: 5s infinite textanimation;
+    white-space: nowrap;
+}
+
+.text-animation h1{
+    line-height: 100px;
+}
+
+.text-animation h1 span{
+    background: var(--color-yellow);
+    width: 40rem;
+    display: block;
+}
+
+
+@media only screen and (max-width: 50em){ /* 1000px */
+    h1{
+        font-size: 60px;
+        line-height: 100px;
+    }
+
+    .text-animation__transform{
+        height: 100px;
+        animation: none;
+        white-space: nowrap;
+    }
+
+    .text-animation__item--2{
+        display: none;
+    }
+
+    .text-animation__item--3{
+        display: none;
+    }
+}
+
+
+@keyframes textanimation{
+    0%{
+        transform: translateY(-210px);
+    }
+
+    5%{
+        transform: translateY(-110px);
+    }
+
+    33%{
+        transform: translateY(-110px);
+    }
+
+    38%{
+        transform: translateY(-10px);
+    }
+
+    66%{
+        transform: translateY(-10px);
+    }
+
+    71%{
+        transform: translateY(-210px);
+    }
+
+    99.99%{
+        transform: translateY(-210px);
+    }
+
+    100%{
+        transform: translateY(-210px);
+    }
 }
 
 /* TOWNVIEW PAGE */
@@ -677,7 +772,7 @@ header.header__townview{
 
 .slogan h1{
     font-size: 15rem;
-    font-family: 'Seguibl', sans-serif;
+    font-family: var(--font);
     letter-spacing: 13.3px;
 }
 
@@ -752,6 +847,12 @@ header.header__townview{
 }
 
 @media only screen and (max-width: 53.125em){ /* 850px */
+    .information__picture{
+        flex-basis: 50rem;
+        height: 50rem;
+        background-size: cover;
+    }
+
     header.header__townview{
         margin-bottom: 5rem;
     }

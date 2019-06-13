@@ -4,7 +4,8 @@
  let contactUsButton = document.querySelector('.contact-us__button'),
      contactUsButtonSuccess = document.querySelector('.contact-us__button--success'),
      nameInput = document.getElementById('name'),
-     emailInput = document.getElementById('email');
+     emailInput = document.getElementById('email'),
+     emailForm = document.querySelector('.contact-us__form')
 
 
 contactUsButton.onclick = (e) => {
@@ -15,7 +16,9 @@ contactUsButton.onclick = (e) => {
         contactUsButton.classList.add('contact-us__button--success');
         setTimeout(() => {
             contactUsButton.innerHTML = '&#10004;';
-        }, 1800)
+            emailForm.reset();
+        }, 1800);
+        
     }else{
         [nameInput, emailInput].forEach(input => input.classList.add('invalid'))
     }
