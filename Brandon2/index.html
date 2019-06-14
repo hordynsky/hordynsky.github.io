@@ -13,7 +13,7 @@
     <div id="wrapper">
         <section class="main">
             <header class="header">
-                <img src="./assets/images/logo.png" alt="BG">
+                <img src="./assets/images/logo.png" alt="BG" onclick="location.href='/index.html'" class='logo'>
                 <ul class="header__navigation">
                     <li class="header__item">
                         <a href="#about">About</a>
@@ -27,7 +27,7 @@
                 </ul>
             </header>
            <div class="main__cta">
-                <h1>Design is </h1>
+                <h1 class="heading--primary">Design is </h1>
                 <div class="text-animation">
                     <div class="text-animation__transform">
                         <h1 class="text-animation__item--1"><span>story-telling</span></h1>
@@ -57,9 +57,9 @@
                     <div class="projects__info">
                         <div class="projects__heading">
                             <h3>Townview</h3>
-                            <p>Insanely convenient app, would 10/10 recommend download.</p>
+                            <p>"Insanely convenient app, would 10/10 recommend download."</p>
                         </div>
-                        <a href="#">View case study</a>
+                        <a href="/townview.html" target="_blank">View case study</a>
                     </div>
                 </div>
             </div>
@@ -69,10 +69,10 @@
                 <h2 >Let's get in touch!</h2>
                 <form action="#" class="contact-us__form">
                     <div class="contact-us__user" >
-                        <input type="text" placeholder="John Doe"  id="name" required >
-                        <input type="email" placeholder="Johndoe@gmail.com"  id="email" required>
+                        <input type="text" placeholder="Name"  id="name" required >
+                        <input type="email" placeholder="Email"  id="email" required>
                     </div>
-                    <textarea name="contact-us__text" id="contact-us__text" class="contact-us__text" placeholder="I want to..." ></textarea>
+                    <textarea name="contact-us__text" id="contact-us__text" class="contact-us__text" placeholder="Message" ></textarea>
                     <div class="contact-us__buttons-area">
                         <button class='button contact-us__button'>Contact</button>
                         <!-- <button class='button contact-us__button contact-us__button--success' >&#10004;</button> -->
