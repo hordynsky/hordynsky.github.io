@@ -1,9 +1,12 @@
 import React from 'react';
-import SinglePost from '../SinglePost';
+import Post from '../Post';
+import * as S from '../../assets/styles/shared-components'
 
-const Posts = ({posts}) => {
+const Posts = ({posts, goToPost, goToUser}) => {
     return(
-        posts.map(post => <SinglePost post={post} key={post.id} index={post.id}/>)
+       <S.Posts>
+            {posts.map(post => <Post post={post} key={post.id} index={post.id} goToPost={goToPost} goToUser={goToUser}/>)}
+       </S.Posts>
     )
 }
 
