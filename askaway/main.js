@@ -154,3 +154,14 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     document.querySelector('.offer-card__count--empty').display = 'none';
 }
 
+function f(){
+    return this;
+}
+
+let obj = {
+    name: 'Andrew',
+    getObj: f
+}
+
+
+console.log(obj.getObj());
