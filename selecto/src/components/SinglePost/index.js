@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import * as S from '../../assets/styles/shared-components';
 import { DATA_URLS } from '../../config/config';
+import PropTypes from 'prop-types';
 
 class SinglePost extends React.Component {
 
@@ -64,7 +65,7 @@ class SinglePost extends React.Component {
                 <S.Comments>
                     <h2 style={{marginBottom: '1rem'}}>Comments: </h2>
                     {
-                        this.state.comments.map(comment => <S.Comment>
+                        this.state.comments.map(comment => <S.Comment key={comment.id}>
                             <p>{comment.body}</p>
                             <S.CommentCredentials>
                                Email: <a href={`mailto:${comment.email}`}>{comment.email}</a>
@@ -80,3 +81,15 @@ class SinglePost extends React.Component {
 
 export default SinglePost;
 
+SinglePost.propTypes = {
+    location: PropTypes.object,
+    history: PropTypes.object,
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            postId: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number
+            ])
+        })
+    })
+}

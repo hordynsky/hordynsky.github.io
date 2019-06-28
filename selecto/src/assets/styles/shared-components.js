@@ -47,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
         color: #DC3D24;
     }
 
-    p{
+    p, li{
         font-family: 'Lato', sans-serif;
         font-size: 1.6rem;
         line-height: 2rem;
@@ -66,6 +66,14 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1.8rem;
     }
 
+    li {
+        list-style: none;
+
+        span{
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+    }
 `;
 
 export const Button = styled.button`
@@ -211,4 +219,68 @@ export const CommentCredentials = styled.div`
     align-self: flex-end;
     font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
+`;
+
+/* SingleUser */
+
+export const User = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    margin: 3rem auto 0;
+    padding: 2rem 3rem; 
+
+    h1{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    @media only screen and (max-width: 62.5em){ /* 1000px */
+        width: 80%;
+    }
+
+    @media only screen and (max-width: 37.5em){ /* 600px */
+        width: 95%;
+        margin-top: 1rem;
+    }
+`;
+
+export const UserDetails = styled.div`
+    display: flex;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #091f36;
+`;
+
+export const UserImage = styled.figure`
+    flex: 1 1 30%;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    margin-right: 2rem;
+
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+`;
+
+export const UserInformation = styled.ul`
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 70%;
+    justify-content: center;
+
+    li:not(:last-child){
+        margin-bottom: 1rem;
+    }
+`;
+
+export const UserAddress = styled.div`
+    display: flex;
+    width: 100%;
+    height: 500px;
+    position: relative;
 `;
