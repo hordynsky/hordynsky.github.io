@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {DATA_URLS} from '../../config/config';
 import * as S from '../../assets/styles/shared-components';
+import MapContainer from '../MapContainer';
 
 class SingleUser extends React.Component {
 
@@ -54,9 +55,11 @@ class SingleUser extends React.Component {
                     </S.UserInformation>
                 </S.UserDetails>
 
+
                 <S.UserAddress>
-                
+                    <MapContainer address={address}/>
                 </S.UserAddress>
+
 
                 <S.Button onClick={() => history.goBack()} style={{position: 'absolute',  bottom: '2rem', left: '1rem'}}>Return back</S.Button>
             </S.User> : `Sorry, there is no user with id:${match.params.userId}`

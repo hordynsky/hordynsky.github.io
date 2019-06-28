@@ -64,7 +64,7 @@ class SinglePost extends React.Component {
                 <S.Comments>
                     <h2 style={{marginBottom: '1rem'}}>Comments: </h2>
                     {
-                        this.state.comments.map(comment => <S.Comment>
+                        this.state.comments.map(comment => <S.Comment key={comment.id}>
                             <p>{comment.body}</p>
                             <S.CommentCredentials>
                                Email: <a href={`mailto:${comment.email}`}>{comment.email}</a>

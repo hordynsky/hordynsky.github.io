@@ -280,4 +280,7 @@ export const UserInformation = styled.ul`
 
 export const UserAddress = styled.div`
     display: flex;
+    width: 100%;
+    height: 500px;
+    position: relative;
 `;
