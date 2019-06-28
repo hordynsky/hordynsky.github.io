@@ -3,6 +3,7 @@ import axios from 'axios';
 import {DATA_URLS} from '../../config/config';
 import * as S from '../../assets/styles/shared-components';
 import MapContainer from '../MapContainer';
+import PropTypes from 'prop-types';
 
 class SingleUser extends React.Component {
 
@@ -69,15 +70,16 @@ class SingleUser extends React.Component {
 
 export default SingleUser;
 
-/*
-    https://jsonplaceholder.typicode.com/posts
-    https://jsonplaceholder.typicode.com/posts/{postId}
-    https://jsonplaceholder.typicode.com/users
-    https://jsonplaceholder.typicode.com/users/{userId}
-    https://jsonplaceholder.typicode.com/posts/{postId}/comments
-    Вивести список постів, Кожен пост має мати посилання на сторінку окремого поста та
-    посилання на сторінку користувача. На сторінці користувача вивести інформацію про
-    нього. На сторінці окремого поста вивести інформацію про пост і коментарі до поста.
-    Для UI можеш вибрати будь яку бібліотеку наприклад bootstrap, materialize :)
-    Стек технологій: React + redux
-*/ 
+
+SingleUser.propTypes = {
+    location: PropTypes.object,
+    history: PropTypes.object,
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            userId: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number
+            ])
+        })
+    })
+}

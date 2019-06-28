@@ -1,6 +1,7 @@
 import React from 'react';
 import Post from '../Post';
-import * as S from '../../assets/styles/shared-components'
+import * as S from '../../assets/styles/shared-components';
+import PropTypes from 'prop-types';
 
 const Posts = ({posts, goToPost, goToUser}) => {
     return(
@@ -11,3 +12,15 @@ const Posts = ({posts, goToPost, goToUser}) => {
 }
 
 export default Posts;
+
+
+Posts.propTypes = {
+    goToPost: PropTypes.func.isRequired,
+    goToUser: PropTypes.func.isRequired,
+    posts: PropTypes.arrayOf(PropTypes.shape({
+        body: PropTypes.string,
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string,
+        userId: PropTypes.number.isRequired
+    }))
+}

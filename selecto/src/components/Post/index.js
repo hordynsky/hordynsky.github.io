@@ -1,5 +1,6 @@
 import React from 'react';
 import * as S from '../../assets/styles/shared-components';
+import PropTypes from 'prop-types';
 
 const Post = ({post, index, goToPost, goToUser}) => {
     const {body, title, userId} = post;
@@ -16,3 +17,15 @@ const Post = ({post, index, goToPost, goToUser}) => {
 }
 
 export default Post;
+
+Post.propTypes = {
+    goToPost: PropTypes.func.isRequired,
+    goToUser: PropTypes.func.isRequired,
+    index: PropTypes.number.isRequired,
+    post: PropTypes.shape({
+        body: PropTypes.string,
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string,
+        userId: PropTypes.number.isRequired
+    })
+}

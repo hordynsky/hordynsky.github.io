@@ -1,6 +1,7 @@
 import React from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 import {mapStyleGrey, mapDarkStyles} from '../../assets/styles/mapStyles';
+import PropTypes from 'prop-types';
 
 const mapStyles = {
     width: '100%',
@@ -40,6 +41,26 @@ MapContainer.defaultProps = {
             "lng": "-34.4618"
         }
     }
+}
+
+MapContainer.propTypes = {
+    address: PropTypes.shape({
+        city: PropTypes.string,
+        geo: PropTypes.shape({
+            lat: PropTypes.oneOfType([
+                PropTypes.number,
+                PropTypes.string
+            ]),
+            lng: PropTypes.oneOfType([
+                PropTypes.number,
+                PropTypes.string
+            ])
+        }),
+        street: PropTypes.string,
+        suite: PropTypes.string,
+        zipcode: PropTypes.string
+    }),
+    google: PropTypes.object
 }
 
 

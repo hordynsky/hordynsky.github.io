@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import {getPosts} from '../../config/config';
 import Posts from '../Posts';
 import * as S from '../../assets/styles/shared-components';
+import PropTypes from 'prop-types';
 
 export default class App extends Component {
     state = {
-        posts: [],
-        users: []
+        posts: []
     }
 
     goToPost = (postId) => {
@@ -33,4 +33,10 @@ export default class App extends Component {
             </S.App>
         )
     }
+}
+
+App.propTypes = {
+    location: PropTypes.object,
+    match: PropTypes.object,
+    history: PropTypes.object
 }

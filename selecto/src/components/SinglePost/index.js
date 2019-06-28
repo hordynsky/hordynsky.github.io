@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import * as S from '../../assets/styles/shared-components';
 import { DATA_URLS } from '../../config/config';
+import PropTypes from 'prop-types';
 
 class SinglePost extends React.Component {
 
@@ -80,3 +81,15 @@ class SinglePost extends React.Component {
 
 export default SinglePost;
 
+SinglePost.propTypes = {
+    location: PropTypes.object,
+    history: PropTypes.object,
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            postId: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number
+            ])
+        })
+    })
+}
