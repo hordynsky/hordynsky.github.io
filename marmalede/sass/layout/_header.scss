@@ -1,0 +1,41 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $gutter-vertical-smallest $gutter-horizontal-small;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+    a{
+        color: $color-white;
+        font-size: 2rem;
+        line-height: 3rem;
+        transition: transform .2s;
+
+        &:hover{
+            transform: translateY(-1.5px);
+        }
+    }
+
+    @include breakpoint(mobile){
+        &-logo__box{
+            display: none;
+
+            @include breakpoint(tablet-horizontal){
+                display: flex;
+            }
+        }
+
+        &-logo__name{
+            left: 2rem;
+            top: 2rem;
+            z-index: 2001;
+            position: absolute;
+
+            @include breakpoint(tablet-horizontal){
+                position: unset;
+            }
+        }
+    }
+}

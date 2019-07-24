@@ -1,0 +1,25 @@
+main{
+    background: $color-black;
+}
+
+.info{
+    @include breakpoint(mobile){
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        a{
+            display: inline-flex;
+            flex-direction: column;
+            color: $color-white;
+
+            span{
+                transform: scale(.7);
+                margin-top: 1rem;
+            }
+        }
+
+        @include breakpoint(desktop){
+            padding: 0 $gutter-horizontal-big;            
+        }
+    }
+}

@@ -18,7 +18,7 @@
 ///////////////////////////////////
 //HEADER
 .header{
-    min-height: 90rem;
+    min-height: 100rem;
     background-image: url(../images/banner.png);
     background-size: 100% 100%;
     padding: 3rem $gutter-horizontal-big;
@@ -29,7 +29,7 @@
     }
 
     @media only screen and(max-width: 62.5em){
-        min-height: 100rem;
+        min-height: 110rem;
         padding: 3rem $gutter-horizontal-medium;
     }
 
@@ -189,6 +189,7 @@
 
     &__btn{
         box-shadow: 0 2rem 4rem rgba(0,0,0, .08);
+        text-transform: uppercase;
 
         &:hover{
             box-shadow: 0 2rem 4rem rgba(0,0,0, .08);
@@ -390,7 +391,7 @@
 //SECTION-FAMILY
 
 .section-family{
-    padding: 8rem 0 $gutter-horizontal-big 0;
+    padding: $gutter-vertical-medium 0;
     display: flex;
     justify-content: center;
 
@@ -404,6 +405,10 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+
+        @include respond(tab-land){
+            width: 80%;
+        }
 
         @include respond(phone){
             width: 80%;

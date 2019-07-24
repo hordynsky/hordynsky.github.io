@@ -1,0 +1,101 @@
+.swiper{
+  @include breakpoint(mobile){
+    &-container{
+      width: 100%;
+      height: 100vh;
+    } 
+  
+    &-slide{
+      text-align: center;
+      font-size: 18px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &-button-next, &-button-prev{
+      outline: none;
+      background-image: none;
+
+      svg{
+        width: 55px;
+        height: 33px;
+      }
+    }
+
+    &-button-next{
+      right: 40px;
+    }
+
+    &-scroll{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 30px;
+
+      span{
+        color: $color-white;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        white-space: nowrap;
+        margin-right: $gutter-horizontal-smallest;
+        @include BasisRegular;
+      }
+    }
+  
+    &-scrollbar{
+      right: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $color-white;
+    }
+
+    &-scrollbar-drag{
+      background-color: $color-white;
+      top: -8px;
+      height: 20px;
+    }
+  }  
+}
+
+.range{
+  @include breakpoint(mobile){
+    &-slider{
+      width: 100%;  
+      display: flex;
+      justify-content: center;
+      margin-bottom: $gutter-vertical-small;
+  
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    } 
+  
+    &-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    &-wrapper{
+      margin-bottom: 2rem;
+    }
+  }
+}
