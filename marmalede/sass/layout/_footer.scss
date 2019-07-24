@@ -1,0 +1,69 @@
+.footer{
+   @include breakpoint(mobile){
+        background: $color-black;
+        display: flex;
+        flex-direction: column;
+        padding-top: $gutter-vertical-medium;
+
+        a, p{
+            color: $color-grey;
+        }
+
+        &__top{
+            align-self: center;
+            margin-bottom: 6.2rem;
+
+            span{ 
+                transform: scale(.7);
+            }
+            
+            a{
+                @include BasisRegular;
+            }
+        }
+        
+        &__bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: $gutter-vertical-smallest 0;
+            width: 92%;
+            align-self: center;
+            border-top: 1px solid $color-grey;
+
+            @include breakpoint(tablet-horizontal){
+                padding: $gutter-vertical-smallest 0;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        &-logo{
+            display: flex;
+            align-items: center;
+
+            &__box{
+                margin-right: 1.23rem;
+
+                span{
+                    background-color: $color-grey;
+                }
+            }
+
+            margin-bottom: $gutter-vertical-smallest;
+
+            @include breakpoint(tablet-horizontal){
+                margin-bottom: 0;
+            }
+        }
+
+        &-nav{
+            display: flex;
+
+            li:not(:last-child){
+                margin-right: $gutter-horizontal-smallest;  
+            }
+        } 
+   }  
+}

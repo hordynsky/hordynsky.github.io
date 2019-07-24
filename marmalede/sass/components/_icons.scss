@@ -1,0 +1,17 @@
+.icon{
+    background-color: $color-white;
+    height: 2.154rem;
+    width: 2.154rem;    
+
+    &:not(:last-child){
+        margin-right: 1.37rem;
+    }
+
+    &-round{
+        border-radius: 50%;
+    }
+
+    &-triangle{
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+}

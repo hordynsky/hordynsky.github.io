@@ -361,7 +361,7 @@ section:not(:last-child) {
       max-width: 100%; } }
 
 .header {
-  min-height: 90rem;
+  min-height: 100rem;
   background-image: url(../images/banner.png);
   background-size: 100% 100%;
   padding: 3rem 8rem;
@@ -372,7 +372,7 @@ section:not(:last-child) {
       padding: 3rem 22rem; } }
   @media only screen and (max-width: 62.5em) {
     .header {
-      min-height: 100rem;
+      min-height: 110rem;
       padding: 3rem 4rem; } }
   @media (max-width: 37.5em) {
     .header {
@@ -472,7 +472,8 @@ section:not(:last-child) {
     margin-left: 2rem;
     margin-bottom: 1rem; }
   .section-win__btn {
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.08); }
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.08);
+    text-transform: uppercase; }
     .section-win__btn:hover {
       box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.08); }
     .section-win__btn:focus {
@@ -600,7 +601,7 @@ section:not(:last-child) {
         width: 80%; } }
 
 .section-family {
-  padding: 8rem 0 8rem 0;
+  padding: 4rem 0;
   display: flex;
   justify-content: center; }
   .section-family__banner {
@@ -612,6 +613,9 @@ section:not(:last-child) {
     display: flex;
     flex-direction: column;
     text-align: center; }
+    @media (max-width: 75em) {
+      .section-family__banner {
+        width: 80%; } }
     @media (max-width: 37.5em) {
       .section-family__banner {
         width: 80%;

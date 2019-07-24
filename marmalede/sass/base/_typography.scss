@@ -1,0 +1,44 @@
+/* HEADINGS */
+
+h1, h2, h3{
+    color: $color-white;
+    font-size: 5.5rem;
+    line-height: 7.5rem;
+    @include CanelaWeb;
+}
+
+h3{
+    line-height: 6.6rem;
+    text-align: center;
+
+    @include breakpoint(mobile){
+        font-size: 3rem;
+        line-height: 4rem;      
+    }
+    @include breakpoint(tablet){
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    @include breakpoint(desktop){
+        font-size: 5.5rem;
+        line-height: 7.5rem;
+        padding: 0 5rem;
+    }
+}
+
+p{
+    @include BasisMedium;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+}
+
+a{
+    @include BasisMedium;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    display: inline-block;
+
+    &:hover{
+        color: darken(red, 80%);
+    }
+}
