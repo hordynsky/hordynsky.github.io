@@ -1,0 +1,631 @@
+/** Usage:
+  @include breakpoint(tablet) {}
+  @include breakpoint(min-width, 1192px) {}
+  @include between-breakpoints(0, 1024px) {}
+  **/
+/* START OF COLORS */
+/* END OF COLORS*/
+/* START OF GUTTERS */
+/* start of reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+span {
+  display: inline-block; }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
+/* end of reset */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+  @media (max-width: 424px) {
+    html {
+      font-size: 56.25%; } }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 75%; } }
+  @media (min-width: 1500px) {
+    html {
+      font-size: 87.5%; } }
+
+/*
+    Initializing Fonts
+*/
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-MediumItalic.eot");
+  src: local("Brandon Grotesque Medium Italic"), local("BrandonGrotesque-MediumItalic"), url("../fonts/BrandonGrotesque-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-MediumItalic.woff") format("woff"), url("../fonts/BrandonGrotesque-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-Bold.eot");
+  src: local("Brandon Grotesque Bold"), local("BrandonGrotesque-Bold"), url("../fonts/BrandonGrotesque-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-Bold.woff") format("woff"), url("../fonts/BrandonGrotesque-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-Light.eot");
+  src: local("Brandon Grotesque Light"), local("BrandonGrotesque-Light"), url("../fonts/BrandonGrotesque-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-Light.woff") format("woff"), url("../fonts/BrandonGrotesque-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-Black.eot");
+  src: local("Brandon Grotesque Black"), local("BrandonGrotesque-Black"), url("../fonts/BrandonGrotesque-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-Black.woff") format("woff"), url("../fonts/BrandonGrotesque-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-Medium.eot");
+  src: local("Brandon Grotesque Medium"), local("BrandonGrotesque-Medium"), url("../fonts/BrandonGrotesque-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-Medium.woff") format("woff"), url("../fonts/BrandonGrotesque-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-ThinItalic.eot");
+  src: local("Brandon Grotesque Thin Italic"), local("BrandonGrotesque-ThinItalic"), url("../fonts/BrandonGrotesque-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-ThinItalic.woff") format("woff"), url("../fonts/BrandonGrotesque-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-Thin.eot");
+  src: local("Brandon Grotesque Thin"), local("BrandonGrotesque-Thin"), url("../fonts/BrandonGrotesque-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-Thin.woff") format("woff"), url("../fonts/BrandonGrotesque-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-LightItalic.eot");
+  src: local("../fonts/Brandon Grotesque Light Italic"), local("BrandonGrotesque-LightItalic"), url("../fonts/BrandonGrotesque-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-LightItalic.woff") format("woff"), url("../fonts/BrandonGrotesque-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-Regular.eot");
+  src: local("Brandon Grotesque Regular"), local("BrandonGrotesque-Regular"), url("../fonts/BrandonGrotesque-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-Regular.woff") format("woff"), url("../fonts/BrandonGrotesque-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-RegularItalic.eot");
+  src: local("Brandon Grotesque Regular Italic"), local("BrandonGrotesque-RegularItalic"), url("../fonts/BrandonGrotesque-RegularItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-RegularItalic.woff") format("woff"), url("../fonts/BrandonGrotesque-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-BoldItalic.eot");
+  src: local("Brandon Grotesque Bold Italic"), local("BrandonGrotesque-BoldItalic"), url("../fonts/BrandonGrotesque-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-BoldItalic.woff") format("woff"), url("../fonts/BrandonGrotesque-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url("../fonts/BrandonGrotesque-BlackItalic.eot");
+  src: local("Brandon Grotesque Black Italic"), local("BrandonGrotesque-BlackItalic"), url("../fonts/BrandonGrotesque-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-BlackItalic.woff") format("woff"), url("../fonts/BrandonGrotesque-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
+/* End of font Initialization fonts*/
+/* Same Paddings on the page */
+header, main, footer, section {
+  padding: 0 3rem; }
+
+/* HEADINGS */
+h1 {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  line-height: 3.6rem; }
+
+h1, h2 {
+  font-size: 3.6rem;
+  line-height: 4rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-style: normal; }
+
+h2 {
+  margin-bottom: 2.2rem; }
+
+h3 {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-style: normal; }
+
+h4 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+h5 {
+  font-size: 1.4rem;
+  line-height: 2.17rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  display: inline-block;
+  outline: none; }
+  a:hover {
+    cursor: pointer; }
+
+.cta__link {
+  color: #f61933;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase; }
+  .cta__link span {
+    width: 5rem;
+    height: 1.6rem;
+    background: #f61933;
+    margin-right: 2.8%; }
+
+@media (min-width: 320px) {
+  .navigation__desktop {
+    display: none; }
+    .navigation__desktop li:not(:last-child) {
+      margin-right: 3rem; } }
+  @media (min-width: 320px) and (min-width: 1024px) {
+    .navigation__desktop {
+      display: flex; } }
+
+@media (min-width: 320px) and (min-width: 1024px) {
+  .navigation__mobile {
+    display: none; } }
+
+@media (min-width: 320px) {
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: .6rem;
+    right: 2rem;
+    border-radius: 50%;
+    z-index: 2000;
+    text-align: center; }
+    .navigation__button:hover {
+      cursor: pointer; }
+  .navigation__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 3.4rem;
+    right: 2.5rem;
+    background-image: radial-gradient(#f61933, #f61933);
+    z-index: 1000;
+    transition: transform 1.1s cubic-bezier(0.86, 0, 0.07, 1);
+    transform: translateX(10rem) translateY(-7rem); }
+  .navigation__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: 1.1s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .navigation__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    margin-top: 3rem; }
+  .navigation__item {
+    margin: 1rem; }
+  .navigation__link:link, .navigation__link:visited {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 52%, white 50%);
+    background-size: 240%;
+    transition: all .4s; }
+  .navigation__link:hover, .navigation__link:active {
+    color: #2f3438;
+    background-position: 100%;
+    transform: translateX(1rem); }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(80) translateX(0); }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    width: 100%; }
+  .navigation__checkbox:checked body {
+    overflow: hidden; }
+  .navigation__icon {
+    position: relative;
+    margin-top: 3.5rem; }
+    .navigation__icon--middle, .navigation__icon::before, .navigation__icon::after {
+      width: 3rem;
+      height: 2px;
+      background-color: white;
+      display: inline-block; }
+    .navigation__icon::before, .navigation__icon::after, .navigation__icon--middle {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .4s; }
+    .navigation__icon::before {
+      top: -.8rem; }
+    .navigation__icon::after {
+      width: 1rem;
+      top: .8rem;
+      left: 2rem; }
+  .navigation__button:hover .navigation__icon::before {
+    top: -1rem; }
+  .navigation__button:hover .navigation__icon::after {
+    top: 1rem; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(-90deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon--middle {
+    top: 0;
+    left: -1rem;
+    transform: rotate(-90deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: -1rem;
+    transform: rotate(90deg); } }
+
+@media (min-width: 320px) {
+  .wwd-card {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 3rem;
+    padding-bottom: 3.5rem;
+    width: 36rem;
+    height: 36rem;
+    background-size: cover; }
+    .wwd-card__more {
+      text-transform: uppercase; }
+    .wwd-card:not(:last-of-type) {
+      margin-bottom: 3rem; }
+    .wwd-card--1 {
+      background: url(../images/wwd-1.png) no-repeat center; }
+    .wwd-card--2 {
+      background: url(../images/wwd-2.png) no-repeat center; }
+    .wwd-card--3 {
+      background: url(../images/wwd-3.png) no-repeat center; }
+    .wwd-card--4 {
+      background: url(../images/wwd-4.png) no-repeat center; }
+    .wwd-card--5 {
+      background: url(../images/wwd-5.png) no-repeat center; }
+    .wwd-card--6 {
+      background: url(../images/wwd-6.png) no-repeat center; }
+    .wwd-card--7 {
+      background: url(../images/wwd-7.png) no-repeat center; }
+    .wwd-card h3 {
+      font-size: 2.4rem;
+      line-height: 2.4rem; } }
+
+@media (min-width: 320px) {
+  .case {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 36rem;
+    height: 50.4rem;
+    justify-content: space-between;
+    background-size: cover;
+    padding: 3rem 3.33rem;
+    padding-bottom: 3.86rem; }
+    .case h3 {
+      margin: 2.5rem 0; }
+    .case h3, .case a {
+      text-transform: uppercase; }
+    .case:not(:last-of-type) {
+      margin-bottom: 2rem; }
+    .case:last-of-type {
+      margin-bottom: 3.16rem; }
+    .case--1 {
+      background: url(../images/case1.png) no-repeat center; }
+    .case--2 {
+      background: url(../images/case2.png) no-repeat center; }
+    .case--3 {
+      background: url(../images/case3.png) no-repeat center; } }
+
+.logo {
+  display: flex;
+  z-index: 9999; }
+  .logo__img {
+    margin-right: 0.5rem; }
+    .logo__img path {
+      fill: white; }
+  .logo__alt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: -3px; }
+    .logo__alt span {
+      font-family: 'Brandon Grotesque';
+      font-weight: 300;
+      font-style: normal;
+      font-weight: 400;
+      color: white;
+      text-transform: uppercase;
+      font-size: .7rem;
+      line-height: 1rem; }
+      .logo__alt span:nth-child(2) {
+        font-weight: 900; }
+
+.logo__bricks {
+  display: flex;
+  margin: 4.4rem 27.2%;
+  padding: 4.8rem 1rem;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  justify-content: center;
+  align-items: center; }
+  .logo__bricks span {
+    background-color: white;
+    display: inline-block; }
+    .logo__bricks span:not(:last-child) {
+      margin-right: 3rem; }
+    .logo__bricks span:nth-child(1) {
+      height: 1.9rem;
+      width: .9rem; }
+    .logo__bricks span:nth-child(2) {
+      height: 1.7rem;
+      width: 2.2rem; }
+    .logo__bricks span:nth-child(3) {
+      height: 1.5rem;
+      width: 2.1rem; }
+    .logo__bricks span:nth-child(4) {
+      height: 1.8rem;
+      width: 1.8rem; }
+
+@media (min-width: 320px) {
+  .header {
+    background: transparent;
+    position: fixed;
+    margin-top: 2.8rem; } }
+
+.header .logo {
+  position: fixed; }
+
+/* Main Slider */
+@media (min-width: 320px) {
+  .main {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../images/main.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    padding-top: 15.6rem; }
+    .main__cta {
+      color: white;
+      margin: 4.4rem 0; }
+      .main__cta span {
+        background: white; }
+    .main__arrow {
+      font-size: 2.9rem;
+      align-self: flex-end; } }
+
+@media (min-width: 320px) {
+  .team-members {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    height: 35rem;
+    margin-bottom: 3.3rem; }
+  .team-member {
+    background: url(../images/member-1.png) no-repeat center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem 3.17rem;
+    padding-bottom: 3.14rem;
+    width: 100%;
+    height: auto; }
+    .team-member h3 {
+      text-transform: uppercase; }
+    .team-member h5 {
+      margin-bottom: 1.7rem; }
+  .team-pagination {
+    padding: 0 1rem; }
+    .team-pagination .swiper-pagination-bullet {
+      outline: none; }
+      .team-pagination .swiper-pagination-bullet-active {
+        background: #767778; }
+      .team-pagination .swiper-pagination-bullet:not(:last-child) {
+        margin-right: 2.3rem; } }
+
+@media (min-width: 320px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #f61933;
+    padding-top: 4.1rem;
+    padding-bottom: 3.7rem; }
+    .footer .logo {
+      margin-bottom: 4.27rem;
+      z-index: unset; }
+      .footer .logo__bricks {
+        padding: 0;
+        margin: 4.4rem 0;
+        border: none;
+        align-self: flex-start; }
+        .footer .logo__bricks span:not(:last-child) {
+          margin-right: 2rem; }
+    .footer__info {
+      display: flex;
+      flex-direction: column; }
+      .footer__info h5 {
+        text-transform: uppercase;
+        margin-bottom: 1.4rem; }
+      .footer__info a {
+        line-height: 2.4rem; }
+    .footer__address {
+      margin-bottom: 4.7rem; } }
+
+@media (min-width: 320px) {
+  .wwd {
+    margin-top: 4.4rem;
+    margin-bottom: 9rem; }
+    .wwd h2 {
+      color: #f61933; }
+    .wwd h2, .wwd h3 {
+      text-transform: uppercase; }
+    .wwd h3 {
+      margin-bottom: .7rem; }
+    .wwd > p {
+      margin-bottom: 3rem; }
+    .wwd a {
+      font-size: 1.3rem; }
+    .wwd-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .wwd__cta {
+      padding-top: 3.16rem;
+      padding-right: 10%; }
+      .wwd__cta h3 {
+        margin-bottom: 1.6rem; } }
+
+@media (min-width: 320px) {
+  .clients {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 6.7rem; }
+    .clients h2 {
+      color: #f61933;
+      text-transform: uppercase;
+      line-height: 3.6rem; }
+    .clients img {
+      margin-top: 4rem;
+      margin-bottom: 8rem; }
+    .clients__cta h3 {
+      text-transform: uppercase;
+      margin-bottom: 1.34rem; } }
+
+@media (min-width: 320px) {
+  .team {
+    background-color: #eceff1;
+    padding-top: 5.96rem;
+    padding-bottom: 7rem; }
+    .team h2 {
+      color: #f61933;
+      text-transform: uppercase; }
+    .team > p {
+      margin-bottom: 4.32rem; }
+    .team__cta {
+      margin-top: 5.56rem; }
+      .team__cta h3 {
+        text-transform: uppercase;
+        margin-bottom: 1.34rem; } }
+
+@media (min-width: 320px) {
+  .news {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5.96rem;
+    padding-bottom: 11.4rem; }
+    .news h2 {
+      color: #f61933;
+      text-transform: uppercase; }
+    .news__item {
+      margin-bottom: 3.82rem; }
+      .news__item > span {
+        margin-bottom: 1.28rem; }
+    .news > img {
+      margin-top: .7rem; } }
