@@ -27,6 +27,19 @@ var swiper = new Swiper({
     preloadImages: false,
 });
 
+window.onload = function(){
+  let team = document.querySelector('.team');
+  let teamWrapper = team.querySelector('.team-wrapper');
+  let header = document.querySelector('header');
+
+  if(document.documentElement.offsetWidth >= 1280){
+    swiper.destroy(true, true);
+    teamWrapper.classList.remove('swiper-wrapper');
+    header.style.position = 'absolute';
+  }
+
+}
+
 
 // var header = document.querySelector('header.header');
 
