@@ -28,54 +28,70 @@
             </div>
         </div>
         <nav class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-            <label for="navi-toggle" class="navigation__button">
-                <span class="navigation__icon">
-                    <span class="navigation__icon--middle">
-                        &nbsp;
+            <div class="navigation__mobile">
+                <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+                <label for="navi-toggle" class="navigation__button">
+                    <span class="navigation__icon">
+                        <span class="navigation__icon--middle">
+                            &nbsp;
+                        </span>
                     </span>
-                </span>
-            </label>
-            
-            <div class="navigation__background">&nbsp;</div>
+                </label>
+                
+                <div class="navigation__background">&nbsp;</div>
 
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">Services</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Case Studies</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Aboud LWDA</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">News</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Get in touch</a></li>
-                    <div class="logo__bricks">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Newsletter</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Privacy</a></li>
-                </ul>
-            </nav>
+                <nav class="navigation__nav">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#" class="navigation__link">Services</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Case Studies</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Aboud LWDA</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">News</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Get in touch</a></li>
+                        <div class="logo__bricks">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Newsletter</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Privacy</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <ul class="navigation__desktop">
+                <li class="navigation__desktop--item"><a href="#">Services</a></li>
+                <li class="navigation__desktop--item"><a href="#">Case Studies</a></li>
+                <li class="navigation__desktop--item"><a href="#">About LWDA</a></li>
+                <li class="navigation__desktop--item"><a href="#">News</a></li>
+                <li class="navigation__desktop--item"><a href="#">Get in touch</a></li>
+            </ul>
         </nav>
     </header>
     
     <main class="main">
-        <h4>Welcome to LWDA</h4>
-        <h1>Are you looking for some help with your new or existing web site?</h1>
-        <p>At LWDA we bring together a team of 
-            experienced web design & development 
-            professionals managed from our 
-            head office in West London. </p>
-        <a href="#" class="main__cta cta__link"><span></span> How can we help you ?</a>
+        <div class="main__info">
+            <h4>Welcome to LWDA</h4>
+            <h1>Are you looking for some help with your new or existing web site?</h1>
+            <p>At LWDA we bring together a team of 
+                experienced web design & development 
+                professionals managed from our 
+                head office in West London. </p>
+            <a href="#" class="main__cta cta__link"><span></span> How can we help you ?</a>
+        </div>
         <a href="#footer" class="main__arrow">&darr;</a>
     </main>
 
     <section class="wwd">
-        <h4>What we do</h4>
-        <h2>We provide the following services</h2>
-        <p>Be it a full bespoke e-commerce build or an ad-hoc solution for an existing web site or agency, our service offering is tailored to your needs.
-            </p>
-        <p>Our first and most important task is understanding our clients business. Once we’ve done that we can advise on how best to meet your goals. We’ve outlined some of our core skills below</p>
+        <div class="desktop-top__icon">
+            <img src="./assets/images/top-wwd.png" alt="icon">
+        </div>
+        <div class="wwd__info">
+            <h4>What we do</h4>
+            <h2>We provide the following services</h2>
+            <p>Be it a full bespoke e-commerce build or an ad-hoc solution for an existing web site or agency, our service offering is tailored to your needs.
+                </p>
+            <p>Our first and most important task is understanding our clients business. Once we’ve done that we can advise on how best to meet your goals. We’ve outlined some of our core skills below</p>        
+        </div>
         <div class="wwd-cards">
             <article class="wwd-card wwd-card--1">
                 <div class="wwd-card__info">
@@ -87,14 +103,14 @@
             <article class="wwd-card wwd-card--2">
                 <div class="wwd-card__info">
                     <h3>Web Development</h3>
-                    <p>Lorem ipsum dolorbespoke e-commerce build or an ad-hoc web site or agency, our service offering is tailored.</p>
+                    <p>Lorem ipsum dolorbespoke web site or agency.</p>
                 </div>
                 <a href="#" class="wwd-card__more">More</a>
             </article>
             <article class="wwd-card wwd-card--3">
                 <div class="wwd-card__info">
                     <h3>Bespoke Builds</h3>
-                    <p>Lorem ipsum dolorbespoke e-commerce build or an ad-hoc web site or agency, our service offering is tailored.</p>
+                    <p>Lorem ipsum dolorbespoke web site or agency.</p>
                 </div>
                 <a href="#" class="wwd-card__more">More</a>
             </article>
@@ -115,32 +131,51 @@
             <article class="wwd-card wwd-card--6">
                 <div class="wwd-card__info">
                     <h3>Word Press</h3>
-                    <p>Lorem ipsum dolorbespoke e-commerce build or an ad-hoc web site or agency, our service offering is tailored.</p>
+                    <p>Lorem ipsum dolorbespoke 
+                            web site or agency.</p>
                 </div>
                 <a href="#" class="wwd-card__more">More</a>
             </article>
             <article class="wwd-card wwd-card--7">
                 <div class="wwd-card__info">
                     <h3>Content Management</h3>
-                    <p>Lorem ipsum dolorbespoke e-commerce build or an ad-hoc web site or agency, our service offering is tailored.</p>
+                    <p>Lorem ipsum dolorbespoke web site or agency.</p>
                 </div>
                 <a href="#" class="wwd-card__more">More</a>
             </article>
-
-           <div class="wwd__cta">
-                <h3>Already know what you need?</h3>
-                <a href="#" class="cta__link"><span></span>get in touch</a>
-           </div>
+            <article class="wwd-card wwd-card--8">
+                <div class="wwd-card__info">
+                    <h3>Hosting</h3>
+                    <p>Lorem ipsum dolorbespoke web site or agency.</p>
+                </div>
+                <a href="#" class="wwd-card__more">More</a>
+            </article>
         </div>
+        <div class="wwd__cta cta-wrapper">
+            <h3>Already know</br> what you need?</h3>
+            <a href="#" class="cta__link"><span></span>get in touch</a>
+       </div>
     </section>
     <section class="clients">
-        <h4>Here are just a few of</h4>
-        <h2>Our Recent Clients</h2>
-        <p>From start-ups to multinational corporations. 
-            We aim to develop long term partnerships with 
-            our clients. Take a look at some of our most 
-            recent collaborations.</p>
-        <img src="./assets/images/clients.png" alt="our recent clients">
+        <div class="desktop-top__icon">
+            <img src="./assets/images/top-clients.png" alt="icon">
+        </div>
+        <div class="clients__info">
+            <div class="clients__info--text">
+                <h4>Here are just a few of</h4>
+                <h2>Our Recent Clients</h2>
+                <p>From start-ups to multinational 
+                        corporations. We aim to develop 
+                        long term partnerships with 
+                        our clients.</p>
+                <p>Take a look at some of our 
+                        most recent collaborations.</p>
+            </div>
+            <div class="clients__info--img">
+                <span></span>
+                <img src="./assets/images/clients.png" alt="our recent clients">
+            </div>
+        </div>
         <div class="cases">
              <article class="case case--1">
                 <div class="case__info">
@@ -153,7 +188,7 @@
             <article class="case case--2">
                 <div class="case__info">
                     <h5>Case study</h5>
-                    <h3>Lauder </br>& Ress</h3>
+                    <h3>Lauder </>& Ress</h3>
                     <p>Lorem ipsum dolorbespoke e-commerce build or an ad-hoc web site or agency, our service offering is tailored.</p>
                 </div>
                 <a href="#" class="case__more">View Project</a>
@@ -166,42 +201,101 @@
                 </div>
                 <a href="#" class="case__more">View Project</a>
             </article>
-            <div class="clients__cta">
-                <h3>Like what</br> you see?</h3>
-                <a href="#" class="cta__link"><span></span>get in touch</a>
-            </div>
+        </div>
+        <div class="clients__cta cta-wrapper">
+            <h3>Like what you see?</h3>
+            <a href="#" class="cta__link"><span></span>get in touch</a>
         </div>
     </section>
     <section class="team">
-        <h4>Our Team</h4>
-        <h2>Who</br> we are</h2>
-        <p>Lorem ipsum dolor multinational corporations. We aim to develop long term partnerships with our clients. Take a look at some.</p>
+        <div class="desktop-top__icon">
+            <img src="./assets/images/top-team.png" alt="icon">
+        </div>
+        <div class="team__info">
+            <h4>Our Team</h4>
+            <h2>Who</br> we are</h2>
+            <p>Lorem ipsum dolor  it a full bespoke e-commerce build or an ad-hoc web site or agency, our service offering is tailored to your needs. Our first and most important task is understanding.</p>
+        </div>
         <div class="team-members">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper team-wrapper">
                 <!-- Slides -->
                 <div class="team-member team-member--1 swiper-slide">
-                    <h5>Job title</h5>
-                    <h3>Ben </br>Lattimore</h3>
+                    <div class="team-member__img">
+                        <img src="./assets/images/member-1.png" alt="member">
+                    </div>
+                    <div class="team-member__hover">
+                        <h5>Job title</h5>
+                        <h3>Ben </br>Lattimore</h3>
+                        <div class="team-member__hover--additional">
+                            <p>Lorem ipsum dolorbespoke e-comme web site or agency, our service offering is tailored.</p>
+                            <a href="#" class="team-member__more">More</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="team-member team-member--2 swiper-slide">
-                    <h5>Job title</h5>
-                    <h3>Ben </br>Lattimore</h3>
+                    <div class="team-member__img">
+                        <img src="./assets/images/member-2.png" alt="member">
+                    </div>
+                    <div class="team-member__hover">
+                        <h5>Job title</h5>
+                        <h3>Stuart </br>Watkins</h3>
+                        <div class="team-member__hover--additional">
+                            <p>Lorem ipsum dolorbespoke e-comme web site or agency, our service offering is tailored.</p>
+                            <a href="#" class="team-member__more">More</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="team-member team-member--3 swiper-slide">
-                    <h5>Job title</h5>
-                    <h3>Ben </br>Lattimore</h3>
+                    <div class="team-member__img">
+                        <img src="./assets/images/member-3.png" alt="member">
+                    </div>
+                    <div class="team-member__hover">
+                        <h5>Job title</h5>
+                        <h3>Miles </br>Gripton</h3>
+                        <div class="team-member__hover--additional">
+                            <p>Lorem ipsum dolorbespoke e-comme web site or agency, our service offering is tailored.</p>
+                            <a href="#" class="team-member__more">More</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="team-member team-member--4 swiper-slide">
-                    <h5>Job title</h5>
-                    <h3>Ben </br>Lattimore</h3>
+                    <div class="team-member__img">
+                        <img src="./assets/images/member-3.png" alt="member">
+                    </div>
+                    <div class="team-member__hover">
+                        <h5>Job title</h5>
+                        <h3>Greg </br>Macdonald</h3>
+                        <div class="team-member__hover--additional">
+                            <p>Lorem ipsum dolorbespoke e-comme web site or agency, our service offering is tailored.</p>
+                            <a href="#" class="team-member__more">More</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="team-member team-member--5 swiper-slide">
-                    <h5>Job title</h5>
-                    <h3>Ben </br>Lattimore</h3>
+                    <div class="team-member__img">
+                        <img src="./assets/images/member-1.png" alt="member">
+                    </div>
+                    <div class="team-member__hover">
+                        <h5>Job title</h5>
+                        <h3>Alex </br>Nul</h3>
+                        <div class="team-member__hover--additional">
+                            <p>Lorem ipsum dolorbespoke e-comme web site or agency, our service offering is tailored.</p>
+                            <a href="#" class="team-member__more">More</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="team-member team-member--6 swiper-slide">
-                    <h5>Job title</h5>
-                    <h3>Ben </br>Lattimore</h3>
+                    <div class="team-member__img">
+                        <img src="./assets/images/member-4.png" alt="member">
+                    </div>
+                    <div class="team-member__hover">
+                        <h5>Job title</h5>
+                        <h3>Tania </br>Cummins</h3>
+                        <div class="team-member__hover--additional">
+                            <p>Lorem ipsum dolorbespoke e-comme web site or agency, our service offering is tailored.</p>
+                            <a href="#" class="team-member__more">More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,23 +303,37 @@
          <div class="team-pagination">
              <span></span>
          </div>
-         <div class="team__cta">
+         <div class="team__cta cta-wrapper">
             <h3>Want to talk </br> to an expert?</h3>
             <a href="#" class="cta__link"><span></span>get in touch</a>
         </div>
     </section>
     <section class="news">
-        <h4>News & events</h4>
-        <h2>Latest<br/> from LWDA</h2>
-        <div class="news__item">
-            <span><img src="./assets/images/twitter.png" alt="twitter"></span>
-            <p>Lorem ipsum dolor multinational corporations. We aim to develop long term partnerships with our clients. Take a look at some.</p>
+        <div class="desktop-top__icon">
+            <img src="./assets/images/top-news.png" alt="icon">
         </div>
-        <div class="news__item">
-            <span><img src="./assets/images/twitter.png" alt="twitter"></span>
-            <p>Lorem ipsum dolor multinational corporations. We aim to develop long term partnerships with our clients. Take a look at some.</p>
+        <div class="news__info">
+            <div class="news__heading">
+                <h4>News & events</h4>
+                <h2>Latest<br/> from LWDA</h2>
+            </div>
+            <div class="news__items">
+                <div class="news__item">
+                    <span><img src="./assets/images/twitter.png" alt="twitter"></span>
+                    <p>Lorem ipsum dolor multinational corporations. We aim to develop long term partnerships with our clients. Take a look at some.</p>
+                </div>
+                <div class="news__item">
+                    <span><img src="./assets/images/twitter.png" alt="twitter"></span>
+                    <p>Lorem ipsum dolor multinational corporations. We aim to develop long term partnerships with our clients. Take a look at some.</p>
+                </div>
+            </div>
+        </div> 
+        <div class="news__images">
+            <img src="./assets/images/case1.png" alt="news">
+            <img src="./assets/images/case2.png" alt="news">
+            <img src="./assets/images/case2.png" alt="news">
+            <img src="./assets/images/case1.png" alt="news">
         </div>
-        <img src="./assets/images/news.png" alt="news">
     </section>
     
     <footer class="footer" id="footer">
