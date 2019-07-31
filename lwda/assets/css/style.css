@@ -1000,7 +1000,8 @@ a {
       margin-left: 12rem;
       display: flex; }
     .news__heading {
-      width: 33%; }
+      width: 33%;
+      padding: 0 2rem; }
     .news__items {
       align-self: flex-end;
       width: 67%; }
