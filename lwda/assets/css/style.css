@@ -215,6 +215,7 @@ p {
   font-weight: 400;
   font-style: normal; }
 
+/* LINKS */
 a {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
@@ -241,6 +242,53 @@ a {
     background: #f61933;
     margin-right: 2.8%; }
 
+/* BUTTONS */
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none; }
+
+/* FORM + INPUT */
+form {
+  width: 27rem; }
+  form input {
+    background: transparent;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    width: 90%;
+    font-size: 1.4rem;
+    margin-right: -3.25rem;
+    transition: all .4s; }
+    form input, form input::placeholder {
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-style: normal; }
+  form button {
+    transition: all .4s; }
+    form button span {
+      color: white;
+      font-size: 1.3rem; }
+  form input:hover {
+    width: 100%; }
+  form input:hover ~ button {
+    transform: rotate(-180deg); }
+
+/* MEDIA QUERIES */
 @media (min-width: 1280px) {
   h1, h2 {
     font-size: 4.8rem;
@@ -540,6 +588,10 @@ a {
       @media (min-width: 1024px) {
         .logo__alt span {
           line-height: .9rem; } }
+    @media (min-width: 1024px) {
+      .logo__alt {
+        align-self: flex-start;
+        margin-top: 0; } }
 
 .logo__bricks {
   display: flex;
@@ -745,6 +797,8 @@ a {
         align-self: flex-start; }
         .footer .logo__bricks span:not(:last-child) {
           margin-right: 2rem; }
+    .footer .desktop__logo .logo__bricks {
+      display: none; }
     .footer__info {
       display: flex;
       flex-direction: column; }
@@ -754,7 +808,56 @@ a {
       .footer__info a {
         line-height: 2.4rem; }
     .footer__address {
-      margin-bottom: 4.7rem; } }
+      margin-bottom: 4.7rem; }
+      .footer__address p {
+        font-size: 1.4rem; }
+    .footer__contact a {
+      font-weight: 400; }
+    .footer__cta {
+      display: none; }
+    .footer__bottom {
+      display: none; } }
+
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between; }
+    .footer .copyright-mobile {
+      display: none; }
+    .footer .desktop__logo .logo__bricks {
+      display: block; }
+    .footer > .logo__bricks {
+      display: none; }
+    .footer__cta {
+      display: flex; }
+    .footer__bottom {
+      display: flex; } }
+
+@media (min-width: 1280px) {
+  .footer {
+    padding: 9rem 15rem;
+    padding-bottom: 0; } }
+
+@media (min-width: 320px) {
+  .credentials {
+    display: none; } }
+
+@media (min-width: 1024px) {
+  .credentials {
+    color: white;
+    background: #f61933;
+    display: flex;
+    padding: 4rem 15rem 9rem;
+    justify-content: space-between;
+    margin-top: -1px; }
+    .credentials p, .credentials a {
+      font-size: 1.2rem; }
+    .credentials .policy {
+      display: flex; }
+      .credentials .policy li a {
+        font-weight: 400; }
+      .credentials .policy li:not(:last-child) {
+        margin-right: 1.9rem; } }
 
 @media (min-width: 320px) {
   .wwd {
@@ -1000,7 +1103,8 @@ a {
       margin-left: 12rem;
       display: flex; }
     .news__heading {
-      width: 33%; }
+      width: 33%;
+      padding: 0 2rem; }
     .news__items {
       align-self: flex-end;
       width: 67%; }
