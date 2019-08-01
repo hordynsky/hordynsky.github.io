@@ -612,8 +612,11 @@ form {
   .header {
     background: transparent;
     position: fixed;
-    margin-top: 2.8rem;
-    z-index: 10; }
+    padding-top: 2.8rem;
+    height: 8rem;
+    width: 100%;
+    z-index: 10;
+    transition: all .8s; }
     .header .logo {
       position: fixed; } }
 
@@ -621,6 +624,7 @@ form {
   .header {
     padding: 0 6rem;
     display: flex;
+    align-items: center;
     width: 100%;
     justify-content: space-between; }
     .header .logo {
