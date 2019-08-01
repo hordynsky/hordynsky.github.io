@@ -447,8 +447,6 @@ form {
     background-size: cover !important; }
     .wwd-card__more {
       text-transform: uppercase; }
-    .wwd-card:not(:last-of-type) {
-      margin-bottom: 3rem; }
     .wwd-card--1 {
       background: url(../images/wwd-1.png) no-repeat center; }
     .wwd-card--2 {
@@ -562,6 +560,23 @@ form {
     height: 15.9rem;
     background: #f61933; } }
 
+.social-icons {
+  display: flex;
+  margin: 4.4rem 27.2%;
+  padding: 4.8rem 1rem;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  justify-content: center;
+  align-items: center; }
+  .social-icons a {
+    display: inline-block; }
+    .social-icons a:not(:last-child) {
+      margin-right: 3rem; }
+    .social-icons a svg {
+      width: 2rem;
+      height: 2rem;
+      fill: white; }
+
 .logo {
   display: flex;
   z-index: 9999; }
@@ -592,32 +607,6 @@ form {
       .logo__alt {
         align-self: flex-start;
         margin-top: 0; } }
-
-.logo__bricks {
-  display: flex;
-  margin: 4.4rem 27.2%;
-  padding: 4.8rem 1rem;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  justify-content: center;
-  align-items: center; }
-  .logo__bricks span {
-    background-color: white;
-    display: inline-block; }
-    .logo__bricks span:not(:last-child) {
-      margin-right: 3rem; }
-    .logo__bricks span:nth-child(1) {
-      height: 1.9rem;
-      width: .9rem; }
-    .logo__bricks span:nth-child(2) {
-      height: 1.7rem;
-      width: 2.2rem; }
-    .logo__bricks span:nth-child(3) {
-      height: 1.5rem;
-      width: 2.1rem; }
-    .logo__bricks span:nth-child(4) {
-      height: 1.8rem;
-      width: 1.8rem; }
 
 @media (min-width: 320px) {
   .header {
@@ -719,6 +708,10 @@ form {
       .team-pagination .swiper-pagination-bullet:not(:last-child) {
         margin-right: 2.3rem; } }
 
+@media (min-width: 768px) {
+  .team-members {
+    height: 50rem; } }
+
 @media (min-width: 1280px) {
   .team-members {
     display: flex;
@@ -770,9 +763,7 @@ form {
     transform: translateY(0); }
   .team-member:hover .team-member__hover--additional {
     transform: translateY(0);
-    opacity: 1; }
-  .team-pagination {
-    display: none; } }
+    opacity: 1; } }
 
 @media (min-width: 1439px) {
   .team-member h3 {
@@ -790,14 +781,14 @@ form {
     .footer .logo {
       margin-bottom: 4.27rem;
       z-index: unset; }
-      .footer .logo__bricks {
-        padding: 0;
-        margin: 4.4rem 0;
-        border: none;
-        align-self: flex-start; }
-        .footer .logo__bricks span:not(:last-child) {
-          margin-right: 2rem; }
-    .footer .desktop__logo .logo__bricks {
+    .footer .social-icons {
+      padding: 0;
+      margin: 4.4rem 0;
+      border: none;
+      align-self: flex-start; }
+      .footer .social-icons a:not(:last-child) {
+        margin-right: 2rem; }
+    .footer .desktop__logo .social-icons {
       display: none; }
     .footer__info {
       display: flex;
@@ -816,17 +807,20 @@ form {
     .footer__cta {
       display: none; }
     .footer__bottom {
-      display: none; } }
+      display: none; }
+    .footer .copyright-mobile {
+      font-size: 1.4rem; } }
 
 @media (min-width: 1024px) {
   .footer {
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding-top: 6rem; }
     .footer .copyright-mobile {
       display: none; }
-    .footer .desktop__logo .logo__bricks {
+    .footer .desktop__logo .social-icons {
       display: block; }
-    .footer > .logo__bricks {
+    .footer > .social-icons {
       display: none; }
     .footer__cta {
       display: flex; }
@@ -840,14 +834,15 @@ form {
 
 @media (min-width: 320px) {
   .credentials {
-    display: none; } }
+    display: none;
+    padding: 0 3rem; } }
 
 @media (min-width: 1024px) {
   .credentials {
     color: white;
     background: #f61933;
     display: flex;
-    padding: 4rem 15rem 9rem;
+    padding-bottom: 4rem;
     justify-content: space-between;
     margin-top: -1px; }
     .credentials p, .credentials a {
@@ -858,6 +853,10 @@ form {
         font-weight: 400; }
       .credentials .policy li:not(:last-child) {
         margin-right: 1.9rem; } }
+
+@media (min-width: 1280px) {
+  .credentials {
+    padding: 4rem 15rem 9rem; } }
 
 @media (min-width: 320px) {
   .wwd {
@@ -1045,6 +1044,10 @@ form {
       .team__cta h3 {
         text-transform: uppercase;
         margin-bottom: 1.34rem; } }
+
+@media (min-width: 768px) {
+  .team__info {
+    width: 70%; } }
 
 @media (min-width: 1280px) {
   .team {

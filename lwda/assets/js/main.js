@@ -1,5 +1,31 @@
 /* Main Slider */
-var swiper = new Swiper({
+
+let swiper;
+
+let pagination = document.querySelector('.team-pagination');
+
+
+// document.querySelectorAll('article').forEach(art => art.style.paddingTop = header.offsetHeight + 33 + 'px')
+
+/* One Page Scroll */
+
+let breakpoint = window.matchMedia( '(min-width:1280px)' );
+
+const breakpointChecker = function(){
+  if(breakpoint.matches === true){
+    if(swiper !== undefined){
+      swiper.destroy(true,true)
+      pagination.style.display = 'none';
+    }
+    return
+  }else if(breakpoint.matches === false){
+    pagination.style.display = 'block';
+    return enableSwiper();
+  }
+}
+
+const enableSwiper = function(){
+  swiper = new Swiper({
     el: '.team-members',
     centeredSlides: true,
     slideToClickedSlide: true,
@@ -25,25 +51,8 @@ var swiper = new Swiper({
     swipe: false,
     lazy: true,
     preloadImages: false,
-});
-
-window.onload = function(){
-  let team = document.querySelector('.team');
-  let teamWrapper = team.querySelector('.team-wrapper');
-  let header = document.querySelector('header');
-
-  if(document.documentElement.offsetWidth >= 1280){
-    swiper.destroy(true, true);
-    teamWrapper.classList.remove('swiper-wrapper');
-    header.style.position = 'absolute';
-  }
-
+  });
 }
 
-
-// var header = document.querySelector('header.header');
-
-// document.querySelectorAll('article').forEach(art => art.style.paddingTop = header.offsetHeight + 33 + 'px')
-
-/* One Page Scroll */
-
+breakpoint.addListener(breakpointChecker);
+breakpointChecker();
