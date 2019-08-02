@@ -53,6 +53,8 @@ table {
 a {
   color: white;
   text-decoration: none; }
+  a:hover {
+    cursor: pointer; }
 
 span {
   display: inline-block; }
@@ -169,6 +171,11 @@ header, main, footer, section {
 @media (min-width: 1439px) {
   section {
     padding: 14.16rem 15rem; } }
+
+/* Useful things */
+.invert {
+  transition: all .4s;
+  filter: invert(1) brightness(150%); }
 
 /* HEADINGS */
 h1 {
@@ -545,6 +552,20 @@ form {
       margin-bottom: 2rem; } }
 
 @media (min-width: 320px) {
+  .cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(32rem, 1fr));
+    grid-gap: 2rem;
+    grid-row-gap: 0;
+    flex-direction: column;
+    align-items: center; } }
+
+@media (min-width: 768px) {
+  .cases {
+    grid-template-columns: repeat(auto-fit, minmax(32%, 1fr)); } }
+
+@media (min-width: 320px) {
   .desktop-top__icon {
     display: none; } }
 
@@ -609,6 +630,37 @@ form {
         margin-top: 0; } }
 
 @media (min-width: 320px) {
+  .quote {
+    background: #2f3438;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 4.4rem 3rem; }
+    .quote-text {
+      margin-bottom: 2rem; }
+    .quote-author h2 {
+      margin-bottom: 1rem;
+      text-transform: uppercase; } }
+
+@media (min-width: 1280px) {
+  .quote {
+    align-items: center;
+    flex-direction: row;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    justify-content: center; }
+    .quote-text {
+      margin-bottom: 0;
+      margin-right: 8rem; }
+    .quote-author h2 {
+      white-space: nowrap; } }
+
+@media (min-width: 1439px) {
+  .quote {
+    padding-left: 22rem !important;
+    padding-right: 22rem !important; } }
+
+@media (min-width: 320px) {
   .header {
     background: transparent;
     position: fixed;
@@ -618,7 +670,13 @@ form {
     z-index: 10;
     transition: all .8s; }
     .header .logo {
-      position: fixed; } }
+      position: fixed; }
+    .header-black .logo__img path {
+      fill: #2f3438; }
+    .header-black .logo__alt span {
+      color: #2f3438; }
+    .header-black .navigation__icon::before, .header-black .navigation__icon--middle, .header-black .navigation__icon::after {
+      background-color: #2f3438; } }
 
 @media (min-width: 1280px) {
   .header {
@@ -628,7 +686,9 @@ form {
     width: 100%;
     justify-content: space-between; }
     .header .logo {
-      position: unset; } }
+      position: unset; }
+    .header-black .navigation__desktop a {
+      color: inherit; } }
 
 @media (min-width: 1439px) {
   .header {
@@ -934,19 +994,6 @@ form {
       color: #f61933;
       text-transform: uppercase;
       line-height: 3.6rem; }
-    .clients .cases {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
-      grid-template-rows: repeat(auto-fit, minmax(32rem, 1fr));
-      grid-gap: 2rem;
-      grid-row-gap: 0;
-      flex-direction: column;
-      align-items: center; } }
-    @media (min-width: 320px) and (min-width: 768px) {
-      .clients .cases {
-        grid-template-columns: repeat(auto-fit, minmax(32%, 1fr)); } }
-
-@media (min-width: 320px) {
     .clients__cta h3 {
       text-transform: uppercase;
       margin-bottom: 1.34rem;
@@ -1128,3 +1175,136 @@ form {
       grid-column-gap: 2rem;
       margin-left: 12rem;
       width: 60%; } }
+
+@media (min-width: 320px) {
+  .services-wwd {
+    padding: 15.6rem 4.4rem 11.4rem; }
+    .services-wwd__info {
+      margin-left: 4rem;
+      margin-bottom: 7rem;
+      transition: all .4s; } }
+    @media (min-width: 320px) and (max-width: 424px) {
+      .services-wwd__info {
+        margin-left: 0; } }
+
+@media (min-width: 320px) {
+    .services-wwd .wwd-cards {
+      margin-bottom: 6rem; }
+    .services-wwd__cta {
+      margin-left: 4rem; }
+      .services-wwd__cta h3 {
+        margin-bottom: 2rem; } }
+
+@media (min-width: 1024px) {
+  .services-wwd__info {
+    width: 80%; } }
+
+@media (min-width: 1280px) {
+  .services-wwd {
+    padding: 15rem; }
+    .services-wwd__info {
+      margin-left: 15rem;
+      width: 60%; }
+    .services-wwd__cta {
+      margin-left: 15rem; } }
+
+@media (min-width: 320px) {
+  .service-u {
+    padding: 15.6rem 3rem 6rem; }
+    .service-u section {
+      padding: 0; }
+    .service-u h2 {
+      text-transform: uppercase; }
+    .service-u-wwd__info {
+      margin-left: 4rem;
+      margin-bottom: 7rem;
+      transition: all .4s; } }
+    @media (min-width: 320px) and (max-width: 424px) {
+      .service-u-wwd__info {
+        margin-left: 0; } }
+
+@media (min-width: 320px) {
+    .service-u__cta {
+      margin-left: 4rem; } }
+    @media (min-width: 320px) and (max-width: 424px) {
+      .service-u__cta {
+        margin-left: 0; } }
+
+@media (min-width: 320px) {
+      .service-u__cta p:last-of-type {
+        margin-bottom: 4.4rem; }
+    .service-u__intro {
+      margin-bottom: 4.4rem; }
+      .service-u__intro--main img {
+        width: 100%; }
+      .service-u__intro--minor {
+        display: none; }
+    .service-u__clients--cta {
+      margin-left: 4rem; } }
+    @media (min-width: 320px) and (max-width: 424px) {
+      .service-u__clients--cta {
+        margin-left: 0; } }
+
+@media (min-width: 320px) {
+    .service-u__quote {
+      margin-bottom: 4.4rem; }
+      .service-u__quote h4 {
+        margin-bottom: 0; }
+    .service-u__clients {
+      padding: 0 3rem;
+      margin-bottom: 6rem; }
+      .service-u__clients--cta h3 {
+        margin-bottom: 1rem; } }
+
+@media (min-width: 768px) {
+  .service-u-wwd__info {
+    width: 80%; } }
+
+@media (min-width: 1024px) {
+  .service-u, .service-u__quote, .service-u__clients {
+    padding-left: 6rem;
+    padding-right: 6rem; }
+  .service-u__cases {
+    margin-bottom: 4.4rem; } }
+
+@media (min-width: 1280px) {
+  .service-u {
+    margin-bottom: 11rem;
+    padding-bottom: 0; }
+    .service-u, .service-u__quote, .service-u__clients {
+      padding-left: 10rem;
+      padding-right: 10rem; }
+    .service-u-wwd {
+      padding: 15rem; }
+      .service-u-wwd__info {
+        margin-left: 15rem;
+        width: 60%; }
+    .service-u__clients--cta {
+      margin-left: 15rem; }
+    .service-u__intro {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(18rem, 1fr));
+      grid-template-rows: repeat(3, minmax(17rem, 1fr)); }
+      .service-u__intro--main {
+        grid-column: 1 / 5;
+        grid-row: 1 / 3; }
+        .service-u__intro--main img {
+          width: 100%;
+          height: 100%; }
+      .service-u__intro--minor {
+        grid-column: 5 / -1;
+        grid-row: 3 / 4;
+        display: flex;
+        flex-direction: row; }
+        .service-u__intro--minor--2 {
+          position: relative; }
+    .service-u__cta {
+      margin-left: 15rem;
+      margin-top: -8rem;
+      width: 80%; }
+      .service-u__cta h2 {
+        width: 50%; }
+    .service-u__cases {
+      margin-bottom: 6rem; }
+    .service-u__clients {
+      margin-bottom: 12rem; } }

@@ -3,7 +3,6 @@
 let swiper;
 
 let pagination = document.querySelector('.team-pagination');
-let header = document.querySelector('header');
 
 
 // document.querySelectorAll('article').forEach(art => art.style.paddingTop = header.offsetHeight + 33 + 'px')
@@ -58,6 +57,3 @@ const enableSwiper = function(){
 breakpoint.addListener(breakpointChecker);
 breakpointChecker();
 
-window.addEventListener('scroll', function(){
-    window.scrollY>100 ? header.style.background = '#000' : header.style.background = 'transparent';
-})
