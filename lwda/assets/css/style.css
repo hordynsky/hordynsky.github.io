@@ -659,6 +659,10 @@ form {
     padding-left: 22rem !important;
     padding-right: 22rem !important; } }
 
+#map {
+  height: 100%;
+  width: 100%; }
+
 @media (min-width: 320px) {
   .header {
     background: transparent;
@@ -833,6 +837,28 @@ form {
   .team-member h3 {
     font-size: 3.6rem;
     line-height: 3.6rem; } }
+
+@media (min-width: 320px) {
+  form.contact__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    form.contact__form input, form.contact__form textarea {
+      background: #f0f2f4;
+      padding: 2.8rem;
+      margin-bottom: 2.1rem;
+      width: 100%; }
+      form.contact__form input::placeholder, form.contact__form input, form.contact__form textarea::placeholder, form.contact__form textarea {
+        color: #2f3438;
+        font-size: 1.4rem;
+        outline: none;
+        border: none; }
+    form.contact__form a {
+      font-size: 1.6rem; }
+    form.contact__form textarea {
+      resize: none;
+      margin-bottom: 3.2rem;
+      height: 13rem; } }
 
 @media (min-width: 320px) {
   .footer {
@@ -1401,6 +1427,8 @@ form {
       position: absolute; }
       .case-study__video--play img {
         width: 100%; }
+      .case-study__video--play:hover {
+        cursor: pointer; }
   .case-study__cta {
     margin-bottom: 4.4rem;
     margin-left: 4rem; }
@@ -1664,3 +1692,65 @@ form {
     padding-left: 30rem; }
   .case-overview__cards {
     padding: 6rem 15rem; } }
+
+@media (min-width: 320px) {
+  .contact {
+    padding: 15.6rem 3rem 6rem; }
+    .contact__info {
+      margin-bottom: 6rem; }
+    .contact-location {
+      padding-bottom: 11.4rem; }
+      .contact-location__info {
+        margin-bottom: 4rem; }
+        .contact-location__info h2 {
+          text-transform: uppercase; }
+      .contact-location__address {
+        margin-bottom: 2rem; }
+        .contact-location__address p {
+          line-height: 2.6rem; }
+      .contact-location__phone p {
+        margin-bottom: 2rem; }
+      .contact-location__phone a {
+        color: #f61933;
+        font-size: 4.8rem;
+        line-height: 4.8rem; }
+      .contact-location__map {
+        height: 55rem; } }
+
+@media (min-width: 768px) {
+  .contact {
+    width: 70%;
+    margin: 0 auto; }
+    .contact-location__info {
+      width: 70%;
+      margin: 0 auto 4.4rem; }
+    .contact-location__map {
+      padding: 0 3rem; } }
+
+@media (min-width: 1024px) {
+  .contact-location__map {
+    padding: 0 8rem; } }
+
+@media (min-width: 1280px) {
+  .contact {
+    width: 50%; }
+    .contact__info h1 {
+      width: 80%; }
+    .contact-location {
+      position: relative; }
+      .contact-location__info {
+        display: inline-flex;
+        flex-direction: column;
+        background: white;
+        margin-bottom: 4rem;
+        position: absolute;
+        width: 51rem;
+        padding: 12rem 8rem 7.6rem;
+        top: -11rem;
+        left: 23rem;
+        z-index: 2; }
+      .contact-location__address {
+        margin-bottom: 2rem; }
+      .contact-location__map {
+        padding: 0;
+        z-index: 1; } }
