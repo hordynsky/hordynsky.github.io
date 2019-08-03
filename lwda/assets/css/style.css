@@ -290,9 +290,9 @@ form {
     form button span {
       color: white;
       font-size: 1.3rem; }
-  form input:hover {
+  form input:focus {
     width: 100%; }
-  form input:hover ~ button {
+  form input:focus ~ button {
     transform: rotate(-180deg); }
 
 /* MEDIA QUERIES */
