@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
     <title>LWDA</title>
 </head>
 <body>
-    <header class="header services-header header-black">
+    <header class="header">
         <a href="../index.html" class="logo">
             <div class="logo__img">
                 <svg xmlns="http://www.w3.org/2000/svg" width="87.699" height="23.177" viewBox="0 0 87.699 23.177">
@@ -44,7 +45,7 @@
                         <li class="navigation__item"><a href="./services.html" class="navigation__link">Services</a></li>
                         <li class="navigation__item"><a href="./case-overview.html" class="navigation__link">Case Studies</a></li>
                         <li class="navigation__item"><a href="#" class="navigation__link">Aboud LWDA</a></li>
-                        <li class="navigation__item"><a href="./news.html" class="navigation__link">News</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">News</a></li>
                         <li class="navigation__item"><a href="./contact-us.html" class="navigation__link">Get in touch</a></li>
                         <div class="social-icons">
                             <a href="#">
@@ -111,88 +112,78 @@
                     </ul>
                 </nav>
             </div>
-            <ul class="navigation__desktop">    
+            <ul class="navigation__desktop">
                 <li class="navigation__desktop--item"><a href="./services.html">Services</a></li>
                 <li class="navigation__desktop--item"><a href="./case-overview.html">Case Studies</a></li>
                 <li class="navigation__desktop--item"><a href="#">About LWDA</a></li>
-                <li class="navigation__desktop--item"><a href="./news.html">News</a></li>
+                <li class="navigation__desktop--item"><a href="#">News</a></li>
                 <li class="navigation__desktop--item"><a href="./contact-us.html">Get in touch</a></li>
             </ul>
         </nav>
     </header>
-    <main class="service-u">
-        <div class="service-u-wwd__info">
-            <h4>Services</h4>
-            <h1>Web Development</h1>
-            <p>
-                Many of our clients are graphic design and advertising agencies who supply us with finished artwork. For these clients we provide bespoke W3C spec coded sites and consultancy. Requirements range from bespoke systems for content management, HTML newsletters and e-commerce.
-            </p>
-        </div>
-        <section class='service-u__intro'>
-            <div class="service-u__intro--main">
-                <img src="../assets//images/service-u.png" alt="Main Image">
-            </div>
-            <div class="service-u__intro--minor">
-                <div class="service-u__intro--minor--1">
-                    <img src="../assets/images/service-u__minor.png" alt="minor img">
-                </div>
-                <div class="service-u__intro--minor--2">
-                    <div class="desktop-top__icon">
-                        <img src="../assets/images/wheel.svg" alt="icon">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="service-u__cta cta-wrapper">
-            <h2>As well as building our own systems from scratch</h2>
-            <p>We also work with WordPress, Magento and bulletin</p>
-            <p>board systems such as vBulletin and phpBB.If you are a graphic designer, ad agency, or anyone else interested in web development we´d love to chat!</p>
-            <a href="#" class="cta__link"><span></span>get in touch</a>
-       </div>
+    
+    <main class="news-heading">
+        <h1>Latest news</h1>
     </main>
-    <section class="service-u__quote quote">
-        <div class="quote-text">
-            <p>“ Lorem ipsum dolor ommerce build or an ad-hoc solution for an existing web site or agency, 
-                our service offering is tailored to your needs. Our first and most important task is under
-                standing our clients business. Once we’ve done that we can “</p>
+    
+    <div class="news-items">
+        <div class="news-item news-item--1">
+            <img src="../assets/images/case-study-additional-bg.png" alt="business cards">
+            <div class="news-item__info">
+                <h5>June 24, 2019</h5>
+                <h2>Lorem Ipsum Dolor Amet</h2>
+                <p>Lorem ipsum dolor amet a couple of  lines will go here lorem ipsum</p>
+            </div>
+            <div class="news-item__cta cta-wrapper">
+                <a href="#" class="cta__link"><span></span>read more</a>
+            </div>
         </div>
-        <div class="quote-author">
-            <h2>Mr. Watkins</h2>
-            <h4>Amitruck's CEO</h4>
+        <div class="news-item news-item--2">
+            <img src="../assets/images/news-item-2.png" alt="business cards">
+            <div class="news-item__info">
+                <h5>June 24, 2019</h5>
+                <h2>Lorem Ipsum Dolor Amet</h2>
+                <p>Lorem ipsum dolor amet a couple of  lines will go here lorem ipsum</p>
+            </div>
+            <div class="news-item__cta cta-wrapper">
+                <a href="#" class="cta__link"><span></span>read more</a>
+            </div>
         </div>
-   </section>
-   <section class="service-u__clients">
-        <div class="service-u__cases cases">
-            <article class="case case--1">
-                <div class="case__info">
-                    <h5>Case study</h5>
-                    <h3>Amitruck</h3>
-                    <p>Lorem ipsum dolorbespoke e-commerce build or an ad-hoc web site or agency, our service offering is tailored.</p>
-                </div>
-                <a href="./case-study.html" class="case__more">View Project</a>
-            </article>
-            <article class="case case--2">
-                <div class="case__info">
-                    <h5>Case study</h5>
-                    <h3>Lauder </>& Ress</h3>
-                    <p>Lorem ipsum dolorbespoke e-commerce build or an ad-hoc web site or agency, our service offering is tailored.</p>
-                </div>
-                <a href="./case-study.html" class="case__more">View Project</a>
-            </article>
-            <article class="case case--3">
-                <div class="case__info">
-                    <h5>Case study</h5>
-                    <h3>Investors </br>in property</h3>
-                    <p>Lorem ipsum dolorbespoke e-commerce build or an ad-hoc web site or agency, our service offering is tailored.</p>
-                </div>
-                <a href="./case-study.html" class="case__more">View Project</a>
-            </article>
+        <div class="news-item news-item--3">
+            <img src="../assets/images/case-study-additional-bg.png" alt="business cards">
+            <div class="news-item__info">
+                <h5>June 24, 2019</h5>
+                <h2>Lorem Ipsum Dolor Amet</h2>
+                <p>Lorem ipsum dolor amet a couple of  lines will go here lorem ipsum</p>
+            </div>
+            <div class="news-item__cta cta-wrapper">
+                <a href="#" class="cta__link"><span></span>read more</a>
+            </div>
         </div>
-        <div class="service-u__clients--cta cta-wrapper">
-            <h3>Like what you see?</h3>
-            <a href="#" class="cta__link"><span></span>get in touch</a>
+        <div class="news-item news-item--4">
+            <img src="../assets/images/news-item-2.png" alt="business cards">
+            <div class="news-item__info">
+                <h5>June 24, 2019</h5>
+                <h2>Lorem Ipsum Dolor Amet</h2>
+                <p>Lorem ipsum dolor amet a couple of  lines will go here lorem ipsum</p>
+            </div>
+            <div class="news-item__cta cta-wrapper">
+                <a href="#" class="cta__link"><span></span>read more</a>
+            </div>
         </div>
-   </section>
+        <div class="news-item news-item--5">
+            <img src="../assets/images/case-study-additional-bg.png" alt="business cards">
+            <div class="news-item__info">
+                <h5>June 24, 2019</h5>
+                <h2>Lorem Ipsum Dolor Amet</h2>
+                <p>Lorem ipsum dolor amet a couple of  lines will go here lorem ipsum</p>
+            </div>
+            <div class="news-item__cta cta-wrapper">
+                <a href="#" class="cta__link"><span></span>read more</a>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer" id="footer">
         <div class="desktop__logo">
             <div class="logo">
@@ -275,7 +266,7 @@
        <div class="footer__info footer__address">
             <h5>Head Quarters</h5>
             <p>
-                Unit 168</br>
+                Unit 168</>
                 30 Red Lion Street</br>
                 Richmond, TW9 1RB
             </p>
@@ -365,7 +356,8 @@
             <li><a href="#">Terms & Conditions</a></li>
         </ul>
     </div>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="../assets/js/header.js"></script>    
 </body>
 </html>
