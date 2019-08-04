@@ -71,6 +71,9 @@ html {
   @media (max-width: 424px) {
     html {
       font-size: 56.25%; } }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 100%; } }
 
 /*
     Initializing Fonts
@@ -628,6 +631,9 @@ form {
       .logo__alt {
         align-self: flex-start;
         margin-top: 0; } }
+    @media (min-width: 1800px) {
+      .logo__alt {
+        margin-top: -6px; } }
 
 @media (min-width: 320px) {
   .quote {
@@ -853,7 +859,8 @@ form {
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: 1; }
+      z-index: 1;
+      object-fit: cover; }
     .news-item__info, .news-item__cta {
       z-index: 2; }
     .news-item__info {
@@ -1470,7 +1477,8 @@ form {
     .case-study__video > img {
       width: 100%;
       min-height: 30rem;
-      z-index: 1; }
+      z-index: 1;
+      object-fit: cover; }
     .case-study__video--play {
       min-height: 10rem;
       min-width: 10rem;
@@ -1827,3 +1835,140 @@ form {
 @media (min-width: 1280px) {
   .news-heading {
     padding-left: 22rem; } }
+
+@media (min-width: 320px) {
+  .post__top-bg {
+    display: none; }
+    .post__top-bg img {
+      width: 100%;
+      object-fit: cover; }
+  .post-main {
+    padding-top: 10.4rem;
+    padding-bottom: 6rem; }
+    .post-main h5 {
+      font-size: 1.6rem; }
+    .post-main h3 {
+      font-size: 2.8rem;
+      line-height: 3.6rem;
+      text-transform: uppercase; }
+    .post-main p {
+      font-size: 1.8rem; }
+    .post-main__author {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 7rem; }
+    .post-main__img {
+      margin-bottom: 2rem; }
+      .post-main__img img {
+        width: 100%;
+        object-fit: cover; }
+    .post-main__heading {
+      margin-bottom: 2.13rem; }
+    .post-main__cta {
+      color: #999999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
+      .post-main__cta p {
+        margin-bottom: 1.2rem; }
+      .post-main__cta a span svg {
+        fill: #999999; }
+    .post-main__text h5 {
+      color: #999999;
+      text-transform: uppercase;
+      margin-bottom: 2.2rem; }
+    .post-main__text h1 {
+      margin-bottom: 6rem; }
+    .post-main__text--bold {
+      font-weight: 700;
+      margin-bottom: 3.6rem; }
+    .post-main__text p {
+      font-size: 1.8rem;
+      line-height: 2.6rem; }
+    .post-main__text-img {
+      margin: 3rem 0; }
+      .post-main__text-img img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 50rem; }
+    .post-main__additional-info {
+      padding: 6rem 3rem; }
+  .post__intro {
+    position: relative;
+    display: flex; }
+    .post__intro-img {
+      z-index: 1; }
+      .post__intro-img img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 1;
+        object-fit: cover; }
+    .post__intro-info {
+      color: white;
+      z-index: 2;
+      padding: 3rem; }
+      .post__intro-info h2 {
+        text-transform: uppercase; }
+    .post__intro-cta {
+      z-index: 2; }
+      .post__intro-cta a {
+        color: white; }
+        .post__intro-cta a span {
+          background: white; } }
+
+@media (min-width: 480px) {
+  .post__top-bg {
+    display: block;
+    padding-top: 8.4rem; }
+  .post-main {
+    padding-top: 7rem; }
+    .post-main__author {
+      flex-direction: row; }
+    .post-main__img {
+      margin-bottom: 0;
+      margin-right: 2rem; }
+      .post-main__img img {
+        height: 100%; }
+  .post__intro-info {
+    padding: 8rem; } }
+
+@media (min-width: 768px) {
+  .post-main, .post__intro, .post-main__additional-info {
+    padding-left: 6rem;
+    padding-right: 6rem; }
+  .post-main__text-img {
+    margin: 6rem 0; }
+  .post__intro-info {
+    padding: 15rem 0;
+    width: 50%;
+    margin: 0 auto; } }
+
+@media (min-width: 1024px) {
+  .post-main, .post__intro, .post-main__additional-info {
+    padding-left: 12rem;
+    padding-right: 12rem; }
+  .post__intro-info {
+    padding: 20rem 0;
+    width: 40%;
+    margin: 0 auto; } }
+
+@media (min-width: 1280px) {
+  .post-main, .post__intro, .post-main__additional-info {
+    padding-left: 22rem;
+    padding-right: 22rem; }
+  .post-main, .post-main__additional-info {
+    padding-bottom: 6rem; }
+  .post__intro-info {
+    padding: 20rem 0;
+    width: 50%;
+    margin: 0 auto; } }
+
+@media (min-width: 1280px) {
+  .post-main, .post__intro, .post-main__additional-info {
+    padding-left: 30rem;
+    padding-right: 30rem; } }
